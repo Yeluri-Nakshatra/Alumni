@@ -22,8 +22,8 @@ const header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-screen z-[9999]">
-      <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
+    <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
+      <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
             <img src={Logo} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]" />
