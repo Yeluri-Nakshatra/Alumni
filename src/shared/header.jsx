@@ -5,6 +5,7 @@ import { useState } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
+import { IoIosNotifications } from "react-icons/io";
 const header = () => {
   const [tab, setTab] = useState("home");
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -21,11 +22,11 @@ const header = () => {
   };
 
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-screen z-[9999]">
       <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
-            <img src={Logo} className="w-[70px] h-[70px]" />
+            <img src={Logo} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]" />
           </div>
           <div className="hidden lg:flex flex-col justify-center items-center ">
             <div className="text-lg font-bold">ALUMNI ASSOCIATION</div>
@@ -43,9 +44,9 @@ const header = () => {
           >
             Home
             {tab === "home" ? (
-              <hr className="bg-blue-950 h-[3px] mt-1" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
-              <hr className="bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </a>
           <a
@@ -56,9 +57,9 @@ const header = () => {
           >
             About Us
             {tab === "aboutus" ? (
-              <hr className="bg-blue-950 h-[3px] mt-1" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
-              <hr className="bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </a>
           <div className="group relative  p-2">
@@ -106,9 +107,9 @@ const header = () => {
           >
             Get Involved
             {tab === "getinvolved" ? (
-              <hr className="bg-blue-950 h-[3px] mt-1" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
-              <hr className="bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </a>
           <a
@@ -119,9 +120,9 @@ const header = () => {
           >
             Alumni
             {tab === "alumni" ? (
-              <hr className="bg-blue-950 h-[3px] mt-1" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
-              <hr className="bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </a>
           <a
@@ -132,9 +133,9 @@ const header = () => {
           >
             Contact
             {tab === "contact" ? (
-              <hr className="bg-blue-950 h-[3px] mt-1" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
-              <hr className="bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </a>
         </div>
@@ -158,11 +159,23 @@ const header = () => {
               sign in
             </a>
           </div>
+          <div>
+            <a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
+            <IoIosNotifications />
+            </a>
+          </div>
         </div>
-        <div className="flex z-[1000] lg:hidden">
+        <div className="flex  z-[1000] lg:hidden">
+            <div className="flex flex-row gap-2">
           <button onClick={toggleMenu} className="text-2xl">
             <RiMenu2Line />
           </button>
+          <div>
+            <a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
+            <IoIosNotifications />
+            </a>
+          </div>
+          </div>
           {isMenuVisible && (
             <div
               className="flex absolute  top-0 right-0  text-xl  pt-10 px-8 transition duration-500 h-screen   w-screen   bg-white  p-2  flex-col   gap-4"
@@ -175,6 +188,7 @@ const header = () => {
                 >
                   <RxCross2 />
                 </button>
+                
               </div>
               <a
                 href="#"
