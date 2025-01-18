@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import './ProudGrad.css';
-import GraduateCard from '../../Components/GraduateCaRd';
+import GraduateCard from '../../Components/GraduateCard';
 const ProudGraduates = () => {
   return (
     <div className='pb-[30px] px-[20px] md:px-0'>
