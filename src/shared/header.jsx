@@ -7,6 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Header = () => {
   const naviagte=useNavigate();
   const [tab, setTab] = useState("home");
@@ -36,8 +37,8 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden lg:flex flex-row items-center justify-center gap-6 font-semibold">
-          <a
-            href="#"
+          <Link
+            to="/"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                         ${
                           tab === "home" ? " text-blue-950" : "text-gray-500"
@@ -50,7 +51,7 @@ const Header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </Link>
           <a
             href="#"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
@@ -99,8 +100,8 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/GetInvolved"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${
                       tab === "getinvolved" ? " text-blue-950" : "text-gray-500"
@@ -113,7 +114,7 @@ const Header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </Link>
           <a
             href="#"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950

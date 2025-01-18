@@ -7,11 +7,11 @@ import ProudGraduates from './ProudGraduates'
 const Home = () => {
   return (
     <div>
-        <Header/>
+        
         <Hero/>
         <TopEvents/>
         <ProudGraduates/>
-        <Footer/>
+        
     </div>
   )
 }
