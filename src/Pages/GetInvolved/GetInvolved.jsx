@@ -69,7 +69,7 @@ const GetInvolved = () => {
   return (
     <div>
         
-      <div className="m-4 mx-10 mt-32 flex flex-col gap-8">
+      <div className="m-4 mx-10 mt-20 md:mt-24  lg:mt-32 flex flex-col gap-8">
         <div className="flex flex-col md:flex-row  gap-10 items-center">
           <div className="w-full md:w-[60%] md:h-[430px] h-[250px]">
             <img src={Frame} className="w-full h-full" />

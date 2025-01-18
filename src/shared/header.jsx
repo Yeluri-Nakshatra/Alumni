@@ -193,13 +193,13 @@ const Header = () => {
                 </button>
                 
               </div>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
                 onClick={() => {tabClick("home");naviagte('/')}}
               >
                 Home
-              </a>
+              </Link>
               <a
                 href="#"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
@@ -250,13 +250,13 @@ const Header = () => {
                   </a>
                 </div>
               </div>
-              <a
-                href="#"
+              <Link
+                to="/GetInvolved"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
                 onClick={() =>{tabClick("getinvolved");naviagte('/getinvolved')}}
               >
                 Get Involved
-              </a>
+              </Link>
               <a
                 href="#"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
