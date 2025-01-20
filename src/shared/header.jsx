@@ -6,10 +6,10 @@ import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Header = () => {
-  const naviagte=useNavigate();
+  // const naviagte=useNavigate();
   const [tab, setTab] = useState("home");
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [submenu, setSubmenu] = useState(false);
@@ -29,7 +29,7 @@ const Header = () => {
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
-            <img src={Logo} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]" />
+            <Link to="/"><img src={Logo} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]" onClick={() => {setTab("home")}}/></Link>
           </div>
           <div className="hidden lg:flex flex-col justify-center items-center ">
             <div className="text-lg font-bold">ALUMNI ASSOCIATION</div>
@@ -38,12 +38,12 @@ const Header = () => {
         </div>
         <div className="hidden lg:flex flex-row items-center justify-center gap-6 font-semibold">
           <Link
-            to="/"
+            to="/home"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                         ${
                           tab === "home" ? " text-blue-950" : "text-gray-500"
                         } `}
-            onClick={() => {setTab("home");naviagte('/')}}
+            onClick={() => {setTab("home")}}
           >
             Home
             {tab === "home" ? (
@@ -67,13 +67,13 @@ const Header = () => {
           </a>
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
-              <div
+              <Link to='/events'
                 className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
                     ${tab === "events" ? " text-blue-950" : "text-gray-500"}`}
                 onClick={() => setTab("events")}
               >
                 Events
-              </div>
+              </Link>
               <FaCaretDown className="group-hover:rotate-180 duration-300" />
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
@@ -101,12 +101,12 @@ const Header = () => {
             </div>
           </div>
           <Link
-            to="/GetInvolved"
+            to="/getinvolved"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${
                       tab === "getinvolved" ? " text-blue-950" : "text-gray-500"
                     } `}
-            onClick={() =>{setTab("getinvolved");naviagte('/getinvolved')}}
+            onClick={() =>{setTab("getinvolved")}}
           >
             Get Involved
             {tab === "getinvolved" ? (
@@ -194,9 +194,9 @@ const Header = () => {
                 
               </div>
               <Link
-                to="/"
+                to="/home"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
-                onClick={() => {tabClick("home");naviagte('/')}}
+                onClick={() => {tabClick("home")}}
               >
                 Home
               </Link>
@@ -209,20 +209,20 @@ const Header = () => {
               </a>
               <div>
                 <div
-                  className=" flex flex-row justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
-                  onClick={tglsubmenu}
+                  className="group flex flex-row justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
+                  onClick={() => {tabClick("events")}}
                 >
-                  <div >Events</div>
+                  <Link to="/events" >Events</Link>
                   <div>
                     <FaCaretDown
-                      className={`${submenu ? "rotate-180" : ""} duration-300`}
+                      className={`group-hover:rotate-180  duration-300`}
                     />
                   </div>
                 </div>
                 <div
-                  className={` ${
-                    submenu ? "flex" : "hidden"
-                  }  duration-400 flex-col font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100`}
+                  className={` 
+                     group-hover:flex  hidden
+                   duration-400 flex-col font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100`}
                 >
                   <a
                     href="#"
@@ -251,9 +251,9 @@ const Header = () => {
                 </div>
               </div>
               <Link
-                to="/GetInvolved"
+                to="/getinvolved"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
-                onClick={() =>{tabClick("getinvolved");naviagte('/getinvolved')}}
+                onClick={() =>{tabClick("getinvolved")}}
               >
                 Get Involved
               </Link>

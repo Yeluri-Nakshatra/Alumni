@@ -2,18 +2,18 @@ import React from 'react'
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineOndemandVideo } from "react-icons/md";
 import { IoPersonOutline } from "react-icons/io5";
-import firsteve from "../assets/firsteve.png"
-import Eventsimg from "../assets/Eventsimg.png"
-import Buttoneve from "../assets/Buttoneve.png"
-import Secondeve from "../assets/Secondeve.png";
-import Thirdeve from "../assets/Thirdeve.png";
-import Fourtheve from "../assets/Fourtheve.png";
-import Fiftheve from "../assets/Fiftheve.png";
-import Photoone from "../assets/Photoone.png";
-import Phototwo from "../assets/Phototwo.png";
-const Events = () => {
+import firsteve from "../../assets/firsteve.png"
+import Eventsimg from "../../assets/Eventsimg.png"
+import Buttoneve from "../../assets/Buttoneve.png"
+import Secondeve from "../../assets/Secondeve.png";
+import Thirdeve from "../../assets/Thirdeve.png";
+import Fourtheve from "../../assets/Fourtheve.png";
+import Fiftheve from "../../assets/Fiftheve.png";
+import Photoone from "../../assets/Photoone.png";
+import Phototwo from "../../assets/Phototwo.png";
+const EventsPage = () => {
   return (
-    <div className="flex flex-col p-[50px] bg-gray-100">
+    <div className="flex mt-8 md:mt-12 lg:mt-14 flex-col p-[50px] ">
         <div><img src={Eventsimg} className="w-screen overflow-x-hidden"></img></div>
         <div className="text-3xl font-bold pt-2">UpComing Events</div>
         <div className="pt-2">RGUKT Alumini events are great to stay connected to the university and your fellow graduates.Find an 
@@ -84,4 +84,4 @@ const Events = () => {
   )
 }
 
-export default Events
+export default EventsPage
