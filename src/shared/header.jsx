@@ -52,8 +52,8 @@ const Header = () => {
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/aboutus"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${tab === "aboutus" ? " text-blue-950" : "text-gray-500"} `}
             onClick={() => setTab("aboutus")}
@@ -64,7 +64,7 @@ const Header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </Link>
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <Link to='/events'
@@ -200,13 +200,13 @@ const Header = () => {
               >
                 Home
               </Link>
-              <a
+              <Link to="/aboutus"
                 href="#"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
                 onClick={() => tabClick("aboutus")}
               >
                 About Us
-              </a>
+              </Link>
               <div>
                 <div
                   className="group flex flex-row justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
