@@ -2,11 +2,11 @@ import React from 'react'
 import { BrowserRouter as Router,Routes,Route } from 'react-router'
 import GetInvolved from './Pages/GetInvolved/GetInvolved'
 import Home from './Pages/Home/Home'
-
+import About from './Pages/About/About'
 import Header from './shared/header'
 import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
-=======
+
 
 const App = () => {
   return (
@@ -18,7 +18,9 @@ const App = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/getinvolved" element={<GetInvolved />} />
       <Route path="/events" element={<EventsPage />} />
-=======
+      <Route path="/aboutus" element={<About />} />
+
+
      
 
     </Routes>
