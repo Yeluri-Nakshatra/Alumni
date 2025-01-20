@@ -1,15 +1,15 @@
-import React from 'react'
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
-import Header from './shared/header'
-import Footer from './shared/Footer/Footer'
-import GetInvolved from './Pages/GetInvolved/GetInvolved'
-import Events from "./shared/Events";
+
+import Home from './Pages/Home/Home'
 const App = () => {
   return (
-    // <Header/>
-  //  <Footer/>
-  <Events />
-  
+    <Router>
+      <Header/>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/GetInvolved" element={<GetInvolved />} />
+    </Routes>
+    <Footer/>
+  </Router>
   )
 }
 

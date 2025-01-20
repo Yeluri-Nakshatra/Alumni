@@ -6,7 +6,10 @@ import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
-const header = () => {
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+const Header = () => {
+  const naviagte=useNavigate();
   const [tab, setTab] = useState("home");
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [submenu, setSubmenu] = useState(false);
@@ -34,13 +37,13 @@ const header = () => {
           </div>
         </div>
         <div className="hidden lg:flex flex-row items-center justify-center gap-6 font-semibold">
-          <a
-            href="#"
+          <Link
+            to="/"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                         ${
                           tab === "home" ? " text-blue-950" : "text-gray-500"
                         } `}
-            onClick={() => setTab("home")}
+            onClick={() => {setTab("home");naviagte('/')}}
           >
             Home
             {tab === "home" ? (
@@ -48,7 +51,7 @@ const header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </Link>
           <a
             href="#"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
@@ -97,13 +100,13 @@ const header = () => {
               </a>
             </div>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/GetInvolved"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${
                       tab === "getinvolved" ? " text-blue-950" : "text-gray-500"
                     } `}
-            onClick={() => setTab("getinvolved")}
+            onClick={() =>{setTab("getinvolved");naviagte('/getinvolved')}}
           >
             Get Involved
             {tab === "getinvolved" ? (
@@ -111,7 +114,7 @@ const header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </Link>
           <a
             href="#"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
@@ -190,13 +193,13 @@ const header = () => {
                 </button>
                 
               </div>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
-                onClick={() => tabClick("home")}
+                onClick={() => {tabClick("home");naviagte('/')}}
               >
                 Home
-              </a>
+              </Link>
               <a
                 href="#"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
@@ -247,13 +250,13 @@ const header = () => {
                   </a>
                 </div>
               </div>
-              <a
-                href="#"
+              <Link
+                to="/GetInvolved"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
-                onClick={() => tabClick("getinvolved")}
+                onClick={() =>{tabClick("getinvolved");naviagte('/getinvolved')}}
               >
                 Get Involved
-              </a>
+              </Link>
               <a
                 href="#"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
@@ -290,4 +293,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
