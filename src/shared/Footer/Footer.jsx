@@ -4,6 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaRegCopyright } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-blue-950 text-white font-light">
@@ -20,12 +21,12 @@ const Footer = () => {
           <div className="flex flex-col gap-4 md:items-center">
             <div className="text-2xl font-semibold">Quick links</div>
             <div className="flex flex-col md:items-center ">
-              <a href="#">Home</a>
-              <a href="#">About Us</a>
-              <a href="#">Events</a>
-              <a href="#">Get Involved</a>
-              <a href="#">Alumni</a>
-              <a href="#">Contact Us</a>
+              <Link to='/home'>Home</Link>
+              <Link to='/about'>About Us</Link>
+              <Link to='/events'>Events</Link>
+              <Link to='/getinvolved'>Get Involved</Link>
+              <a href='#'>Alumni</a>
+              <a href='#'>Contact Us</a>
             </div>
           </div>
           <div className="flex flex-col gap-4 md:items-center">
