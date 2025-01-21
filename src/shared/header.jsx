@@ -32,8 +32,8 @@ const Header = () => {
             <Link to="/"><img src={Logo} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]" onClick={() => {setTab("home")}}/></Link>
           </div>
           <div className="hidden lg:flex flex-col justify-center items-center ">
-            <div className="text-lg font-bold">ALUMNI ASSOCIATION</div>
-            <div>RGUKT-NUZVID</div>
+            <div className="text-lg font-bold text-blue-950">ALUMNI ASSOCIATION</div>
+            <div className='font-semibold'>RGUKT-NUZVID</div>
           </div>
         </div>
         <div className="hidden lg:flex flex-row items-center justify-center gap-6 font-semibold">

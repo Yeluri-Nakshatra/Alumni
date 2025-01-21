@@ -1,9 +1,10 @@
 import React from 'react'
-import Header from '../../shared/header'
-import Footer from '../../shared/Footer/Footer'
 import Hero from '../../Components/Hero'
 import TopEvents from '../../Components/TopEvents'
 import ProudGraduates from './ProudGraduates'
+import HomeAbout from '../../Components/HomeAbout'
+import HomeEvents from '../../Components/HomeEvents'
+import HomeGetInvolved from '../../Components/HomeGetInvolved'
 const Home = () => {
   return (
     <div>
@@ -11,6 +12,9 @@ const Home = () => {
         <Hero/>
         <TopEvents/>
         <ProudGraduates/>
+        <HomeAbout/>
+        <HomeEvents/>
+        <HomeGetInvolved/>
         
     </div>
   )
