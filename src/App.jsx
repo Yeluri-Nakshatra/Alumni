@@ -7,7 +7,8 @@ import Header from './shared/header'
 import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
-
+import Login from './Components/Login'
+import Register from './Components/Register'
 
 const App = () => {
   return (
@@ -21,6 +22,9 @@ const App = () => {
       <Route path="/events" element={<EventsPage />} />
       <Route path="/aboutus" element={<About />} />
       <Route path="/Contact" element={<Contact />} />
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
+
 
 
      
@@ -28,6 +32,7 @@ const App = () => {
     </Routes>
     <Footer/>
   </Router>
+  
   
   )
 }
