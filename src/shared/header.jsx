@@ -154,12 +154,12 @@ const Header = () => {
             </a>
           </div>
           <div>
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md "
             >
-              sign in
-            </a>
+              Login
+            </Link>
           </div>
           <div className="subscription mr-[20px]">
            <img src={bell} className="h-[35px] w-[35px]"/>
@@ -295,13 +295,13 @@ const Header = () => {
                 {" "}
                 Donate
               </a>
-              <a
-                href="#"
+              <Link
+                to='login'
                 className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
               >
                 {" "}
-                Sign in
-              </a>
+                Login 
+              </Link>
             </div>
           )}
         </div>
