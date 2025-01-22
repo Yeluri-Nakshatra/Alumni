@@ -11,7 +11,6 @@ const About = () => {
       <Hero />
       <Description />
       <Cards />
-      <AboutUs />
       <OurTeam />
       <Partners />
     </div>
