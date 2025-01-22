@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 const Cards = () => {
-    {/*const teamMembers = [
+    const teamMembers = [
         { id: 1, image: aboutteam2, linkedin: "#", instagram: "#" },
         { id:2, image:aboutteam2, linkedin: "#", instagram: "#"}
         
@@ -13,11 +13,11 @@ const Cards = () => {
         {id:1, image:aboutteam2,name:"Name"},
         {id:2, image:aboutteam2,name:"Name"},
         {id:3, image:aboutteam2,name:"Name"}
-    ]*/}
+    ]
   return (
    <>
    <div className="flex justify-center text-3xl font-bold">Members</div>
-    <div className='flex flex-row flex-wrap  p-[20px] justify-center flex-row flex-wrap gap-[30px]'>
+    <div className='flex flex-row flex-wrap  p-[20px] justify-center  gap-[30px]'>
         
         
         {teamMembers.map((member) => (
