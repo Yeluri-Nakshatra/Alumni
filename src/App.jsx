@@ -6,6 +6,7 @@ import About from './Pages/About/About'
 import Header from './shared/header'
 import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
+import Contact from "./Pages/Contact/Contact";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/getinvolved" element={<GetInvolved />} />
       <Route path="/events" element={<EventsPage />} />
       <Route path="/aboutus" element={<About />} />
+      <Route path="/Contact" element={<Contact />} />
 
 
      
