@@ -6,6 +6,8 @@ import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
+import bell from "../assets/bell.png"
+import "./Header.css";
 // import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Header = () => {
@@ -23,16 +25,16 @@ const Header = () => {
     setTab(tabSelected);
     setIsMenuVisible(false);
   };
-
+   const [count,setcount]=useState(5);
   return (
     <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
-            <Link to="/"><img src={Logo} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]" onClick={() => {setTab("home")}}/></Link>
+            <Link to="/"><img src={Logo} className="w-[40px] h-[40px] md:w-[70px] md:h-[70px]" onClick={() => {setTab("home")}}/></Link>
           </div>
           <div className="hidden lg:flex flex-col justify-center items-center ">
-            <div className="text-lg font-bold text-blue-950">ALUMNI ASSOCIATION</div>
+            <div className="text-lg font-bold text-blue-950 ">ALUMNI ASSOCIATION</div>
             <div className='font-semibold'>RGUKT-NUZVID</div>
           </div>
         </div>
@@ -143,9 +145,6 @@ const Header = () => {
           </a>
         </div>
         <div className="hidden lg:flex flex-row justify-center items-center gap-4">
-          <div className="text-lg">
-            <IoSearch />
-          </div>
           <div>
             <a
               href="#"
@@ -162,10 +161,13 @@ const Header = () => {
               sign in
             </a>
           </div>
-          <div>
-            <a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
+          <div className="subscription mr-[20px]">
+           <img src={bell} className="h-[35px] w-[35px]"/>
+           {count>0 && <span className="bell-icon">{count}</span>}
+
+            {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
             <IoIosNotifications />
-            </a>
+            </a>*/}
           </div>
         </div>
         <div className="flex  z-[1000] lg:hidden">
@@ -173,26 +175,41 @@ const Header = () => {
           <button onClick={toggleMenu} className="text-2xl">
             <RiMenu2Line />
           </button>
-          <div>
-            <a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
+          <div  className="subscription mr-[20px]">
+
+          <img src={bell} className="h-[35px] w-[35px]"/>
+          {count>0 && <span className="bell-icon">{count}</span>}
+            {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
             <IoIosNotifications />
-            </a>
+            </a>*/}
           </div>
           </div>
           {isMenuVisible && (
             <div
-              className="flex absolute  top-0 right-0  text-xl  pt-10 px-8 transition duration-500 h-screen   w-screen   bg-white  p-2  flex-col   gap-4"
+              className="flex absolute  top-0 left-0  text-xl  pt-10 px-8 transition duration-500 h-screen   w-[80%]   bg-white  p-2  flex-col   gap-4"
               id="menulist"
             >
-              <div className="w-full text-right">
+              <div className="flex justify-between">
+              <div className="flex flex-row gap-[3px] ">
+                 <div>
+                 <Link to="/"><img src={Logo} className="w-[40px] h-[40px]" onClick={() => {setTab("home")}}/></Link>
+                </div>
+          <div className="flex flex-col justify-center items-center ">
+            <div className="text-[8px] font-bold text-blue-950 ">ALUMNI ASSOCIATION</div>
+            <div className='font-semibold text-[8px]'>RGUKT-NUZVID</div>
+          </div>
+        </div>
+              
                 <button
-                  className=" rounded-sm w-fit justify-content-end  p-2 hover:bg-gray-300 duration-200"
+                  className=" rounded-sm w-fit justify-content-end text-[red] p-2 hover:bg-gray-300 duration-200"
                   onClick={toggleMenu}
                 >
                   <RxCross2 />
                 </button>
                 
+              
               </div>
+              
               <Link
                 to="/home"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
