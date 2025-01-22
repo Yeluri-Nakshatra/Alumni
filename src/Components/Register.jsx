@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Register = () => {
   return (
     <div className='flex w-full  mt-10 md:mt-20 justify-center items-center'>
@@ -38,7 +38,7 @@ const Register = () => {
             </form>
             <hr />
             <div className='text-center'>
-                Already have an account? <span className='text-blue-950 font-semibold cursor-pointer'>Login</span>
+                Already have an account? <Link to='/login' className='text-blue-950 font-semibold cursor-pointer'>Login</Link>
             </div>
             
 
