@@ -130,8 +130,8 @@ const Header = () => {
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </a>
-          <a
-            href="#"
+          <Link 
+            to="Contact"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${tab === "contact" ? " text-blue-950" : "text-gray-500"} `}
             onClick={() => setTab("contact")}
@@ -142,7 +142,7 @@ const Header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:flex flex-row justify-center items-center gap-4">
           <div>
@@ -281,13 +281,13 @@ const Header = () => {
               >
                 Alumni
               </a>
-              <a
-                href="#"
+              <Link
+                to='Contact'
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
                 onClick={() => tabClick("contact")}
               >
                 Contact
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md w-full text-center"
