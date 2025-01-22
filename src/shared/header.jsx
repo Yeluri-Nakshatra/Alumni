@@ -291,6 +291,7 @@ const Header = () => {
               <a
                 href="#"
                 className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md w-full text-center"
+                onClick={() => tabClick("donate")}
               >
                 {" "}
                 Donate
@@ -298,6 +299,7 @@ const Header = () => {
               <Link
                 to='login'
                 className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
+                onClick={() => tabClick("login")}
               >
                 {" "}
                 Login 
