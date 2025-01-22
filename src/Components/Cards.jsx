@@ -1,6 +1,5 @@
 import React from 'react'
 import aboutteam2 from "../assets/aboutteam2.jpg";
-import logo from "../assets/logo.png";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 const Cards = () => {
