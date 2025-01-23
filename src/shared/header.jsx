@@ -194,7 +194,7 @@ const Header = () => {
                  <div>
                  <Link to="/"><img src={Logo} className="w-[40px] h-[40px]" onClick={() => {setTab("home")}}/></Link>
                 </div>
-          <div className="flex flex-col justify-center items-center ">
+          <div className="flex flex-col  ">
             <div className="text-[8px] font-bold text-blue-950 ">ALUMNI ASSOCIATION</div>
             <div className='font-semibold text-[8px]'>RGUKT-NUZVID</div>
           </div>
@@ -226,46 +226,50 @@ const Header = () => {
               </Link>
               <div>
                 <div
-                  className="group flex flex-row justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
-                  onClick={() => {tabClick("events")}}
+                  className="group flex flex-col justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
+                  
                 >
-                  <Link to="/events" >Events</Link>
+                  <div className='flex flex-row gap-2 items-center'>
+
+                  <div >Events</div>
                   <div>
                     <FaCaretDown
                       className={`group-hover:rotate-180  duration-300`}
                     />
                   </div>
-                </div>
-                <div
+                  </div>
+                  <div
                   className={` 
-                     group-hover:flex  hidden
+                       group-hover:flex hidden
                    duration-400 flex-col font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100`}
                 >
-                  <a
-                    href="#"
+                  <Link
+                    to='/events'
                     className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
                     onClick={() => tabClick("event1")}
                   >
                     {" "}
                     Event 1{" "}
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to='/events'
                     className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
                     onClick={() => tabClick("eventevent1")}
                   >
                     {" "}
                     Event Event 1{" "}
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to='/events'
                     className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
                     onClick={() => tabClick("event2")}
                   >
                     {" "}
                     Event 2{" "}
-                  </a>
+                  </Link>
                 </div>
+                </div>
+                
               </div>
               <Link
                 to="/getinvolved"
