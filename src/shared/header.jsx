@@ -69,37 +69,40 @@ const Header = () => {
           </Link>
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
-              <Link to='/events'
+              <div
                 className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
                     ${tab === "events" ? " text-blue-950" : "text-gray-500"}`}
-                onClick={() => setTab("events")}
+                
               >
                 Events
-              </Link>
+              </div>
               <FaCaretDown className="group-hover:rotate-180 duration-300" />
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
-              <a
-                href="#"
+              <Link
+                to='/events'
                 className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event1")}
               >
                 {" "}
                 Event 1{" "}
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to='/events'
                 className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("eventevent1")}
               >
                 {" "}
                 Event Event 1{" "}
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to='/events'
                 className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
               >
                 {" "}
                 Event 2{" "}
-              </a>
+              </Link>
             </div>
           </div>
           <Link
@@ -209,7 +212,7 @@ const Header = () => {
                 
               
               </div>
-              <div className="flex flex-col gap-[40px] px-[10px]">
+              <div className="flex flex-col gap-6 px-[10px]">
               <Link
                 to="/home"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
@@ -226,10 +229,10 @@ const Header = () => {
               </Link>
               <div>
                 <div
-                  className="group flex flex-col justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
+                  className="group flex flex-col  gap-2  cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
                   
                 >
-                  <div className='flex flex-row gap-2 items-center'>
+                  <div className='flex flex-row gap-2  items-center'>
 
                   <div >Events</div>
                   <div>
