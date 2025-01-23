@@ -4,9 +4,9 @@ import { GrResources } from "react-icons/gr";
 const Homehero=()=>{
     return(
         <div className=" flex md:flex-row flex-col md:mt-auto mt-[70px] gap-[40px] justify-center items-center  min-h-screen w-full ">
-           <div className="flex flex-col gap-[30px]">
-           <div className="text-black font-bold text-[45px]">A new way to learn <br className="md:block hidden"/>& get knowledge</div>
-           <div className="text-black text-[15px]">Eduflex is here for you with various courses & <br className="md:block hidden"/>materials from skilled tutors oil around the world.</div>
+           <div className="flex flex-col gap-[30px] px-[35px] md:order-1 order-2">
+           <div className="text-black font-bold text-[45px] ">A new way to learn <br className="md:block hidden"/>& get knowledge</div>
+           <div className="text-black text-[15px] ">Eduflex is here for you with various courses & <br className="md:block hidden"/>materials from skilled tutors oil around the world.</div>
            <div className="flex flex-row gap-[20px]">
             <div className="h-[30px] w-[100px] text-[white] bg-blue-950 rounded-[13px] flex justify-center items-center">Register</div>
             <div className="h-[30px] w-[100px] text-[black] bg-[white]  rounded-[13px] border border-[black] flex justify-center items-center">join us</div>
@@ -34,7 +34,7 @@ const Homehero=()=>{
 
             </div> 
 
-            <div>
+            <div className="md:order-2 order-1">
                 <img src={graduation} className="h-[500px] w-[500px]"/>
             </div>
             
