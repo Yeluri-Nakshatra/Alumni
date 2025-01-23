@@ -196,12 +196,12 @@ const Header = () => {
                 </div>
           <div className="flex flex-col justify-center items-center ">
             <div className="text-[8px] font-bold text-blue-950 ">ALUMNI ASSOCIATION</div>
-            <div className='font-semibold text-[8px]'>RGUKT-NUZVID</div>
+            <div className='font-semibold text-[8px] mt-[-10px]'>RGUKT-NUZVID</div>
           </div>
         </div>
               
                 <button
-                  className=" rounded-sm w-fit justify-content-end text-[red] p-2 hover:bg-gray-300 duration-200"
+                  className=" rounded-sm w-fit text-[25px] justify-content-end text-[red] p-2 hover:bg-gray-300 duration-200"
                   onClick={toggleMenu}
                 >
                   <RxCross2 />
@@ -209,24 +209,24 @@ const Header = () => {
                 
               
               </div>
-              
+              <div className="flex flex-col gap-[40px] px-[10px]">
               <Link
                 to="/home"
-                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
+                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
                 onClick={() => {tabClick("home")}}
               >
                 Home
               </Link>
               <Link to="/aboutus"
                 href="#"
-                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
+                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
                 onClick={() => tabClick("aboutus")}
               >
                 About Us
               </Link>
               <div>
                 <div
-                  className="group flex flex-row justify-center gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
+                  className="group flex flex-row  gap-2 items-center cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
                   onClick={() => {tabClick("events")}}
                 >
                   <Link to="/events" >Events</Link>
@@ -269,21 +269,21 @@ const Header = () => {
               </div>
               <Link
                 to="/getinvolved"
-                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
+                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
                 onClick={() =>{tabClick("getinvolved")}}
               >
                 Get Involved
               </Link>
               <a
                 href="#"
-                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
+                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
                 onClick={() => tabClick("alumni")}
               >
                 Alumni
               </a>
               <Link
                 to='Contact'
-                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full text-center py-2 rounded-md duration-200"
+                className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
                 onClick={() => tabClick("contact")}
               >
                 Contact
@@ -304,6 +304,10 @@ const Header = () => {
                 {" "}
                 Login 
               </Link>
+                </div>
+              
+              
+              
             </div>
           )}
         </div>
