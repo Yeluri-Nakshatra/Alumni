@@ -4,7 +4,7 @@ const Description = () => {
   return (
     <div className="flex flex-col p-[20px]">
         <div className="text-3xl font-bold flex justify-center">Description</div>
-        <div className='pt-[10px] text-lg'><p>College is a higher education institution where students earn degrees and develop skills for their careers. 
+        <div className='pt-[10px] text-lg text-center'><p>College is a higher education institution where students earn degrees and develop skills for their careers. 
             What is college?
             College is an academic institution that provides higher education 
             Students earn degrees and develop skills for their careers 
@@ -13,7 +13,7 @@ const Description = () => {
             Students learn, grow, and make unforgettable experiences
             Students develop life skills, build friendships, and explore new interests
             Students exchange ideas and participate in extra-curricular activities</p></div>
-    <div className="pt-[10px] text-lg"><p>**What is required to enter college? 
+    <div className="pt-[10px] text-lg text-center"><p>**What is required to enter college? 
         In most countries, students need a high school diploma or equivalent to enter college
         In the United States and Canada, a GED is equivalent to a high school diploma
         **What are some benefits of college?

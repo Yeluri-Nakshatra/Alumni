@@ -1,20 +1,23 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
-import { IoIosNotifications } from "react-icons/io";
+import NewNotifications from "../Components/NewNotifications";
 import bell from "../assets/bell.png"
 import "./Header.css";
-// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+
+
 const Header = () => {
-  // const naviagte=useNavigate();
+
   const [tab, setTab] = useState("home");
+  const location = useLocation();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [submenu, setSubmenu] = useState(false);
+
   const tglsubmenu = () => {
     setSubmenu(!submenu);
   };
@@ -26,12 +29,16 @@ const Header = () => {
     setIsMenuVisible(false);
   };
    const [count,setcount]=useState(5);
+   const [notifivisibility,setNotifivisibility]=useState(false);
+   const togglenotific=()=>{
+    setNotifivisibility(!notifivisibility);
+   }
   return (
     <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
-            <Link to="/"><img src={Logo} className="w-[40px] h-[40px] md:w-[70px] md:h-[70px]" onClick={() => {setTab("home")}}/></Link>
+            <Link to="/"><img src={Logo} className="w-[40px] h-[40px] md:w-[70px] md:h-[70px]" /></Link>
           </div>
           <div className="hidden lg:flex flex-col justify-center items-center ">
             <div className="text-lg font-bold text-blue-950 ">ALUMNI ASSOCIATION</div>
@@ -42,13 +49,15 @@ const Header = () => {
           <Link
             to="/home"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
-                        ${
-                          tab === "home" ? " text-blue-950" : "text-gray-500"
-                        } `}
-            onClick={() => {setTab("home")}}
+              ${
+                location.pathname === "/home"
+                  ? "text-blue-950"
+                  : "text-gray-500"}
+               `}
+            
           >
             Home
-            {tab === "home" ? (
+            {location.pathname === "/home" ? (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
@@ -57,11 +66,15 @@ const Header = () => {
           <Link
             to="/aboutus"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
-                    ${tab === "aboutus" ? " text-blue-950" : "text-gray-500"} `}
-            onClick={() => setTab("aboutus")}
+              ${
+                location.pathname === "/aboutus"
+                  ? "text-blue-950"
+                  : "text-gray-500"}
+               `}
+           
           >
             About Us
-            {tab === "aboutus" ? (
+            {location.pathname === "/aboutus" ? (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
@@ -108,13 +121,15 @@ const Header = () => {
           <Link
             to="/getinvolved"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
-                    ${
-                      tab === "getinvolved" ? " text-blue-950" : "text-gray-500"
-                    } `}
-            onClick={() =>{setTab("getinvolved")}}
+              ${
+                location.pathname === "/getinvolved"
+                  ? "text-blue-950"
+                  : "text-gray-500"}
+               `}
+            
           >
             Get Involved
-            {tab === "getinvolved" ? (
+            {location.pathname === "/getinvolved" ? (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
@@ -165,9 +180,9 @@ const Header = () => {
             </Link>
           </div>
           <div className="subscription mr-[20px]">
-           <img src={bell} className="h-[35px] w-[35px]"/>
+           <img src={bell} className="h-[35px] w-[35px]" onClick={togglenotific}/>
            {count>0 && <span className="bell-icon">{count}</span>}
-
+           {notifivisibility?<NewNotifications/>:''}
             {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
             <IoIosNotifications />
             </a>*/}
@@ -180,16 +195,17 @@ const Header = () => {
           </button>
           <div  className="subscription mr-[20px]">
 
-          <img src={bell} className="h-[35px] w-[35px]"/>
+          <img src={bell} className="h-[35px] w-[35px]" onClick={togglenotific}/>
           {count>0 && <span className="bell-icon">{count}</span>}
             {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
             <IoIosNotifications />
             </a>*/}
+            {notifivisibility?<NewNotifications/>:''}
           </div>
           </div>
           {isMenuVisible && (
             <div
-              className="flex absolute  top-0 left-0  text-xl  pt-10 px-8 transition duration-500 h-screen   w-[80%]   bg-white  p-2  flex-col   gap-4"
+              className="flex absolute  top-0 left-0  text-xl  pt-4 px-8 transition duration-500 h-screen   w-[80%]   bg-white  p-2  flex-col   gap-4"
               id="menulist"
             >
               <div className="flex justify-between">
@@ -229,21 +245,21 @@ const Header = () => {
               </Link>
               <div>
                 <div
-                  className="group flex flex-col  gap-2  cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
+                  className=" flex flex-col  gap-2  cursor-pointer font-semibold text-gray-600 hover:text-blue-950   w-full  py-2 rounded-md duration-200"
                   
                 >
-                  <div className='flex flex-row gap-2  items-center'>
+                  <div className='flex flex-row gap-2  items-center' onClick={tglsubmenu}>
 
                   <div >Events</div>
                   <div>
                     <FaCaretDown
-                      className={`group-hover:rotate-180  duration-300`}
+                      className={`${submenu?'rotate-180':''}  duration-300`}
                     />
                   </div>
                   </div>
                   <div
                   className={` 
-                       group-hover:flex hidden
+                        ${submenu?'flex':'hidden'}
                    duration-400 flex-col font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100`}
                 >
                   <Link
