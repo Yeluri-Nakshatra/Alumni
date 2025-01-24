@@ -7,12 +7,12 @@ import Description from "../../Components/Description";
 import Cards from "../../Components/Cards";
 const About = () => {
   return (
-    <div className=" mt-20 md:mt-26 px-4 sm:px-8 lg:mt-[110px] ">
+    <div className=" mt-14 md:mt-26 px-0  lg:mt-[90px] ">
       <Hero />
       <Description />
       <Cards />
       <OurTeam />
-      <Partners />
+     
     </div>
   );
 };

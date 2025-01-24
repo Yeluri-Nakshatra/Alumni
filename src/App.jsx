@@ -9,14 +9,13 @@ import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
 import Login from './Components/Login'
 import Register from './Components/Register'
-
+import Notifications from './Components/Notifications'
 const App = () => {
   return (
     <Router>
       <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
-
       <Route path="/home" element={<Home />} />
       <Route path="/getinvolved" element={<GetInvolved />} />
       <Route path="/events" element={<EventsPage />} />
@@ -24,14 +23,12 @@ const App = () => {
       <Route path="/Contact" element={<Contact />} />
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
-
-
-
-     
-
+      <Route path='/notifications' element={<Notifications/>}/>
     </Routes>
     <Footer/>
   </Router>
+ 
+
   
   
   )
