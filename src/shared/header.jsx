@@ -253,13 +253,12 @@ const Header = () => {
               Login
             </Link>
           </div>
-          <div className="subscription mr-[20px]">
-           <img src={bell} className="h-[35px] w-[35px]" onClick={togglenotific}/>
+          <div className="group flex flex-col  border border-red-900 subscription mr-[20px]">
+           <img src={bell} className="h-[35px] w-[35px]"/>
            {count>0 && <span className="bell-icon">{count}</span>}
-           {notifivisibility?<NewNotifications/>:''}
-            {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
-            <IoIosNotifications />
-            </a>*/}
+           <div className='absolute top-10 right-0 hidden group-hover:flex'>
+           <NewNotifications/>
+           </div>
           </div>
         </div>
         <div className="flex  z-[1000] lg:hidden">
@@ -267,14 +266,12 @@ const Header = () => {
           <button onClick={toggleMenu} className="text-2xl">
             <RiMenu2Line />
           </button>
-          <div  className="subscription mr-[20px]">
-
-          <img src={bell} className="h-[35px] w-[35px]" onClick={togglenotific}/>
-          {count>0 && <span className="bell-icon">{count}</span>}
-            {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
-            <IoIosNotifications />
-            </a>*/}
-            {notifivisibility?<NewNotifications/>:''}
+          <div className="group flex flex-col   subscription mr-[20px]">
+           <img src={bell} className="h-[35px] w-[35px]"/>
+           {count>0 && <span className="bell-icon">{count}</span>}
+           <div className='absolute top-10 -right-4 hidden group-hover:flex'>
+           <NewNotifications/>
+           </div>
           </div>
           </div>
           {isMenuVisible && (
