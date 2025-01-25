@@ -253,7 +253,7 @@ const Header = () => {
               Login
             </Link>
           </div>
-          <div className="group flex flex-col  border border-red-900 subscription mr-[20px]">
+          <div className="group flex flex-col   subscription mr-[20px]">
            <img src={bell} className="h-[35px] w-[35px]"/>
            {count>0 && <span className="bell-icon">{count}</span>}
            <div className='absolute top-10 right-0 hidden group-hover:flex'>
