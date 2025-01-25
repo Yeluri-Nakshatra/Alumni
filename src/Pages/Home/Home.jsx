@@ -5,6 +5,7 @@ import ProudGraduates from './ProudGraduates'
 import HomeAbout from '../../Components/HomeAbout'
 import HomeEvents from '../../Components/HomeEvents'
 import HomeGetInvolved from '../../Components/HomeGetInvolved'
+import Testimonals from '../../Components/Testimonals'
 const Home = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const Home = () => {
       <ProudGraduates />
       <HomeAbout />
       <HomeEvents />
+      <Testimonals/>
       <HomeGetInvolved />
 
     </div>
