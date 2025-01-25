@@ -35,7 +35,7 @@ const NewNotifications = () => {
 
   const [tab, setTab] = useState("direct");
   return (
-    <div className=" duration-[1000ms] h-[350px] overflow-y-scroll w-[300px] md:w-[350px] z-[1000] gap-6 bg-white   border border-black/20 shadow-md p-4  right-4 flex flex-col rounded-xl ">
+    <div className=" duration-[1000ms]  w-[300px] md:w-[350px] z-[1000] gap-4 bg-white   border border-black/20 shadow-md p-4  right-4 flex flex-col rounded-xl ">
       <div className='text-2xl font-bold text-blue-950'>Notifications</div>
       <div className='flex flex-row gap-4'>
         <div className={`${tab=="direct"?'text-blue-950':'text-gray-500'} font-semibold cursor-pointer flex flex-col`} onClick={()=>{setTab('direct')}}>
@@ -54,8 +54,8 @@ const NewNotifications = () => {
         
 
       </div>
-      <div><hr className="h-[2px] mt-[-23px] w-full bg-gray-200"/></div>
-      <div className="flex flex-col gap-2">
+      <div><hr className="h-[2px] mt-[-20px] w-full bg-gray-200"/></div>
+      <div className="flex flex-col gap-0 ">
       {tab=="direct" && (notific.map((data) => (
         <div
           className="duration-[500ms]  text-sm  p-1 cursor-pointer  rounded-md sm:text-md "
