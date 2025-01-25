@@ -371,13 +371,86 @@ const Header = () => {
               >
                 Get Involved
               </Link>
+              {/*
               <a
                 href="#"
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
                 onClick={() => tabClick("alumni")}
               >
                 Alumni
-              </a>
+              </a>*/}
+              <div className="group relative  p-2">
+            <div className="flex  flex-row items-center  gap-2">
+              <div
+                className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
+                    ${tab === "events" ? " text-blue-950" : "text-gray-500"}`}
+                
+              >
+                Alumni
+              </div>
+              <FaCaretDown className="group-hover:rotate-180 duration-300" />
+            </div>
+            <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event1")}
+              >
+                {" "}
+                CSE{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("eventevent1")}
+              >
+                {" "}
+                ECE
+                {" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                EEE{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                CIVIL{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                MECH{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                CHEM{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                MME{" "}
+              </Link>
+             
+            </div>
+          </div>
               <Link
                 to='Contact'
                 className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
