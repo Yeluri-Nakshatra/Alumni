@@ -3,7 +3,7 @@ import graduation from "../assets/graduation.png";
 import { GrResources } from "react-icons/gr";
 const Homehero=()=>{
     return(
-        <div className=" flex md:flex-row flex-col md:mt-auto mt-[70px] gap-[40px] justify-center items-center  min-h-screen w-full ">
+        <div className=" flex md:flex-row flex-col md:mt-auto mt-[100px] gap-[40px] justify-center items-center   w-full ">
            <div className="flex flex-col gap-[30px] px-[35px] md:order-1 order-2">
            <div className="text-black font-bold text-[45px] ">A new way to learn <br className="md:block hidden"/>& get knowledge</div>
            <div className="text-black text-[15px] ">Eduflex is here for you with various courses & <br className="md:block hidden"/>materials from skilled tutors oil around the world.</div>
