@@ -28,15 +28,37 @@ const NewNotifications = () => {
       note: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptate?",
     },
   ];
-  const [msg, setMsg] = useState(null);
-  const toggleMessage = (id) => {
-    msg === id ? setMsg(null) : setMsg(id);
-  };
+  // const [msg, setMsg] = useState(null);
+  // const toggleMessage = (id) => {
+  //   msg === id ? setMsg(null) : setMsg(id);
+  // };
+
+  const [tab, setTab] = useState("direct");
   return (
-    <div className="absolute duration-[1000ms] top-16 w-[300px] z-[1000] gap-2 bg-white/30 backdrop-blur-lg   border border-black/20 shadow-md p-4  right-4 flex flex-col rounded-lg ">
-      {notific.map((data) => (
+    <div className=" duration-[1000ms] h-[350px] overflow-y-scroll w-[300px] md:w-[350px] z-[1000] gap-6 bg-white   border border-black/20 shadow-md p-4  right-4 flex flex-col rounded-xl ">
+      <div className='text-2xl font-bold text-blue-950'>Notifications</div>
+      <div className='flex flex-row gap-4'>
+        <div className={`${tab=="direct"?'text-blue-950':'text-gray-500'} font-semibold cursor-pointer flex flex-col`} onClick={()=>{setTab('direct')}}>
+          Direct
+          {
+            tab=='direct'?(<hr className="horizontal bg-blue-950 h-[3px] mt-1" />):''
+          }
+
+        </div>
+        <div className={`${tab=="overall"?'text-blue-950':'text-gray-500'}  font-semibold cursor-pointer flex flex-col`} onClick={()=>{setTab('overall')}}>
+          Overall
+          {
+            tab=='overall'?(<hr className="horizontal bg-blue-950 h-[3px] mt-1" />):''
+          }
+        </div>
+        
+
+      </div>
+      <div><hr className="h-[2px] mt-[-23px] w-full bg-gray-200"/></div>
+      <div className="flex flex-col gap-2">
+      {tab=="direct" && (notific.map((data) => (
         <div
-          className="duration-[500ms] bg-white text-sm shadow-md shadow-blue-950 border   p-1 cursor-pointer  rounded-md sm:text-md hover:scale-[1.1]"
+          className="duration-[500ms]  text-sm  p-1 cursor-pointer  rounded-md sm:text-md "
           key={data.id}
           onClick={() => toggleMessage(data.id)}
         >
@@ -44,10 +66,27 @@ const NewNotifications = () => {
                 <div className="font-bold text-blue-950">{data.title}</div>
                 <div className="font-semibold text-gray-700">{data.time}</div>
                 </div>
-          {" "}
-          {data.id === msg ? data.note : `${data.note.substring(0, 30)}...`}
+           <div>{data.note}</div>
+           <div><hr className="mt-4 bg-gray-800"/></div>
         </div>
-      ))}
+      )))}
+      {tab=="overall" && (notific.map((data) => (
+        <div
+          className="duration-[500ms]  text-sm   p-1 cursor-pointer  rounded-md sm:text-md "
+          key={data.id}
+          onClick={() => toggleMessage(data.id)}
+        >
+            <div className="flex flex-row justify-between">
+                <div className="font-bold text-blue-950">{data.title}</div>
+                <div className="font-semibold text-gray-700">{data.time}</div>
+                </div>
+           <div>{data.note}</div>
+           <div><hr className="mt-4 bg-gray-800"/></div>
+        </div>
+      )))}
+
+      </div>
+      
       <div>
         <Link to='/notifications'>
         <button className="duration-[500ms] bg-blue-950 text-white font-bold w-full p-1 rounded-lg hover:scale-[0.8] ">View All</button>
@@ -58,3 +97,17 @@ const NewNotifications = () => {
 };
 
 export default NewNotifications;
+{/* {notific.map((data) => (
+        <div
+          className="duration-[500ms]  text-sm   border   p-1 cursor-pointer  rounded-md sm:text-md hover:scale-[1.1]"
+          key={data.id}
+          onClick={() => toggleMessage(data.id)}
+        >
+            <div className="flex flex-row justify-between">
+                <div className="font-bold text-blue-950">{data.title}</div>
+                <div className="font-semibold text-gray-700">{data.time}</div>
+                </div>
+          {" "}
+          {data.id === msg ? data.note : `${data.note.substring(0, 30)}...`}
+        </div>
+      ))} */}
