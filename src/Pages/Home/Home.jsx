@@ -5,7 +5,8 @@ import ProudGraduates from './ProudGraduates'
 import HomeAbout from '../../Components/HomeAbout'
 import HomeEvents from '../../Components/HomeEvents'
 import HomeGetInvolved from '../../Components/HomeGetInvolved'
-import Testimonals from '../../Components/Testimonals'
+import {InfiniteMovingCardsDemo} from "../../accernity/InfiniteMovingCardsDemo";
+import {LayoutGridDemo} from "../../accernity/LayoutGridDemo";
 const Home = () => {
   return (
     <div>
@@ -15,7 +16,8 @@ const Home = () => {
       <ProudGraduates />
       <HomeAbout />
       <HomeEvents />
-      <Testimonals/>
+      <LayoutGridDemo/>
+      <InfiniteMovingCardsDemo />
       <HomeGetInvolved />
 
     </div>
