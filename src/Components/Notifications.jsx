@@ -31,17 +31,38 @@ const Notifications = () => {
         const toggleMessage = (id) => {
           msg === id ? setMsg(null) : setMsg(id);
         };
+        const [tab, setTab] = useState("direct");
   return (
-    <div className='mt-20 mb-10'>
-        <div className='flex flex-col gap-0 justify-center items-center'>
+    <div className='mt-28 md:mt-36 mb-10 h-auto md:h-[50vh] lg:h-auto flex flex-col justify-center items-center'>
+        {/* <div className='flex flex-col gap-0 justify-center items-center'>
             <div className='mx-4 mt-4 w-[95%] rounded-lg h-[60px] md:h-[100px] bg-blue-950'></div>
             <div className='md:w-[300px] md:h-[50px] w-[170px] flex justify-center h-[40px] bg-blue-950 rounded-bl-lg rounded-br-lg text-white font-bold text-lg md:text-2xl text-center'>Notifications</div>
 
+        </div> */}
+        <div className='font-bold text-2xl text-blue-950 my-10'>Notifications</div>
+        <div className='flex flex-col gap-4 w-[80%] justify-center '>
+        <div className='flex flex-row gap-12'>
+        <div className={`${tab=="direct"?'text-blue-950':'text-gray-500'} font-semibold cursor-pointer flex flex-col`} onClick={()=>{setTab('direct')}}>
+          Direct
+          {
+            tab=='direct'?(<hr className="horizontal bg-blue-950 h-[3px] mt-1 " />):''
+          }
+
         </div>
-        <div className="  gap-4 mt-8   p-4 justify-center items-center  flex flex-col rounded-lg ">
-      {notific.map((data) => (
+        <div className={`${tab=="overall"?'text-blue-950':'text-gray-500'}  font-semibold cursor-pointer flex flex-col`} onClick={()=>{setTab('overall')}}>
+          Overall
+          {
+            tab=='overall'?(<hr className="horizontal bg-blue-950 h-[3px] mt-1" />):''
+          }
+        </div>
+        
+
+      </div>
+      <div><hr className="h-[2px] mt-[-20px] w-full bg-gray-200"/></div>
+      <div className="flex flex-col gap-2">
+      {tab=="direct" && (notific.map((data) => (
         <div
-          className="w-[90%] md:w-[70%] duration-[500ms] bg-white text-sm shadow-md shadow-blue-950 border   p-1 cursor-pointer  rounded-md sm:text-md hover:scale-[1.05]"
+          className="duration-[500ms]  text-sm  p-1 cursor-pointer  rounded-md sm:text-md "
           key={data.id}
           onClick={() => toggleMessage(data.id)}
         >
@@ -49,12 +70,27 @@ const Notifications = () => {
                 <div className="font-bold text-blue-950">{data.title}</div>
                 <div className="font-semibold text-gray-700">{data.time}</div>
                 </div>
-          {" "}
-          {data.id === msg ? data.note : `${data.note.substring(0, 30)}...`}
+           <div>{data.note}</div>
+           <div><hr className="mt-4 bg-gray-800"/></div>
         </div>
-      ))}
-      
-    </div>
+      )))}
+      {tab=="overall" && (notific.map((data) => (
+        <div
+          className="duration-[500ms]  text-sm   p-1 cursor-pointer  rounded-md sm:text-md "
+          key={data.id}
+          onClick={() => toggleMessage(data.id)}
+        >
+            <div className="flex flex-row justify-between">
+                <div className="font-bold text-blue-950">{data.title}</div>
+                <div className="font-semibold text-gray-700">{data.time}</div>
+                </div>
+           <div>{data.note}</div>
+           <div><hr className="mt-4 bg-gray-800"/></div>
+        </div>
+      )))}
+
+      </div>
+        </div>
     </div>
   )
 }
