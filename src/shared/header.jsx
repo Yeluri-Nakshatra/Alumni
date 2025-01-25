@@ -135,7 +135,80 @@ const Header = () => {
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </Link>
-          <a
+
+          <div className="group relative  p-2">
+            <div className="flex  flex-row items-center  gap-2">
+              <div
+                className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
+                    ${tab === "events" ? " text-blue-950" : "text-gray-500"}`}
+                
+              >
+                Alumni
+              </div>
+              <FaCaretDown className="group-hover:rotate-180 duration-300" />
+            </div>
+            <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event1")}
+              >
+                {" "}
+                CSE{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("eventevent1")}
+              >
+                {" "}
+                ECE
+                {" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                EEE{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                CIVIL{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                MECH{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                CHEM{" "}
+              </Link>
+              <Link
+                to='/events'
+                className="text-gray-500 hover:text-white hover:bg-blue-950 rounded px-2 "
+                onClick={() => setTab("event2")}
+              >
+                {" "}
+                MME{" "}
+              </Link>
+             
+            </div>
+          </div>
+          {/*<a
             href="#"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${tab === "alumni" ? " text-blue-950" : "text-gray-500"} `}
@@ -147,7 +220,8 @@ const Header = () => {
             ) : (
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
-          </a>
+          </a>*/}
+
           <Link 
             to="Contact"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
@@ -179,13 +253,12 @@ const Header = () => {
               Login
             </Link>
           </div>
-          <div className="subscription mr-[20px]">
-           <img src={bell} className="h-[35px] w-[35px]" onClick={togglenotific}/>
+          <div className="group flex flex-col   subscription mr-[20px]">
+           <img src={bell} className="h-[35px] w-[35px]"/>
            {count>0 && <span className="bell-icon">{count}</span>}
-           {notifivisibility?<NewNotifications/>:''}
-            {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
-            <IoIosNotifications />
-            </a>*/}
+           <div className='absolute top-10 right-0 hidden group-hover:flex'>
+           <NewNotifications/>
+           </div>
           </div>
         </div>
         <div className="flex  z-[1000] lg:hidden">
@@ -193,14 +266,12 @@ const Header = () => {
           <button onClick={toggleMenu} className="text-2xl">
             <RiMenu2Line />
           </button>
-          <div  className="subscription mr-[20px]">
-
-          <img src={bell} className="h-[35px] w-[35px]" onClick={togglenotific}/>
-          {count>0 && <span className="bell-icon">{count}</span>}
-            {/*<a href="#" className="hover:text-blue-950 text-gray-700 text-xl">
-            <IoIosNotifications />
-            </a>*/}
-            {notifivisibility?<NewNotifications/>:''}
+          <div className="group flex flex-col   subscription mr-[20px]">
+           <img src={bell} className="h-[35px] w-[35px]"/>
+           {count>0 && <span className="bell-icon">{count}</span>}
+           <div className='absolute top-10 -right-4 hidden group-hover:flex'>
+           <NewNotifications/>
+           </div>
           </div>
           </div>
           {isMenuVisible && (
