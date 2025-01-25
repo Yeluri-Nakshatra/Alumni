@@ -34,8 +34,8 @@ const Homehero=()=>{
 
             </div> 
 
-            <div className="mt-[50px] md:order-2 order-1">
-                <img src={graduation} className="h-[500px] w-[500px]"/>
+            <div className="mt-[50px] mt-[0px] md:order-2 order-1">
+                <img src={graduation} className="h-[500px] w-[500px] "/>
             </div>
             
             
