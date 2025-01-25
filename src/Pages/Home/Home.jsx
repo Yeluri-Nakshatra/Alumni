@@ -5,6 +5,7 @@ import ProudGraduates from './ProudGraduates'
 import HomeAbout from '../../Components/HomeAbout'
 import HomeEvents from '../../Components/HomeEvents'
 import HomeGetInvolved from '../../Components/HomeGetInvolved'
+import Network from '../../Components/Network';
 const Home = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Home = () => {
       <TopEvents />
       <ProudGraduates />
       <HomeAbout />
+      <Network />
       <HomeEvents />
       <HomeGetInvolved />
 
