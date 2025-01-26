@@ -21,7 +21,7 @@ const Login = ({ isVisible, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white p-6 rounded-lg w-[90%] md:w-[440px] shadow-lg"
+        className="bg-white p-6 rounded-lg  w-[90%] md:w-[440px] shadow-lg"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -101,7 +101,7 @@ const Login = ({ isVisible, onClose }) => {
             </button>
           </form>}
           
-          {isSignUp && <form className='flex flex-col gap-4'>
+          {isSignUp && <form className='flex flex-row gap-4'>
                 <div className=' flex flex-col gap-2 ml-[20px]'>
                     <label htmlFor="name" className='font-semibold text-blue-950 '>Name</label>
                     <input type="text" placeholder='examplename' className='w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950'/>
