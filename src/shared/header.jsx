@@ -52,7 +52,7 @@ import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import NewNotifications from "../Components/NewNotifications";
-
+import LoginModal from "../Components/LoginModal";
 import bell from "../assets/bell.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
@@ -102,6 +102,11 @@ const Header = () => {
     setIsMenuVisible(false);
   };
   const [count, setcount] = useState(5);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
   return (
     <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
@@ -422,12 +427,14 @@ const Header = () => {
           </div>
           {/* Sign in */}
           <div className="flex  flex-row justify-center items-center">
-            <Link
-              to="/register"
+            <div
+              
               className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
+              onClick={toggleModal}
             >
               Sign In / Sign Up
-            </Link>
+            </div>
+            <LoginModal isVisible={isModalVisible} onClose={toggleModal} />
           </div>
           {/* Sign up */}
           {/* <div className="flex font-semibold flex-row justify-center items-center">
