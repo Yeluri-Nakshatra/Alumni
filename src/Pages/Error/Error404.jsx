@@ -1,5 +1,5 @@
 import React from 'react'
-import Error from "../../assets/Error404"
+import Error from "../../assets/Error404.png"
 import { FaArrowLeft } from "react-icons/fa6";
 const Error404 = () => {
   return (
