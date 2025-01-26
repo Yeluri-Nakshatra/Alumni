@@ -11,6 +11,7 @@ import Login from './Components/Login'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
 import Alumni_Directory from './Pages/News&Blogs/Alumni_Directory/Alumni_Directory'
+import Alumni_News from './Pages/updates/alumni_news/Alumni_News'
 const App = () => {
   return (
     <Router>
@@ -27,6 +28,7 @@ const App = () => {
       <Route path='/notifications' element={<Notifications/>}/>
       <Route path='/alumnidirectory' element={<Alumni_Directory/>}/>
 
+      <Route path='/alumni_news' element={<Alumni_News/>}/>
     </Routes>
     <Footer/>
   </Router>
