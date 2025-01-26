@@ -7,7 +7,7 @@ import Header from './shared/header'
 import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
-// import Login from './Components/Login'
+import Error from './Pages/Error/Error404'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
 
@@ -33,6 +33,7 @@ const App = () => {
       <Route path='/chapters' element={<Chapter/>}/>
 
       <Route path='/alumni_news' element={<Alumni_News/>}/>
+      <Route path='*' element={<Error />}/>
 
     </Routes>
     <Footer/>

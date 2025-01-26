@@ -21,7 +21,7 @@ const Login = ({ isVisible, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white p-6 rounded-lg w-[90%] md:w-[440px] shadow-lg"
+        className="bg-white p-6 rounded-lg  w-[90%] md:w-[440px] shadow-lg"
         onClick={(e) => e.stopPropagation()}
       >
         {/*<button
