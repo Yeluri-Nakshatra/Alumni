@@ -19,7 +19,7 @@ const Home = () => {
       <HomeAbout />
       <Network />
       <HomeEvents />
-      <InfiniteMovingCardsDemo />
+      
       <HomeGetInvolved />
     </div>
   );
