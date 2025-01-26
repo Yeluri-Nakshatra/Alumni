@@ -11,7 +11,14 @@ import Login from './Components/Login'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
 import Alumni_Directory from './Pages/News&Blogs/Alumni_Directory/Alumni_Directory'
+import Error from './Pages/Error/Error404'
+import Register from './Components/Register'
+import Notifications from './Components/Notifications'
+
+import Chapter from './Pages/Events/Chapter/Chapter'
+
 import Alumni_News from './Pages/updates/alumni_news/Alumni_News'
+
 const App = () => {
   return (
     <Router>
@@ -23,12 +30,13 @@ const App = () => {
       <Route path="/events" element={<EventsPage />} />
       <Route path="/aboutus" element={<About />} />
       <Route path="/Contact" element={<Contact />} />
-      <Route path='/login' element={<Login/>}/>
+      {/* <Route path='/login' element={<Login/>}/> */}
       <Route path='/register' element={<Register/>}/>
       <Route path='/notifications' element={<Notifications/>}/>
       <Route path='/alumnidirectory' element={<Alumni_Directory/>}/>
-
+      <Route path='/chapters' element={<Chapter/>}/>
       <Route path='/alumni_news' element={<Alumni_News/>}/>
+      <Route path='*' element={<Error />}/>
     </Routes>
     <Footer/>
   </Router>

@@ -49,8 +49,8 @@ const Notifications = () => {
 
   const TabButton = ({ active, onClick, children }) => (
     <button
-      className={`flex-1 py-4 px-6 text-sm font-medium focus:outline-none ${
-        active ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-500 hover:text-gray-700"
+      className={`flex-1 py-4 px-6 text-md font-bold focus:outline-none ${
+        active ? "text-blue-950 border-b-2 border-blue-950 " : "text-gray-500 hover:text-gray-700"
       }`}
       onClick={onClick}
     >
@@ -93,10 +93,10 @@ const Notifications = () => {
   )
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 mt-14 lg:mt-20 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mt-3 text-gray-900 mb-8 flex items-center justify-center">
-          <FaBell className="mr-2 text-blue-600" />
+          <FaBell className="mr-2 text-blue-950" />
           Notifications
         </h1>
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
