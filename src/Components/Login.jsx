@@ -4,12 +4,10 @@ const Login = ({ isVisible, onClose }) => {
   const [isSignUp, setIsSignUp] = useState(false); // State to track active mode
    const[isSignIn,serIsSignIn]=useState(false);
   if (!isVisible) return null;
-
   const signin = () => {
     setIsSignUp(false);
     setIsSignIn(true);
   };
-
   const signup = () => {
     setIsSignUp(true);
     setIsSignIn(false);
