@@ -119,4 +119,8 @@ const [isSignUp, setIsSignUp] = useState(false); // State to track active mode
   );
 };
 
+<<<<<<< HEAD
 export default Login;
+=======
+export default Login;
+>>>>>>> 1876acafd97eeb8f5a578cd344c6d06f7c80ceff

@@ -117,21 +117,21 @@ const Alumni_News = () => {
             <span>By {article.author}</span>
           </div>
         </div>
-        <button onClick={() => toggleSaved(article.id)} className="text-blue-600 hover:text-blue-800">
+        <button onClick={() => toggleSaved(article.id)} className="text-blue-800 hover:text-blue-950">
           {article.saved ? <FaBookmark size={20} /> : <FaRegBookmark size={20} />}
         </button>
       </div>
       <div className="mt-4">
-        <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">Read More</button>
+        <button className="text-blue-800 hover:text-blue-950 text-sm font-medium">Read More</button>
       </div>
     </div>
   )
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 mt-20 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8 flex items-center justify-center">
-          <FaNewspaper className="mr-2 text-blue-600" />
+        <h1 className="text-3xl font-bold text-blue-950 mb-8 flex items-center justify-center">
+          <FaNewspaper className="mr-2 text-blue-950" />
           Alumni News
         </h1>
 
@@ -142,7 +142,7 @@ const Alumni_News = () => {
                 key={category}
                 onClick={() => setFilter(category)}
                 className={`px-3 py-1 rounded-full text-sm font-medium mb-2 ${
-                  filter === category ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  filter === category ? "bg-blue-950 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
                 {category}
@@ -155,7 +155,7 @@ const Alumni_News = () => {
               placeholder="Search articles..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-950"
             />
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
@@ -170,7 +170,7 @@ const Alumni_News = () => {
               id="graduationYear"
               value={graduationYearFilter}
               onChange={(e) => setGraduationYearFilter(e.target.value)}
-              className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-950"
             >
               {graduationYears.map((year) => (
                 <option key={year} value={year}>
@@ -187,7 +187,7 @@ const Alumni_News = () => {
               id="sortBy"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-950"
             >
               <option value="date">Date</option>
               <option value="title">Title</option>
@@ -206,7 +206,7 @@ const Alumni_News = () => {
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="mr-4 px-3 py-1 rounded-md bg-blue-600 text-white disabled:bg-gray-300 disabled:text-gray-500"
+              className="mr-4 px-3 py-1 rounded-md bg-blue-950 text-white disabled:bg-gray-300 disabled:text-gray-500"
             >
               <FaChevronLeft />
             </button>
@@ -216,7 +216,7 @@ const Alumni_News = () => {
             <button
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="ml-4 px-3 py-1 rounded-md bg-blue-600 text-white disabled:bg-gray-300 disabled:text-gray-500"
+              className="ml-4 px-3 py-1 rounded-md bg-blue-950 text-white disabled:bg-gray-300 disabled:text-gray-500"
             >
               <FaChevronRight />
             </button>

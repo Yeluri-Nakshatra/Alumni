@@ -92,7 +92,7 @@ const SecondContact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
+                className="w-full bg-blue-950 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
               >
                 Send message
               </button>
