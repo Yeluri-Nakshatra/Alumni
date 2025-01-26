@@ -1,3 +1,49 @@
+// Header.jsx
+{/*import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LoginModal from "../Components/LoginModal";// Import the LoginModal component
+
+const Header = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+  return (
+    <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
+      <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
+        
+        <div className="hidden lg:flex flex-row justify-center items-center gap-4">
+          <div>
+            <a
+              href="#"
+              className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md"
+            >
+              Donate
+            </a>
+          </div>
+          <div>
+            <button
+              onClick={toggleModal}
+              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <LoginModal isVisible={isModalVisible} onClose={toggleModal} />
+    </div>
+  );
+};
+
+export default Header;
+*/}
+
+
 import React from "react";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
@@ -32,6 +78,8 @@ import { GiMetalDisc } from "react-icons/gi";
 import { FaRegNewspaper } from "react-icons/fa";
 import { LiaAwardSolid } from "react-icons/lia";
 import { LuNewspaper } from "react-icons/lu";
+import { GrGallery } from "react-icons/gr";
+import { GrServices } from "react-icons/gr";
 const Header = () => {
   const [tab, setTab] = useState("home");
   const location = useLocation();
@@ -57,7 +105,7 @@ const Header = () => {
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
-            <Link to="/">
+            <Link to="/home">
               <img
                 src={Logo}
                 className="w-[40px] h-[40px] md:w-[70px] md:h-[70px]"
@@ -65,13 +113,14 @@ const Header = () => {
             </Link>
           </div>
           <div className="hidden lg:flex flex-col justify-center items-center ">
-            <div className="text-lg font-bold text-blue-950 ">
+            <div className="text-md font-bold text-blue-950 ">
               ALUMNI ASSOCIATION
             </div>
             <div className="font-semibold">RGUKT-NUZVID</div>
           </div>
         </div>
-        <div className="hidden lg:flex flex-row items-center justify-center gap-6 font-semibold">
+        <div className="hidden lg:flex flex-row items-center justify-center gap-4 font-semibold">
+          {/* Home */}
           <Link
             to="/home"
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
@@ -89,6 +138,7 @@ const Header = () => {
               <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </Link>
+          {/* About */}
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <div
@@ -137,11 +187,22 @@ const Header = () => {
                 {" "}
                 <div className="flex flex-row gap-2 items-center">
                   <MdWebhook className="font-bold" />
-                  Student Volunteers
+                  Web Team
+                </div>{" "}
+              </Link>
+              <Link
+                to="/aboutus"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center">
+                  <GrGallery className="font-bold" />
+                  Gallery
                 </div>{" "}
               </Link>
             </div>
           </div>
+          {/* Events */}
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <div
@@ -186,16 +247,29 @@ const Header = () => {
                   Sponserships
                 </div>{" "}
               </Link>
+              <Link
+                to="/events"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                onClick={() => setTab("services")}
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center">
+                  <GrServices className="font-bold" />
+                  Services
+                </div>{" "}
+              </Link>
             </div>
           </div>
-
+          {/* News&Blogs */}
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <div
                 className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
-                    ${tab === "services" ? " text-blue-950" : "text-gray-500"}`}
+                    ${
+                      tab === "news&blogs" ? " text-blue-950" : "text-gray-500"
+                    }`}
               >
-                Services
+                News & Blogs
               </div>
               <FaCaretDown className="group-hover:rotate-180 duration-300" />
             </div>
@@ -262,111 +336,21 @@ const Header = () => {
               </Link>
             </div>
           </div>
-
+          {/* Chapters */}
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <div
                 className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
-                    ${tab === "events" ? " text-blue-950" : "text-gray-500"}`}
+                    ${tab === "chapters" ? " text-blue-950" : "text-gray-500"}`}
               >
-                Alumni
+                Chapters
               </div>
               <FaCaretDown className="group-hover:rotate-180 duration-300" />
             </div>
-            <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("cse")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <FaComputer className="font-bold" />
-                  CSE
-                </div>{" "}
-              </Link>
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("ece")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <MdOutlineElectricBolt className="font-bold" />
-                  ECE
-                </div>{" "}
-              </Link>
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("eee")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <MdOutlineElectricScooter className="font-bold" />
-                  EEE
-                </div>{" "}
-              </Link>
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("civil")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <FaBuilding className="font-bold" />
-                  CIVIL
-                </div>{" "}
-              </Link>
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("mech")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <GiMissileMech className="font-bold" />
-                  MECH
-                </div>{" "}
-              </Link>
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("chem")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <GiChemicalTank className="font-bold" />
-                  CHEM
-                </div>{" "}
-              </Link>
-              <Link
-                to="/events"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("mme")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center">
-                  <GiMetalDisc className="font-bold" />
-                  MME
-                </div>{" "}
-              </Link>
-            </div>
+            <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100"></div>
           </div>
 
-          <Link
-            to="Contact"
-            className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
-                    ${tab === "contact" ? " text-blue-950" : "text-gray-500"} `}
-            onClick={() => setTab("contact")}
-          >
-            Contact
-            {tab === "contact" ? (
-              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
-            ) : (
-              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
-            )}
-          </Link>
+          {/* Updates */}
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <div
@@ -410,9 +394,24 @@ const Header = () => {
               </Link>
             </div>
           </div>
+          {/* Contact */}
+          <Link
+            to="Contact"
+            className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
+                    ${tab === "contact" ? " text-blue-950" : "text-gray-500"} `}
+            onClick={() => setTab("contact")}
+          >
+            Contact
+            {tab === "contact" ? (
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
+            ) : (
+              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+            )}
+          </Link>
         </div>
         <div className="hidden lg:flex flex-row justify-center items-center gap-4">
-          <div>
+          {/* Donate */}
+          <div className="flex flex-row justify-center items-center">
             <a
               href="#"
               className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md "
@@ -420,14 +419,25 @@ const Header = () => {
               Donate
             </a>
           </div>
-          <div>
+          {/* Sign in */}
+          <div className="flex  flex-row justify-center items-center">
             <Link
               to="/login"
-              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md "
+              className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
             >
-              Login
+              Sign In / Sign Up
             </Link>
           </div>
+          {/* Sign up */}
+          {/* <div className="flex font-semibold flex-row justify-center items-center">
+            <Link
+              to="/register"
+              className=" bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md "
+            >
+              Sign up
+            </Link>
+          </div> */}
+          {/* Notifications */}
           <div className="group flex flex-col  subscription mr-[20px]">
             <img src={bell} className="h-[35px] w-[35px]" />
             {count > 0 && <span className="bell-icon">{count}</span>}
@@ -436,6 +446,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+        {/* sidebar */}
         <div className="flex  z-[1000] lg:hidden">
           <div className="flex flex-row gap-2">
             <button onClick={toggleMenu} className="text-2xl">
@@ -484,7 +495,9 @@ const Header = () => {
                   <RxCross2 />
                 </button>
               </div>
+
               <div className="flex flex-col gap-4 px-[10px]">
+                {/* Home */}
                 <Link
                   to="/home"
                   className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
@@ -494,7 +507,7 @@ const Header = () => {
                 >
                   Home
                 </Link>
-
+                {/* About */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
                     <div
@@ -556,13 +569,25 @@ const Header = () => {
                           {" "}
                           <div className="flex flex-row gap-2 items-center">
                             <MdWebhook className="font-bold" />
-                            Student Volunteers
+                            Web Team
+                          </div>{" "}
+                        </Link>
+                        <Link
+                          to="/aboutus"
+                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                          onClick={() => setIsMenuVisible(false)}
+                        >
+                          {" "}
+                          <div className="flex flex-row gap-2 items-center">
+                            <GrGallery className="font-bold" />
+                            Gallery
                           </div>{" "}
                         </Link>
                       </div>
                     )}
                   </div>
                 </div>
+                {/* Events */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
                     <div
@@ -616,30 +641,41 @@ const Header = () => {
                             Sponserships
                           </div>{" "}
                         </Link>
+                        <Link
+                          to="/events"
+                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                          onClick={() => setIsMenuVisible(false)}
+                        >
+                          {" "}
+                          <div className="flex flex-row gap-2 items-center">
+                            <GrServices className="font-bold" />
+                            Services
+                          </div>{" "}
+                        </Link>
                       </div>
                     )}
                   </div>
                 </div>
-
+                {/* News & Blogs */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
                     <div
                       className="flex flex-row gap-2 items-center"
-                      onClick={() => tglsubmenu("services")}
+                      onClick={() => tglsubmenu("news&blogs")}
                     >
-                      <div>Services</div>
+                      <div>News & Blogs</div>
 
                       <div>
                         <FaCaretDown
                           className={`${
-                            submenu === "services" ? "rotate-180" : ""
+                            submenu === "news&blogs" ? "rotate-180" : ""
                           }  duration-300`}
                         />
                       </div>
                     </div>
 
                     {/* Submenu items */}
-                    {submenu === "services" && (
+                    {submenu === "news&blogs" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
                           to="/getinvolved"
@@ -723,19 +759,19 @@ const Header = () => {
                     )}
                   </div>
                 </div>
-
+                {/* Chapters */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
                     <div
                       className="flex flex-row gap-2 items-center"
-                      onClick={() => tglsubmenu("alumni")}
+                      onClick={() => tglsubmenu("chapters")}
                     >
-                      <div>Alumni</div>
+                      <div>Chapters</div>
 
                       <div>
                         <FaCaretDown
                           className={`${
-                            submenu === "alumni" ? "rotate-180" : ""
+                            submenu === "chapters" ? "rotate-180" : ""
                           }  duration-300`}
                         />
                       </div>
@@ -744,94 +780,12 @@ const Header = () => {
                     {/* Submenu items */}
                     {submenu === "alumni" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <FaComputer className="font-bold" />
-                            CSE
-                          </div>{" "}
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <MdOutlineElectricBolt className="font-bold" />
-                            ECE
-                          </div>{" "}
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <MdOutlineElectricScooter className="font-bold" />
-                            EEE
-                          </div>{" "}
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <FaBuilding className="font-bold" />
-                            CIVIL
-                          </div>{" "}
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <GiMissileMech className="font-bold" />
-                            MECH
-                          </div>{" "}
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <GiChemicalTank className="font-bold" />
-                            CHEM
-                          </div>{" "}
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center">
-                            <GiMetalDisc className="font-bold" />
-                            MME
-                          </div>{" "}
-                        </Link>
+                        
                       </div>
                     )}
                   </div>
                 </div>
-                <Link
-                  to="Contact"
-                  className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
-                  onClick={() => tabClick("contact")}
-                >
-                  Contact
-                </Link>
+                {/* Updates */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
                     <div
@@ -889,23 +843,42 @@ const Header = () => {
                     )}
                   </div>
                 </div>
+                {/* Contact */}
+                <Link
+                  to="Contact"
+                  className=" cursor-pointer font-semibold text-gray-600 hover:text-blue-950  rounded-md duration-200"
+                  onClick={() => tabClick("contact")}
+                >
+                  Contact
+                </Link>
+                {/* Donate */}
 
                 <a
                   href="#"
-                  className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md w-full text-center"
+                  className="flex flex-row justify-center items-center text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md w-full text-center"
                   onClick={() => tabClick("donate")}
                 >
                   {" "}
                   Donate
                 </a>
+                {/* Sign in */}
                 <Link
-                  to="login"
-                  className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
+                  to="/login"
+                  className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
                   onClick={() => tabClick("login")}
                 >
                   {" "}
-                  Login
+                  Sign In / Sign Up
                 </Link>
+                {/* Sign up */}
+                {/* <Link
+                  to="/register"
+                  className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
+                  onClick={() => tabClick("login")}
+                >
+                  {" "}
+                  Sign Up
+                </Link> */}
               </div>
             </div>
           )}
