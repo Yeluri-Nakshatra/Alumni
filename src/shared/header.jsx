@@ -1,3 +1,49 @@
+// Header.jsx
+{/*import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LoginModal from "../Components/LoginModal";// Import the LoginModal component
+
+const Header = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+  return (
+    <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
+      <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
+        
+        <div className="hidden lg:flex flex-row justify-center items-center gap-4">
+          <div>
+            <a
+              href="#"
+              className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md"
+            >
+              Donate
+            </a>
+          </div>
+          <div>
+            <button
+              onClick={toggleModal}
+              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <LoginModal isVisible={isModalVisible} onClose={toggleModal} />
+    </div>
+  );
+};
+
+export default Header;
+*/}
+
+
 import React from "react";
 import Logo from "../assets/logo.png";
 import { useState } from "react";

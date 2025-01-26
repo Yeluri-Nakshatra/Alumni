@@ -17,7 +17,6 @@ const Home = () => {
       <Testimonals/>
       <HomeAbout />
       <HomeEvents />
-      
       <InfiniteMovingCardsDemo />
       <HomeGetInvolved />
 
