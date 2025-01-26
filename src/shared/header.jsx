@@ -379,18 +379,18 @@ const Header = () => {
               to="/login"
               className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
             >
-              Sign in
+              Sign In / Sign Up
             </Link>
           </div>
           {/* Sign up */}
-          <div className="flex font-semibold flex-row justify-center items-center">
+          {/* <div className="flex font-semibold flex-row justify-center items-center">
             <Link
               to="/register"
               className=" bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md "
             >
               Sign up
             </Link>
-          </div>
+          </div> */}
           {/* Notifications */}
           <div className="group flex flex-col  subscription mr-[20px]">
             <img src={bell} className="h-[35px] w-[35px]" />
@@ -822,17 +822,17 @@ const Header = () => {
                   onClick={() => tabClick("login")}
                 >
                   {" "}
-                  Sign in
+                  Sign In / Sign Up
                 </Link>
                 {/* Sign up */}
-                <Link
+                {/* <Link
                   to="/register"
                   className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
                   onClick={() => tabClick("login")}
                 >
                   {" "}
                   Sign Up
-                </Link>
+                </Link> */}
               </div>
             </div>
           )}
