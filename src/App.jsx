@@ -8,8 +8,6 @@ import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
 import Login from './Components/Login'
-import Register from './Components/Register'
-import Notifications from './Components/Notifications'
 import Alumni_Directory from './Pages/News&Blogs/Alumni_Directory/Alumni_Directory'
 import Error from './Pages/Error/Error404'
 import Register from './Components/Register'
