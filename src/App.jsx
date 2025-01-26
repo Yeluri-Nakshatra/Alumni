@@ -7,7 +7,7 @@ import Header from './shared/header'
 import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
-import Login from './Components/Login'
+// import Login from './Components/Login'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
 import Alumni_News from './Pages/updates/alumni_news/Alumni_News'
