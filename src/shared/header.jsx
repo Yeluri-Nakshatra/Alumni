@@ -243,10 +243,10 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <Link to='/alumnidirectory' className="flex flex-row gap-2 items-center">
                   <IoPersonSharp className="font-bold" />
                   Alumni Directory
-                </div>{" "}
+                </Link>{" "}
               </Link>
               <Link
                 to="/getinvolved"
