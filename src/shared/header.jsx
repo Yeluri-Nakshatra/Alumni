@@ -1,3 +1,49 @@
+// Header.jsx
+{/*import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LoginModal from "../Components/LoginModal";// Import the LoginModal component
+
+const Header = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+  return (
+    <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
+      <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
+        
+        <div className="hidden lg:flex flex-row justify-center items-center gap-4">
+          <div>
+            <a
+              href="#"
+              className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md"
+            >
+              Donate
+            </a>
+          </div>
+          <div>
+            <button
+              onClick={toggleModal}
+              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <LoginModal isVisible={isModalVisible} onClose={toggleModal} />
+    </div>
+  );
+};
+
+export default Header;
+*/}
+
+
 import React from "react";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
@@ -6,6 +52,7 @@ import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import NewNotifications from "../Components/NewNotifications";
+
 import bell from "../assets/bell.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
@@ -34,6 +81,7 @@ import { LiaAwardSolid } from "react-icons/lia";
 import { LuNewspaper } from "react-icons/lu";
 import { GrGallery } from "react-icons/gr";
 import { GrServices } from "react-icons/gr";
+import { GrChapterAdd } from "react-icons/gr";
 const Header = () => {
   const [tab, setTab] = useState("home");
   const location = useLocation();
@@ -212,6 +260,17 @@ const Header = () => {
                   Services
                 </div>{" "}
               </Link>
+              <Link
+                to="/chapters"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                onClick={() => setTab("services")}
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center">
+                  <GrChapterAdd className="font-bold" />
+                  Chapters
+                </div>{" "}
+              </Link>
             </div>
           </div>
           {/* News&Blogs */}
@@ -290,19 +349,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          {/* Chapters */}
-          <div className="group relative  p-2">
-            <div className="flex  flex-row items-center  gap-2">
-              <div
-                className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
-                    ${tab === "chapters" ? " text-blue-950" : "text-gray-500"}`}
-              >
-                Chapters
-              </div>
-              <FaCaretDown className="group-hover:rotate-180 duration-300" />
-            </div>
-            <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100"></div>
-          </div>
+          
 
           {/* Updates */}
           <div className="group relative  p-2">
@@ -376,7 +423,7 @@ const Header = () => {
           {/* Sign in */}
           <div className="flex  flex-row justify-center items-center">
             <Link
-              to="/login"
+              to="/register"
               className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
             >
               Sign In / Sign Up
@@ -606,6 +653,17 @@ const Header = () => {
                             Services
                           </div>{" "}
                         </Link>
+                        <Link
+                to="/chapters"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                onClick={() => setIsMenuVisible(false)}
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center">
+                  <GrChapterAdd className="font-bold" />
+                  Chapters
+                </div>{" "}
+              </Link>
                       </div>
                     )}
                   </div>
@@ -713,32 +771,7 @@ const Header = () => {
                     )}
                   </div>
                 </div>
-                {/* Chapters */}
-                <div>
-                  <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
-                    <div
-                      className="flex flex-row gap-2 items-center"
-                      onClick={() => tglsubmenu("chapters")}
-                    >
-                      <div>Chapters</div>
-
-                      <div>
-                        <FaCaretDown
-                          className={`${
-                            submenu === "chapters" ? "rotate-180" : ""
-                          }  duration-300`}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Submenu items */}
-                    {submenu === "alumni" && (
-                      <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
-                        
-                      </div>
-                    )}
-                  </div>
-                </div>
+                
                 {/* Updates */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
@@ -817,7 +850,7 @@ const Header = () => {
                 </a>
                 {/* Sign in */}
                 <Link
-                  to="/login"
+                  to="/register"
                   className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
                   onClick={() => tabClick("login")}
                 >

@@ -7,6 +7,7 @@ import HomeEvents from '../../Components/HomeEvents';
 import HomeGetInvolved from '../../Components/HomeGetInvolved';
 import Network from '../../Components/Network';
 import Testimonals from "../../accernity/Testimonals";
+import {InfiniteMovingCardsDemo} from "../../accernity/InfiniteMovingCardsDemo";
 
 const Home = () => {
   return (
@@ -18,9 +19,9 @@ const Home = () => {
       <HomeAbout />
       <Network />
       <HomeEvents />
+      <InfiniteMovingCardsDemo />
       <HomeGetInvolved />
     </div>
   );
 };
-
 export default Home;
