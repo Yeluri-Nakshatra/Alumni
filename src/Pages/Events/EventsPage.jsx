@@ -3,7 +3,7 @@ import EventsHero from '../../Components/EventsHero';
 import UpComingEvents from '../../Components/UpComingEvents';
 import PastEvents from '../../Components/PastEvents';
 import SomeMemories from '../../Components/SomeMemories';
-
+import {LayoutGridDemo} from "../../accernity/LayoutGridDemo"
 
 
 const EventsPage = () => {
@@ -12,7 +12,8 @@ const EventsPage = () => {
         <EventsHero/>
         <UpComingEvents/>
         <PastEvents/>
-        <SomeMemories/>
+        <LayoutGridDemo/>
+        {/*<SomeMemories/>*/}
         
        
        

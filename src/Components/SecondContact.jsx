@@ -1,83 +1,77 @@
 import React from 'react'
-import { PiHeadphones } from "react-icons/pi";
-import { PiMessengerLogoBold } from "react-icons/pi";
-import { MdOutlineMail } from "react-icons/md";
+import { IoLocation } from "react-icons/io5";
+import { MdMarkEmailRead } from "react-icons/md";
+import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
 const SecondContact = () => {
   return (
-    <div className="flex  flex-col md:flex-row p-[10px] lg:justify-center gap-[10px] lg:gap-[90px] bg-gray-100">
-        <div className="flex flex-col w-full md:w-[580px] lg:w-[800px] gap-[12px] bg-white rounded-[20px] p-[16px] md:pr-[150px] md:relative">
-            <div className="text-[#182d6a] text-xl font-bold">Send us a message</div>
-            <div >Do you have a question?A complaint? Or need any help to choose
-                the right product from Zalomi.Feel free to contact us
-            </div>
-            <div className="flex flex-col md:flex-row gap-[10px]">
-                <div className="flex flex-col w-full md:w-[50%]">
-                    <p className="font-bold pl-[2px] pb-[2px]">First Name</p>
-                    <p className="pt-[4px]"><input type="text" placeholder="Enter your first name"className="rounded-[20px] border border-gray-300 p-[6px] text-sm w-full"></input></p>
+    <div className="p-[10px] md:p-[100px] bg-gray-100">
+        <div className="flex flex-col  md:flex-row justify-center gap-[10px]">
+            <div className="flex w-full md:w-[50%] lg:w-[30%] flex-col p-[10px] gap-[22px] pt-[20px]">
+                <div className="text-2xl font-bold">Get in Touch</div>
+                <div>"We’d love to hear from you! Reach out with any questions, feedback, or collaboration ideas."</div>
+                <hr></hr>
+                <div className="flex flex-row">
+                    <div className="pt-[10px] pr-[4px]"><IoLocation className="rounded-full bg-violet-300 w-[30px] h-[30px] p-[4px]"/></div>
+                    <div className="flex flex-col">
+                    <div className=" font-semibold">Location</div>
+                    <p>Visit Us Here</p>
+                    </div>
+                    
+                 
                 </div>
-                <div className="flex flex-col w-full md:w-[50%]">
-                    <p className="font-bold pl-[2px] pb-[2px]">Last Name</p>
-                    <p className="pt-[4px]"><input type="text" placeholder="Enter your Last name"className="rounded-[20px] border border-gray-300 p-[6px] text-sm w-full"></input></p>
+                <div className="flex flex-row">
+                    <div className="pt-[10px] pr-[4px]"><MdMarkEmailRead className="rounded-full bg-green-500 w-[30px] h-[30px] p-[4px]"/></div>
+                    <div className="flex flex-col">
+                    <div className=" font-semibold">Email</div>
+                    <p>We’d Love to Hear from You!
+                    Send us a message </p>
+                    </div>
+                    
+                 
                 </div>
+                <div className="flex flex-row">
+                    <div className="pt-[10px] pr-[4px]"><MdOutlinePhoneAndroid className="rounded-full bg-red-500 w-[30px] h-[30px] p-[4px]"/></div>
+                    <div className="flex flex-col">
+                    <div className=" font-semibold">Get us</div>
+                    <p>Your questions are the key to better answers.</p>
+                    </div>
+                    
+                 
+                </div>
+                <hr></hr>
+                <div>Follow us on social media</div>
+                <div className="flex flex-row gap-[4px]">
+                    <div><FaFacebookF className="w-[30px] h-[30px] rounded-full p-[4px] bg-[rgba(24,45,106,0.9)] text-white cursor-pointer"/></div>
+                    <div><FaTwitter className="w-[30px] h-[30px] rounded-full p-[4px] bg-[rgba(24,45,106,0.9)] text-white cursor-pointer"/></div>
+                    <div><FaYoutube className="w-[30px] h-[30px] rounded-full p-[4px] bg-[rgba(24,45,106,0.9)] text-white cursor-pointer"/></div>
+                    <div><FaSquareInstagram className="w-[30px] h-[30px] rounded-full p-[4px] bg-[rgba(24,45,106,0.9)] text-white cursor-pointer"/></div>
+                    
+                </div>
+                
 
             </div>
-            <div className="flex flex-col md:flex-row gap-[10px] pt-[6px]">
-                <div className="flex flex-col w-full md:w-[50%]">
-                    <p className="font-bold pl-[2px] pb-[2px]">Email</p>
-                    <p className="pt-[4px]"><input type="email" placeholder="Enter your Email"className="rounded-[20px] border border-gray-300 p-[6px] text-sm w-full"></input></p>
+            <div className="flex w-full md:w-[50%] flex-col border-2 shadow-lg rounded-lg p-[20px] lg:p-[50px] gap-[20px] md:gap-[0px]">
+                <div className="text-2xl font-bold">Send a message</div>
+                <div>“Communication is the key to understanding.”</div>
+                <div className="flex flex-col lg:flex-row">
+                    <div className="w-full lg:w-[50%]"><p>Name:</p><p><input type="text" placeholder="name"className="p-[6px] bg-[rgba(24,45,106,0.2)]  rounded-[10px] lg:w-[70%] w-full"></input></p></div>
+                    <div classname="w-full lg:w-[50%]"><p>Branch</p><p><input type="text" placeholder="name"className="p-[6px] bg-[rgba(24,45,106,0.2)] rounded-[10px] lg:w-[70%] w-full"></input></p></div>
                 </div>
-                <div className="flex flex-col w-full md:w-[50%]">
-                    <p className="font-bold pl-[2px] pb-[2px]">Contact details</p>
-                    <p className="pt-[4px]"><input type="number" placeholder="Enter your number"className="rounded-[20px] border border-gray-300 p-[6px] text-sm w-full"></input></p>
+                <div className="flex flex-col lg:flex-row">
+                    <div className="w-full lg:w-[50%]"><p>Phone:</p><p><input type="text" placeholder="number"className="p-[6px] bg-[rgba(24,45,106,0.2)] rounded-[10px] lg:w-[70%] w-full"></input></p></div>
+                    <div classname="w-full lg:w-[50%]"><p>Email:</p><p><input type="text" placeholder="email"className="p-[6px] bg-[rgba(24,45,106,0.2)] rounded-[10px] lg:w-[70%] w-full"></input></p></div>
                 </div>
-
-            </div>
-            <div className="flex flex-col w-full md:w-[50%]">
-                <div className=" text-lg font-bold">Message</div>
-                <div><textarea className="w-[300px] md:w-[350px] h-[100px] border border-gray-200 rounded-[10px] w-full"></textarea></div>
-            </div>
-            <div className="flex justify-end pb-[10px] md:pb-[0px] pr-0 md:pr-[10px]"><button className="bg-[#182d6a] rounded-[20px] pl-[24px] pr-[24px] pt-[10px] pb-[10px] text-white">Send a message</button></div>
-            
-        </div>
-        <div className="w-[300px] h-[400px] bg-[#182d6a] rounded-[10px] flex flex-col p-[26px] gap-[20px] md:mt-[50px] md:absolute ml-[16px] md:ml-[450px] lg:ml-[900px]">
-            <div className="text-white font-semibold">Hi! we are always there here to help you</div>
-            <div className="bg-[#a0b0df] h-[50px] w-full rounded-[10px] flex flex-row p-[4px] text-white">
-                <div className="pt-[6px] pl-[20px]"><PiHeadphones className="text-white w-[30px] h-[30px]"/></div>
-                <div className="flex flex-col pl-[20px]">
-                    <p className="text-sm">Hotline</p>
-                    <p className="text-sm pb-[-10px]">12 234 678</p>
-                </div>
-            </div>
-            <div className="bg-[#a0b0df] h-[50px] w-full rounded-[10px] flex flex-row p-[4px] text-white">
-                <div className="pt-[6px] pl-[20px]"><PiMessengerLogoBold className="text-white w-[30px] h-[30px]"/></div>
-                <div className="flex flex-col pl-[20px]">
-                    <p className="text-sm">sms Whatsapp</p>
-                    <p className="text-sm pb-[-10px]">12 234 678</p>
-                </div>
-            </div>
-            <div className="bg-[#a0b0df] h-[50px] w-full rounded-[10px] flex flex-row p-[4px] text-white">
-                <div className="pt-[6px] pl-[20px]"><MdOutlineMail className="text-white w-[30px] h-[30px]"/></div>
-                <div className="flex flex-col pl-[20px]">
-                    <p className="text-sm">Email</p>
-                    <p className="text-sm pb-[-10px]">alumni@gmail.com</p>
-                </div>
-            </div>
-            <hr></hr>
-            <div className="text-white flex justify-center">Connect with us</div>
-            <div className="flex flex-row text-white justify-evenly">
-            <FaFacebookF className="w-[20px] h-[20px] cursor-pointer"/>
-            <FaInstagram className="w-[20px] h-[20px] cursor-pointer"/>
-            <FaTwitter className="w-[20px] h-[20px] cursor-pointer"/>
-
+                <div><p>Subject</p><p><input type="text" placeholder="Subject"className="p-[6px] bg-[rgba(24,45,106,0.2)] rounded-[10px] lg:w-[70%] w-full"></input></p></div>
+                <div><p>Message</p><p><input type="text" placeholder="Message" className="w-full h-[100px] bg-[rgba(24,45,106,0.2)] rounded-[10px]"></input></p></div>
+                <div className="pt-[10px]"><button className="p-[10px] bg-violet-300 rounded-[10px]">Send message</button></div>
 
             </div>
 
         </div>
-        
-
       
     </div>
   )
