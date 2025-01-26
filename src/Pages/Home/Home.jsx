@@ -21,9 +21,9 @@ const Home = () => {
       <HomeAbout />
       <Network />
       <HomeEvents />
+      <InfiniteMovingCardsDemo />
       <HomeGetInvolved />
     </div>
   );
 };
-// ..
 export default Home;
