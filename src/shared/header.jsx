@@ -1,47 +1,3 @@
-// Header.jsx
-{/*import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import LoginModal from "../Components/LoginModal";// Import the LoginModal component
-
-const Header = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalVisible(!isModalVisible);
-  };
-
-  return (
-    <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
-      <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
-        
-        <div className="hidden lg:flex flex-row justify-center items-center gap-4">
-          <div>
-            <a
-              href="#"
-              className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md"
-            >
-              Donate
-            </a>
-          </div>
-          <div>
-            <button
-              onClick={toggleModal}
-              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
-            >
-              Login
-            </button>
-          </div>
-        </div>
-      </div>
-
-      
-      <LoginModal isVisible={isModalVisible} onClose={toggleModal} />
-    </div>
-  );
-};
-
-export default Header;
-*/}
 
 
 import React from "react";
@@ -81,6 +37,7 @@ import { LiaAwardSolid } from "react-icons/lia";
 import { LuNewspaper } from "react-icons/lu";
 import { GrGallery } from "react-icons/gr";
 import { GrServices } from "react-icons/gr";
+import Login from "../Components/Login";
 import { GrChapterAdd } from "react-icons/gr";
 const Header = () => {
   const [tab, setTab] = useState("home");
@@ -102,6 +59,12 @@ const Header = () => {
     setIsMenuVisible(false);
   };
   const [count, setcount] = useState(5);
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
   return (
     <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
@@ -420,15 +383,24 @@ const Header = () => {
               Donate
             </a>
           </div>
+
+          <div>
+            <button
+              onClick={toggleModal}
+              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
+            >
+               Sign In / Sign Up
+            </button>
+          </div>
           {/* Sign in */}
-          <div className="flex  flex-row justify-center items-center">
+          {/*<div className="flex  flex-row justify-center items-center">
             <Link
               to="/register"
               className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
             >
               Sign In / Sign Up
             </Link>
-          </div>
+          </div>*/}
           {/* Sign up */}
           {/* <div className="flex font-semibold flex-row justify-center items-center">
             <Link
@@ -871,6 +843,7 @@ const Header = () => {
           )}
         </div>
       </div>
+      <Login isVisible={isModalVisible} onClose={toggleModal} />
     </div>
   );
 };
