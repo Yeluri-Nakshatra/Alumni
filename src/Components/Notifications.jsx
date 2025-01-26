@@ -93,7 +93,7 @@ const Notifications = () => {
   )
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 mt-14 lg:mt-20 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mt-3 text-gray-900 mb-8 flex items-center justify-center">
           <FaBell className="mr-2 text-blue-600" />
