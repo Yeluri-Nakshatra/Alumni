@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 import Login from './Components/Login'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
+import Alumni_News from './Pages/updates/alumni_news/Alumni_News'
 const App = () => {
   return (
     <Router>
@@ -24,6 +25,7 @@ const App = () => {
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/notifications' element={<Notifications/>}/>
+      <Route path='/alumni_news' element={<Alumni_News/>}/>
     </Routes>
     <Footer/>
   </Router>
