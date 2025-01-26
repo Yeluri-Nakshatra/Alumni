@@ -58,7 +58,7 @@ const NewNotifications = () => {
       <div className="flex flex-col gap-0 ">
       {tab=="direct" && (notific.map((data) => (
         <div
-          className="duration-[500ms]  text-sm  p-1 cursor-pointer  rounded-md sm:text-md "
+          className="duration-[500ms]  text-sm  p-1 px-2 cursor-pointer hover:bg-blue-950 hover:bg-opacity-20 rounded-md sm:text-md "
           key={data.id}
           onClick={() => toggleMessage(data.id)}
         >
@@ -72,7 +72,7 @@ const NewNotifications = () => {
       )))}
       {tab=="overall" && (notific.map((data) => (
         <div
-          className="duration-[500ms]  text-sm   p-1 cursor-pointer  rounded-md sm:text-md "
+          className="duration-[500ms]  text-sm px-2 hover:bg-blue-950 hover:bg-opacity-20  p-1 cursor-pointer  rounded-md sm:text-md "
           key={data.id}
           onClick={() => toggleMessage(data.id)}
         >

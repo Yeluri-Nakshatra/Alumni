@@ -4,7 +4,7 @@ import { FaEnvelope } from "react-icons/fa"
 const HeroContact = () => {
   return (
     <div className="p-4 sm:p-6 md:p-8 mt-20 lg:p-10">
-      <div className="relative bg-gradient-to-r from-blue-800 to-blue-600 rounded-lg overflow-hidden shadow-xl">
+      <div className="relative bg-gradient-to-r from-blue-950 to-blue-800 rounded-lg overflow-hidden shadow-xl">
         <div className="absolute inset-0">
           <svg className="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none">
             <path

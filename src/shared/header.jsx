@@ -6,7 +6,6 @@ import { RiMenu2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
 import NewNotifications from "../Components/NewNotifications";
-
 import bell from "../assets/bell.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
@@ -86,6 +85,7 @@ const Header = () => {
           {/* Home */}
           <Link
             to="/home"
+            onClick={() => setTab("home")}
             className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
               ${
                 location.pathname === "/home"
@@ -118,7 +118,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <RiUserCommunityFill className="font-bold" />
                   Alumni Association
                 </div>{" "}
@@ -128,7 +128,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GiAtomCore className="font-bold" />
                   Core Team
                 </div>{" "}
@@ -138,7 +138,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <BsPersonHeart className="font-bold" />
                   Student Volunteers
                 </div>{" "}
@@ -148,7 +148,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <MdWebhook className="font-bold" />
                   Web Team
                 </div>{" "}
@@ -158,7 +158,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GrGallery className="font-bold" />
                   Gallery
                 </div>{" "}
@@ -183,7 +183,7 @@ const Header = () => {
                 onClick={() => setTab("eventcalender")}
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <SlCalender className="font-bold" />
                   Event Calender
                 </div>{" "}
@@ -194,7 +194,7 @@ const Header = () => {
                 onClick={() => setTab("reunion")}
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <LuCombine className="font-bold" />
                   Reunion
                 </div>{" "}
@@ -205,7 +205,7 @@ const Header = () => {
                 onClick={() => setTab("sponserships")}
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GoSponsorTiers className="font-bold" />
                   Sponserships
                 </div>{" "}
@@ -216,7 +216,7 @@ const Header = () => {
                 onClick={() => setTab("services")}
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GrServices className="font-bold" />
                   Services
                 </div>{" "}
@@ -227,7 +227,7 @@ const Header = () => {
                 onClick={() => setTab("services")}
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GrChapterAdd className="font-bold" />
                   Chapters
                 </div>{" "}
@@ -253,7 +253,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <RiRefund2Line className="font-bold" />
                   Donate
                 </div>{" "}
@@ -263,7 +263,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <IoPersonSharp className="font-bold" />
                   Alumni Directory
                 </div>{" "}
@@ -273,7 +273,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <SiMentorcruise className="font-bold" />
                   Mentor Ship
                 </div>{" "}
@@ -283,7 +283,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GrWorkshop className="font-bold" />
                   Workshops
                 </div>{" "}
@@ -293,7 +293,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <RiKakaoTalkFill className="font-bold" />
                   Alumni Talks
                 </div>{" "}
@@ -303,7 +303,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <FaRegIdCard className="font-bold" />
                   Alumni SMART ID
                 </div>{" "}
@@ -329,7 +329,7 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <FaRegNewspaper className="font-bold" />
                   News Letter
                 </div>{" "}
@@ -339,17 +339,17 @@ const Header = () => {
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <LiaAwardSolid className="font-bold" />
                   RGUKT Awards
                 </div>{" "}
               </Link>
               <Link
-                to="/getinvolved"
+                to="/alumni_news"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <LuNewspaper className="font-bold" />
                   Alumni News
                 </div>{" "}
@@ -381,7 +381,7 @@ const Header = () => {
               Donate
             </a>
           </div>
-
+          {/* Sign in/ Sign up */}
           <div>
             <button
               onClick={toggleModal}
@@ -390,24 +390,8 @@ const Header = () => {
                Sign In / Sign Up
             </button>
           </div>
-          {/* Sign in */}
-          {/*<div className="flex  flex-row justify-center items-center">
-            <Link
-              to="/register"
-              className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
-            >
-              Sign In / Sign Up
-            </Link>
-          </div>*/}
-          {/* Sign up */}
-          {/* <div className="flex font-semibold flex-row justify-center items-center">
-            <Link
-              to="/register"
-              className=" bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md "
-            >
-              Sign up
-            </Link>
-          </div> */}
+          
+          
           {/* Notifications */}
           <div className="group flex flex-col  subscription mr-[20px]">
             <img src={bell} className="h-[35px] w-[35px]" />
@@ -505,7 +489,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <RiUserCommunityFill className="font-bold" />
                             Alumni Association
                           </div>{" "}
@@ -516,7 +500,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <GiAtomCore className="font-bold" />
                             Core Team
                           </div>{" "}
@@ -527,7 +511,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <BsPersonHeart className="font-bold" />
                             Student Volunteers
                           </div>{" "}
@@ -538,7 +522,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <MdWebhook className="font-bold" />
                             Web Team
                           </div>{" "}
@@ -549,7 +533,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <GrGallery className="font-bold" />
                             Gallery
                           </div>{" "}
@@ -585,7 +569,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <SlCalender className="font-bold" />
                             Event Calender
                           </div>{" "}
@@ -596,7 +580,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <LuCombine className="font-bold" />
                             Reunion
                           </div>{" "}
@@ -607,7 +591,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <GoSponsorTiers className="font-bold" />
                             Sponserships
                           </div>{" "}
@@ -618,7 +602,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <GrServices className="font-bold" />
                             Services
                           </div>{" "}
@@ -629,7 +613,7 @@ const Header = () => {
                 onClick={() => setIsMenuVisible(false)}
               >
                 {" "}
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1">
                   <GrChapterAdd className="font-bold" />
                   Chapters
                 </div>{" "}
@@ -667,7 +651,7 @@ const Header = () => {
                           }}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <RiRefund2Line className="font-bold" />
                             Donate
                           </div>{" "}
@@ -680,7 +664,7 @@ const Header = () => {
                           }}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <IoPersonSharp className="font-bold" />
                             Alumni Directory
                           </div>{" "}
@@ -693,7 +677,7 @@ const Header = () => {
                           }}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <SiMentorcruise className="font-bold" />
                             Mentor Ship
                           </div>{" "}
@@ -706,7 +690,7 @@ const Header = () => {
                           }}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <GrWorkshop className="font-bold" />
                             Workshops
                           </div>{" "}
@@ -719,7 +703,7 @@ const Header = () => {
                           }}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <RiKakaoTalkFill className="font-bold" />
                             Alumni Talks
                           </div>{" "}
@@ -732,7 +716,7 @@ const Header = () => {
                           }}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <FaRegIdCard className="font-bold" />
                             Alumni SMART ID
                           </div>{" "}
@@ -769,7 +753,7 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <FaRegNewspaper className="font-bold" />
                             News Letter
                           </div>{" "}
@@ -780,18 +764,18 @@ const Header = () => {
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <LiaAwardSolid className="font-bold" />
                             RGUKT Awards
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/getinvolved"
+                          to="/alumni_news"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
                           {" "}
-                          <div className="flex flex-row gap-2 items-center">
+                          <div className="flex flex-row gap-2 items-center p-1">
                             <LuNewspaper className="font-bold" />
                             Alumni News
                           </div>{" "}
@@ -827,15 +811,8 @@ const Header = () => {
                   {" "}
                   Sign In / Sign Up
                 </Link>
-                {/* Sign up */}
-                {/* <Link
-                  to="/register"
-                  className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
-                  onClick={() => tabClick("login")}
-                >
-                  {" "}
-                  Sign Up
-                </Link> */}
+                
+               
               </div>
             </div>
           )}
