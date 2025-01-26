@@ -1,3 +1,49 @@
+// Header.jsx
+{/*import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LoginModal from "../Components/LoginModal";// Import the LoginModal component
+
+const Header = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+  return (
+    <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
+      <div className="flex flex-row justify-between items-center m-2 mx-4 h-max">
+        
+        <div className="hidden lg:flex flex-row justify-center items-center gap-4">
+          <div>
+            <a
+              href="#"
+              className="text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md"
+            >
+              Donate
+            </a>
+          </div>
+          <div>
+            <button
+              onClick={toggleModal}
+              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <LoginModal isVisible={isModalVisible} onClose={toggleModal} />
+    </div>
+  );
+};
+
+export default Header;
+*/}
+
+
 import React from "react";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
@@ -379,18 +425,18 @@ const Header = () => {
               to="/login"
               className=" bg-blue-950 font-semibold  bg-opacity-20 px-2 py-[5px] rounded-md "
             >
-              Sign in
+              Sign In / Sign Up
             </Link>
           </div>
           {/* Sign up */}
-          <div className="flex font-semibold flex-row justify-center items-center">
+          {/* <div className="flex font-semibold flex-row justify-center items-center">
             <Link
               to="/register"
               className=" bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md "
             >
               Sign up
             </Link>
-          </div>
+          </div> */}
           {/* Notifications */}
           <div className="group flex flex-col  subscription mr-[20px]">
             <img src={bell} className="h-[35px] w-[35px]" />
@@ -822,17 +868,17 @@ const Header = () => {
                   onClick={() => tabClick("login")}
                 >
                   {" "}
-                  Sign in
+                  Sign In / Sign Up
                 </Link>
                 {/* Sign up */}
-                <Link
+                {/* <Link
                   to="/register"
                   className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
                   onClick={() => tabClick("login")}
                 >
                   {" "}
                   Sign Up
-                </Link>
+                </Link> */}
               </div>
             </div>
           )}
