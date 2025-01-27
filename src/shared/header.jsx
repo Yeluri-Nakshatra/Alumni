@@ -813,23 +813,8 @@ const Header = () => {
                Sign In / Sign Up
             </button>
           </div>
-                {/*<Link
-                  to="/register"
-                  className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
-                  onClick={() => tabClick("login")}
-                >
-                  {" "}
-                  Sign In / Sign Up
-                </Link>*/}
-                {/* Sign up */}
-                {/* <Link
-                  to="/register"
-                  className="flex flex-row justify-center items-center font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md  w-full text-center"
-                  onClick={() => tabClick("login")}
-                >
-                  {" "}
-                  Sign Up
-                </Link> */}
+                
+               
               </div>
             </div>
           )}
