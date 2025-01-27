@@ -81,12 +81,12 @@ const Header = () => {
             <div className="font-semibold">RGUKT-NUZVID</div>
           </div>
         </div>
-        <div className="hidden lg:flex flex-row items-center justify-center gap-4 font-semibold">
+        <div className=" hidden lg:flex flex-row items-center justify-center gap-4 font-semibold">
           {/* Home */}
           <Link
             to="/home"
             onClick={() => setTab("home")}
-            className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
+            className={`relative  group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
               ${
                 location.pathname === "/home"
                   ? "text-blue-950"
@@ -95,11 +95,16 @@ const Header = () => {
                `}
           >
             Home
+            
+            
             {location.pathname === "/home" ? (
-              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
+              
+              <hr className="absolute bottom-0 left-2 w-[80%]  horizontal bg-blue-950 h-[3px] mt-1" />
+              
             ) : (
-              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className=" absolute bottom-0 left-2 w-[80%]   horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
+            
           </Link>
           {/* About */}
           <div className="group relative  p-2">
@@ -114,7 +119,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/aboutus"
+                to="/alumni_association"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -124,7 +129,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/aboutus"
+                to="/core_team"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -134,7 +139,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/aboutus"
+                to="/student_volunteers"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -144,7 +149,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/aboutus"
+                to="/web_team"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -154,7 +159,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/aboutus"
+                to="/gallery"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -178,7 +183,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/events"
+                to="/event_calender"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                 onClick={() => setTab("eventcalender")}
               >
@@ -189,7 +194,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/events"
+                to="/reunion"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                 onClick={() => setTab("reunion")}
               >
@@ -200,7 +205,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/events"
+                to="/sponserships"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                 onClick={() => setTab("sponserships")}
               >
@@ -211,7 +216,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/events"
+                to="/services"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                 onClick={() => setTab("services")}
               >
@@ -249,7 +254,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/getinvolved"
+                to="/donate"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -259,14 +264,14 @@ const Header = () => {
                 </div>{" "}
               </Link>
              
-                <Link to='/alumnidirectory' className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 ">
+                <Link to='/alumni_directory' className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 ">
                 <div className="flex flex-row gap-2 items-center p-1">
                   <IoPersonSharp className="font-bold" />
                   Alumni Directory
                 </div>{" "}
               </Link>
               <Link
-                to="/getinvolved"
+                to="/mentor_ship"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -276,7 +281,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/getinvolved"
+                to="/workshops"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -286,7 +291,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/getinvolved"
+                to="/alumni_talks"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -296,7 +301,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/getinvolved"
+                to="/smartid"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -322,7 +327,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/getinvolved"
+                to="/news_letter"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -332,7 +337,7 @@ const Header = () => {
                 </div>{" "}
               </Link>
               <Link
-                to="/getinvolved"
+                to="/awards"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -356,15 +361,15 @@ const Header = () => {
           {/* Contact */}
           <Link
             to="Contact"
-            className={`group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
+            className={`relative group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
                     ${tab === "contact" ? " text-blue-950" : "text-gray-500"} `}
             onClick={() => setTab("contact")}
           >
             Contact
             {tab === "contact" ? (
-              <hr className="horizontal bg-blue-950 h-[3px] mt-1" />
+              <hr className="absolute bottom-0 left-3 w-[80%]  horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
-              <hr className="horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
+              <hr className="absolute bottom-0 left-3 w-[80%]  horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
             )}
           </Link>
         </div>
@@ -481,7 +486,7 @@ const Header = () => {
                     {submenu === "about" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/aboutus"
+                          to="/alumni_association"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -492,7 +497,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/aboutus"
+                          to="/core_team"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -503,7 +508,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/aboutus"
+                          to="/student_volunteers"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -514,7 +519,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/aboutus"
+                          to="/web_team"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -525,7 +530,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/aboutus"
+                          to="/gallery"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -561,7 +566,7 @@ const Header = () => {
                     {submenu === "events" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/events"
+                          to="/event_calender"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -572,7 +577,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/events"
+                          to="/reunion"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -583,7 +588,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/events"
+                          to="/sponserships"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -594,7 +599,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/events"
+                          to="/services"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -641,7 +646,7 @@ const Header = () => {
                     {submenu === "news&blogs" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/getinvolved"
+                          to="/donate"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => {
                             setIsMenuVisible(false);
@@ -654,7 +659,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/alumnidirectory"
+                          to="/alumni_directory"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => {
                             setIsMenuVisible(false);
@@ -667,7 +672,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/getinvolved"
+                          to="/mentor_ship"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => {
                             setIsMenuVisible(false);
@@ -680,7 +685,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/getinvolved"
+                          to="/workshops"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => {
                             setIsMenuVisible(false);
@@ -693,7 +698,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/getinvolved"
+                          to="/alumni_talks"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => {
                             setIsMenuVisible(false);
@@ -706,7 +711,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/getinvolved"
+                          to="/smartid"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => {
                             setIsMenuVisible(false);
@@ -745,7 +750,7 @@ const Header = () => {
                     {submenu === "updates" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/getinvolved"
+                          to="/news_letter"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -756,7 +761,7 @@ const Header = () => {
                           </div>{" "}
                         </Link>
                         <Link
-                          to="/getinvolved"
+                          to="/awards"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
