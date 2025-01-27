@@ -258,12 +258,9 @@ const Header = () => {
                   Donate
                 </div>{" "}
               </Link>
-              <Link
-                to="/getinvolved"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center p-1">
+             
+                <Link to='/alumnidirectory' className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center p-1 text-gray-500">
                   <IoPersonSharp className="font-bold" />
                   Alumni Directory
                 </div>{" "}

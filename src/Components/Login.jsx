@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-
+import { RxCross2 } from "react-icons/rx";
 const Login = ({ isVisible, onClose }) => {
   const [isSignUp, setIsSignUp] = useState(false); // State to track active mode
    const[isSignIn,serIsSignIn]=useState(false);
   if (!isVisible) return null;
-
   const signin = () => {
     setIsSignUp(false);
     setIsSignIn(true);
   };
-
   const signup = () => {
     setIsSignUp(true);
     setIsSignIn(false);
@@ -24,15 +22,20 @@ const Login = ({ isVisible, onClose }) => {
         className="bg-white p-6 rounded-lg  w-[90%] md:w-[440px] shadow-lg"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
+        {/*<button
           className="absolute top-2 right-2 text-xl font-bold text-gray-500"
           onClick={onClose}
         >
           X
-        </button>
+        </button>*/}
+        <div className="flex justify-end">
+  <RxCross2 className="text-[20px]" onClick={onClose}/>
+</div>
+
         <h2 className="text-3xl text-center font-bold text-blue-950 mb-4">
           {isSignUp ? "Sign Up" : "Login"}
         </h2>
+        
         <div className="border border-gray-150 border-t-0 pb-[5px]">
           <div className="flex flex-row">
             <div
@@ -80,7 +83,6 @@ const Login = ({ isVisible, onClose }) => {
                 className="w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950"
               />
             </div>
-           
               <div className="flex flex-col gap-2 ml-[20px]">
                 <label htmlFor="phn" className="font-semibold text-blue-950">
                   Phone number
@@ -97,7 +99,7 @@ const Login = ({ isVisible, onClose }) => {
               type="submit"
               className="w-[90%] bg-blue-950 ml-[20px] text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 mt-4"
             >
-              {isSignUp ? "Sign Up" : "Login"}
+             Login
             </button>
           </form>}
           
@@ -107,7 +109,7 @@ const Login = ({ isVisible, onClose }) => {
                     <label htmlFor="name" className='font-semibold text-blue-950 '>Name</label>
                     <input type="text" placeholder='examplename' className='w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950'/>
                 </div>
-                <div className=' flex flex-col gap-2 ml-[20px]'>
+                <div className=' flex flex-col gap-2 '>
                     <label htmlFor="rguktid" className='font-semibold text-blue-950 '>Rgukt Id</label>
                     <input type="text" placeholder='1234' className='w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950'/>
                 </div>
@@ -117,7 +119,7 @@ const Login = ({ isVisible, onClose }) => {
                     <label htmlFor="mail" className='font-semibold text-blue-950 '>E-mail</label>
                     <input type="email" placeholder='examplename@gmail.com' className='w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950'/>
                 </div>
-                <div className=' flex flex-col gap-2 ml-[20px]'>
+                <div className=' flex flex-col gap-2 '>
                     <label htmlFor="pwd" className='font-semibold text-blue-950 '>Password</label>
                     <input type="password" placeholder='........' className='w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950'/>
                 </div>
@@ -127,7 +129,7 @@ const Login = ({ isVisible, onClose }) => {
                     <label htmlFor="domain" className='font-semibold text-blue-950 '>Working Domain</label>
                     <input type="text" placeholder='cse' className='w-[90%] p-1 px-2 border border-gray-300 shadow-md rounded-md outline-none focus:border-blue-950'/>
                 </div>
-                <div className=' flex flex-col gap-2 ml-[20px]'>
+                <div className=' flex flex-col gap-2 '>
                     <label htmlFor="photo" className='font-semibold text-blue-950 '>Upload Photo</label>
                     <input type="file" className='w-[90%] flex justify-between'/>
                 </div>

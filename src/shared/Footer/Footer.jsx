@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-blue-900 to-blue-950 text-white font-light">
+    <footer className="relative bg-gradient-to-b from-blue-900 to-blue-950 text-white font-light ">
       <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg
           data-name="Layer 1"
