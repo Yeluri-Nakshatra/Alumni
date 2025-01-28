@@ -12,7 +12,7 @@ const team = [
 
 const CoreTeam = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center min-h-screen gap-6 p-4 mt-[50px] md:mt-[0px]">
+    <div className="flex flex-wrap justify-center items-center min-h-screen gap-6 p-4 mt-[50px] lg:mt-[0px] md:mt-[70px]">
       {team.map((member) => (
         <div key={member.id} className="relative flex flex-col items-center text-center">
           <img
