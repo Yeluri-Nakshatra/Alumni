@@ -3,22 +3,26 @@
 import React from "react";
 import { InfiniteMovingCards } from "./testimonials";
 import AnimatedText from "../utils/cn";
+import aboutteam2 from "../assets/aboutteam2.jpg";
 const Testimonals = () => {
   const testimonialItems = [
     {
       quote: "This is the best service I've ever used. Highly recommend!",
       name: "John Doe",
       title: "CEO, Company A",
+      person:aboutteam2,
     },
     {
       quote: "Amazing support and features. Worth every penny.",
       name: "Jane Smith",
       title: "CTO, Company B",
+      person:aboutteam2,
     },
     {
       quote: "A game-changer in the industry. Absolutely love it!",
       name: "Emily Johnson",
       title: "Founder, Company C",
+      person:aboutteam2,
     },
   ];
 
