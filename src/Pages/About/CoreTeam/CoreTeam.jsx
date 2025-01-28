@@ -18,10 +18,10 @@ const CoreTeam = () => {
           <img
             src={Newimage}
             alt={member.name}
-            className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] rounded-full border-4 border-red-500 p-4"
+            className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] rounded-full border-4 border-blue-950 p-4"
           />
           <div className="absolute top-[80px] md:top-[110px] ml-[190px] md:ml-[240px]">
-            <FaLinkedinIn className="bg-red-500 text-white w-[40px] h-[40px] rounded-full p-2 shadow-lg" />
+            <FaLinkedinIn className="bg-blue-950 text-white w-[40px] h-[40px] rounded-full p-2 shadow-lg" />
           </div>
           <div className="font-bold lg:mt-4">
             <div>{member.name}</div>
