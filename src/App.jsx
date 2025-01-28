@@ -8,7 +8,7 @@ import Footer from './shared/Footer/Footer'
 import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
 import Login from './Components/Login'
-import Alumni_Directory from './Pages/News&Blogs/Alumni_Directory/Alumni_Directory'
+import Alumni_Directory from './Pages/Alumni/Alumni_Directory/Alumni_Directory'
 import Error from './Pages/Error/Error404'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
@@ -22,14 +22,15 @@ import Gallery from './Pages/About/Gallery/Gallery'
 import EventCalender from './Pages/Events/EventCalender/EventCalender'
 import Reunion from './Pages/Events/Reunion/Reunion'
 import Sponserships from './Pages/Events/Sponserships/Sponserships'
-import Services from './Pages/Events/Services/Services'
-import Donate from './Pages/News&Blogs/Donate/Donate'
-import MentorShip from './Pages/News&Blogs/MentorShip/MentorShip'
-import Workshops from './Pages/News&Blogs/Workshops/Workshops'
-import AlumniTalks from './Pages/News&Blogs/AlumniTalks/AlumniTalks'
-import SmartId from './Pages/News&Blogs/SmartId/SmartId'
+import MentorShip from './Pages/Alumni/MentorShip/MentorShip'
+import Workshops from './Pages/Alumni/Workshops/Workshops'
+import AlumniTalks from './Pages/Alumni/AlumniTalks/AlumniTalks'
+import SmartId from './Pages/Alumni/SmartId/SmartId'
 import NewsLetter from './Pages/updates/NewsLetter/NewsLetter'
 import Awards from './Pages/updates/Awards/Awards'
+import Donate from './Pages/GetInvolved/Donate/Donate'
+import Contribute from './Pages/GetInvolved/Contribute/Contribute'
+import Jobs from './Pages/updates/Jobs/Jobs'
 const App = () => {
   return (
     <Router>
@@ -55,7 +56,7 @@ const App = () => {
       <Route path='/event_calender' element={<EventCalender/>}/>
       <Route path='/reunion' element={<Reunion/>}/>
       <Route path='/sponserships' element={<Sponserships/>}/>
-      <Route path='/services' element={<Services/>}/>
+      
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/mentor_ship' element={<MentorShip/>}/>
       <Route path='/workshops' element={<Workshops/>}/>
@@ -63,6 +64,9 @@ const App = () => {
       <Route path='/smartid' element={<SmartId/>}/>
       <Route path='/news_letter' element={<NewsLetter/>}/>
       <Route path='/awards' element={<Awards/>}/>
+      <Route path='/donate' element={<Donate/>}/>
+      <Route path='/contribute' element={<Contribute/>}/>
+      <Route path='/jobs' element={<Jobs/>}/>
       <Route path='*' element={<Error />}/>
     </Routes>
     <Footer/>
