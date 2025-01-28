@@ -36,6 +36,7 @@ import { GrGallery } from "react-icons/gr";
 import { GrServices } from "react-icons/gr";
 import Login from "../Components/Login";
 import { GrChapterAdd } from "react-icons/gr";
+import { PiStudentBold } from "react-icons/pi";
 const Header = () => {
   const [tab, setTab] = useState("home");
   const location = useLocation();
@@ -62,6 +63,10 @@ const Header = () => {
   const toggleModal = () => {
     setIsModalVisible(!isModalVisible);
   };
+  const ModalClick=()=>{
+    setIsMenuVisible(false);
+    setIsModalVisible(!isModalVisible)
+  }
   return (
     <div className="fixed bg-white top-0 left-0 w-screen z-[9999]">
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
@@ -119,7 +124,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/alumni_association"
+                to="/aboutus"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -183,9 +188,9 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/event_calender"
+                to="/events"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("eventcalender")}
+                
               >
                 {" "}
                 <div className="flex flex-row gap-2 items-center p-1">
@@ -196,7 +201,7 @@ const Header = () => {
               <Link
                 to="/reunion"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("reunion")}
+                
               >
                 {" "}
                 <div className="flex flex-row gap-2 items-center p-1">
@@ -207,7 +212,7 @@ const Header = () => {
               <Link
                 to="/sponserships"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("sponserships")}
+                
               >
                 {" "}
                 <div className="flex flex-row gap-2 items-center p-1">
@@ -215,21 +220,11 @@ const Header = () => {
                   Sponserships
                 </div>{" "}
               </Link>
-              <Link
-                to="/services"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("services")}
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center p-1">
-                  <GrServices className="font-bold" />
-                  Services
-                </div>{" "}
-              </Link>
+              
               <Link
                 to="/chapters"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                onClick={() => setTab("services")}
+                
               >
                 {" "}
                 <div className="flex flex-row gap-2 items-center p-1">
@@ -239,30 +234,21 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          {/* News&Blogs */}
+          {/* Alumni */}
           <div className="group relative  p-2">
             <div className="flex  flex-row items-center  gap-2">
               <div
                 className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
                     ${
-                      tab === "news&blogs" ? " text-blue-950" : "text-gray-500"
+                      tab === "alumni" ? " text-blue-950" : "text-gray-500"
                     }`}
               >
-                News & Blogs
+                Alumni
               </div>
               <FaCaretDown className="group-hover:rotate-180 duration-300" />
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
-              <Link
-                to="/donate"
-                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-              >
-                {" "}
-                <div className="flex flex-row gap-2 items-center p-1">
-                  <RiRefund2Line className="font-bold" />
-                  Donate
-                </div>{" "}
-              </Link>
+              
              
                 <Link to='/alumni_directory' className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 ">
                 <div className="flex flex-row gap-2 items-center p-1">
@@ -356,6 +342,51 @@ const Header = () => {
                   Alumni News
                 </div>{" "}
               </Link>
+              <Link
+                to="/jobs"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center p-1">
+                  <PiStudentBold className="font-bold" />
+                   Jobs
+                </div>{" "}
+              </Link>
+            </div>
+          </div>
+          {/* Get Involved */}
+          <div className="group relative  p-2">
+            <div className="flex  flex-row items-center  gap-2">
+              <div
+                className={`cursor-pointer rounded-md duration-200 font-semibold  hover:text-blue-950
+                    ${tab === "getinvolved" ? " text-blue-950" : "text-gray-500"}`}
+              >
+                Get Involved
+              </div>
+              <FaCaretDown className="group-hover:rotate-180 duration-300" />
+            </div>
+            <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
+              <Link
+                to="/getinvolved"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center p-1">
+                  <RiRefund2Line className="font-bold" />
+                   Donate
+                </div>{" "}
+              </Link>
+              <Link
+                to="/contribute"
+                className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+              >
+                {" "}
+                <div className="flex flex-row gap-2 items-center p-1">
+                  <GrServices className="font-bold" />
+                  Contribute
+                </div>{" "}
+              </Link>
+              
             </div>
           </div>
           {/* Contact */}
@@ -486,7 +517,7 @@ const Header = () => {
                     {submenu === "about" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/alumni_association"
+                          to="/aboutus"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -566,7 +597,7 @@ const Header = () => {
                     {submenu === "events" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/event_calender"
+                          to="/events"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -598,17 +629,7 @@ const Header = () => {
                             Sponserships
                           </div>{" "}
                         </Link>
-                        <Link
-                          to="/services"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => setIsMenuVisible(false)}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center p-1">
-                            <GrServices className="font-bold" />
-                            Services
-                          </div>{" "}
-                        </Link>
+                        
                         <Link
                 to="/chapters"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
@@ -624,40 +645,28 @@ const Header = () => {
                     )}
                   </div>
                 </div>
-                {/* News & Blogs */}
+                {/* Alumni */}
                 <div>
                   <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
                     <div
                       className="flex flex-row gap-2 items-center"
-                      onClick={() => tglsubmenu("news&blogs")}
+                      onClick={() => tglsubmenu("alumni")}
                     >
-                      <div>News & Blogs</div>
+                      <div>Alumni</div>
 
                       <div>
                         <FaCaretDown
                           className={`${
-                            submenu === "news&blogs" ? "rotate-180" : ""
+                            submenu === "alumni" ? "rotate-180" : ""
                           }  duration-300`}
                         />
                       </div>
                     </div>
 
                     {/* Submenu items */}
-                    {submenu === "news&blogs" && (
+                    {submenu === "alumni" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
-                        <Link
-                          to="/donate"
-                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
-                          onClick={() => {
-                            setIsMenuVisible(false);
-                          }}
-                        >
-                          {" "}
-                          <div className="flex flex-row gap-2 items-center p-1">
-                            <RiRefund2Line className="font-bold" />
-                            Donate
-                          </div>{" "}
-                        </Link>
+                        
                         <Link
                           to="/alumni_directory"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
@@ -782,6 +791,65 @@ const Header = () => {
                             Alumni News
                           </div>{" "}
                         </Link>
+                        <Link
+                          to="/jobs"
+                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                          onClick={() => setIsMenuVisible(false)}
+                        >
+                          {" "}
+                          <div className="flex flex-row gap-2 items-center p-1">
+                            <PiStudentBold className="font-bold" />
+                            Jobs
+                          </div>{" "}
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {/* Get Involved */}
+                <div>
+                  <div className="flex flex-col gap-2 cursor-pointer font-semibold text-gray-600 hover:text-blue-950 w-full py-2 rounded-md duration-200">
+                    <div
+                      className="flex flex-row gap-2 items-center"
+                      onClick={() => tglsubmenu("getinvolved")}
+                    >
+                      <div>Get Involved</div>
+
+                      <div>
+                        <FaCaretDown
+                          className={`${
+                            submenu === "getinvolved" ? "rotate-180" : ""
+                          }  duration-300`}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Submenu items */}
+                    {submenu === "getinvolved" && (
+                      <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
+                        <Link
+                          to="/getinvolved"
+                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                          onClick={() => setIsMenuVisible(false)}
+                        >
+                          {" "}
+                          <div className="flex flex-row gap-2 items-center p-1">
+                            <RiRefund2Line className="font-bold" />
+                            Donate
+                          </div>{" "}
+                        </Link>
+                        <Link
+                          to="/contribute"
+                          className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
+                          onClick={() => setIsMenuVisible(false)}
+                        >
+                          {" "}
+                          <div className="flex flex-row gap-2 items-center p-1">
+                            <GrServices className="font-bold" />
+                            Contribute
+                          </div>{" "}
+                        </Link>
+                        
                       </div>
                     )}
                   </div>
@@ -796,21 +864,22 @@ const Header = () => {
                 </Link>
                 {/* Donate */}
 
-                <a
-                  href="#"
+                <Link
+                  to='/donate'
                   className="flex flex-row justify-center items-center text-white font-semibold bg-blue-950 px-2 py-[5px] rounded-md w-full text-center"
                   onClick={() => tabClick("donate")}
                 >
                   {" "}
                   Donate
-                </a>
+                </Link>
                 {/* Sign in */}
 
 
                 <div>
             <button
-              onClick={toggleModal}
-              className="font-semibold bg-blue-950 bg-opacity-20 px-2 py-[5px] rounded-md"
+              onClick={ModalClick}
+              className="flex flex-row justify-center items-center text-center font-semibold bg-blue-950 bg-opacity-20 w-full px-2 py-[5px] rounded-md"
+              
             >
                Sign In / Sign Up
             </button>
