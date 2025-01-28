@@ -14,14 +14,11 @@ const ProudGraduates = () => {
     <div>
        <h1 className='text-[25px] font-semibold text-center my-[20px]'>Our Proud Graduates</h1>
     
-    <div className="flex md:flex-row flex-col gap-[50px]">
+    <div className="flex md:flex-row flex-col gap-[10px]">
       
-    <div className='pb-[30px] px-[20px] md:px-0 md:w-[33%] w-[90%]'>
+    <div className='pb-[30px] px-[20px] md:px-0 md:w-[40%] w-[90%] '>
        
-        <Swiper  pagination={{
-        dynamicBullets: true,
-        clickable:true
-      }}
+        <Swiper  
       breakpoints={{
         320: {
           slidesPerView: 1,
