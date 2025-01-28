@@ -9,6 +9,7 @@ import EventsPage from './Pages/Events/EventsPage'
 import Contact from "./Pages/Contact/Contact";
 import Login from './Components/Login'
 import Alumni_Directory from './Pages/News&Blogs/Alumni_Directory/Alumni_Directory'
+import Donation from './Pages/Donation/Donation'
 import Error from './Pages/Error/Error404'
 import Register from './Components/Register'
 import Notifications from './Components/Notifications'
@@ -30,6 +31,7 @@ const App = () => {
       <Route path="/Contact" element={<Contact />} />
       {/* <Route path='/login' element={<Login/>}/> */}
       <Route path='/register' element={<Register/>}/>
+      <Route path='/donation' element={<Donation/>}/>
       <Route path='/notifications' element={<Notifications/>}/>
       <Route path='/alumnidirectory' element={<Alumni_Directory/>}/>
       <Route path='/chapters' element={<Chapter/>}/>
