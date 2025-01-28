@@ -31,6 +31,7 @@ import Awards from './Pages/updates/Awards/Awards'
 import Donate from './Pages/GetInvolved/Donate/Donate'
 import Contribute from './Pages/GetInvolved/Contribute/Contribute'
 import Jobs from './Pages/updates/Jobs/Jobs'
+import Donation from './Pages/Donation/Donation'
 const App = () => {
   return (
     <Router>

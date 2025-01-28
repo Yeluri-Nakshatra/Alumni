@@ -3,28 +3,28 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const DonationOption = ({ title, description, amount, selected, onSelect }) => (
   <motion.div
-    className={`p-6 border rounded-lg cursor-pointer ${selected ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
+    className={`p-6 border rounded-lg cursor-pointer ${selected ? "border-blue-950 bg-blue-50" : "border-gray-200"}`}
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
     onClick={onSelect}
   >
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <h3 className="text-xl  font-semibold mb-2">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
-    <p className="text-2xl font-bold text-blue-600">${amount.toLocaleString()}</p>
+    <p className="text-2xl font-bold text-blue-950">${amount.toLocaleString()}</p>
   </motion.div>
 )
 
 const PaymentMethodOption = ({ title, icon, selected, onSelect }) => (
   <motion.div
     className={`p-4 border rounded-lg cursor-pointer flex items-center ${
-      selected ? "border-blue-500 bg-blue-50" : "border-gray-200"
+      selected ? "border-blue-950 bg-blue-50" : "border-gray-200"
     }`}
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
     onClick={onSelect}
   >
     <span className="text-2xl mr-2">{icon}</span>
-    <span className="text-lg font-semibold">{title}</span>
+    <span className="text-lg  font-semibold">{title}</span>
   </motion.div>
 )
 
@@ -156,7 +156,7 @@ const Donation = () => {
                   <button
                     key={frequency}
                     className={`px-4 py-2 rounded-lg ${
-                      giftFrequency === frequency ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"
+                      giftFrequency === frequency ? "bg-blue-950 text-white" : "bg-gray-200 text-gray-800"
                     }`}
                     onClick={() => setGiftFrequency(frequency)}
                   >
@@ -272,9 +272,9 @@ const Donation = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
+    <div className="min-h-screen mt-20 bg-gray-100 py-12">
       <main className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-8">Support Your Alma Mater</h1>
+        <h1 className="text-4xl text-blue-950 font-bold text-center mb-8">Support Your Alma Mater</h1>
 
         <div className="bg-white shadow-lg rounded-lg p-8">
           <div className="mb-8">
@@ -282,11 +282,11 @@ const Donation = () => {
               {[1, 2, 3, 4].map((stepNumber) => (
                 <div
                   key={stepNumber}
-                  className={`w-1/4 text-center ${step === stepNumber ? "text-blue-600" : "text-gray-400"}`}
+                  className={`w-1/4 text-center ${step === stepNumber ? "text-blue-950" : "text-gray-400"}`}
                 >
                   <div
                     className={`w-8 h-8 mx-auto rounded-full flex items-center justify-center ${
-                      step >= stepNumber ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-600"
+                      step >= stepNumber ? "bg-blue-950 text-white" : "bg-gray-200 text-blue-950"
                     }`}
                   >
                     {stepNumber}
@@ -302,7 +302,7 @@ const Donation = () => {
             </div>
             <div className="mt-4 h-2 bg-gray-200 rounded-full">
               <div
-                className="h-full bg-blue-600 rounded-full transition-all duration-500 ease-in-out"
+                className="h-full bg-blue-950 rounded-full transition-all duration-500 ease-in-out"
                 style={{ width: `${((step - 1) / 3) * 100}%` }}
               ></div>
             </div>
@@ -316,7 +316,7 @@ const Donation = () => {
                 <motion.button
                   type="button"
                   onClick={handlePrevStep}
-                  className="bg-gray-300 text-gray-800 px-6 py-2 rounded-lg text-lg font-semibold"
+                  className="bg-gray-300 text-blue-950 px-6 py-2 rounded-lg text-lg font-semibold"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -327,7 +327,7 @@ const Donation = () => {
                 <motion.button
                   type="button"
                   onClick={handleNextStep}
-                  className="bg-blue-600 text-white px-6 py-2 rounded-lg text-lg font-semibold ml-auto"
+                  className="bg-blue-950 text-white px-6 py-2 rounded-lg text-lg font-semibold ml-auto"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
