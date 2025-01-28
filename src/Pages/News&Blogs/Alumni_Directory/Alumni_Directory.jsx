@@ -111,13 +111,48 @@ const Alumni_Directory = () => {
   )
 }
 
-// Alumni data and other constants remain the same as in the original code
 const domains = [
   "Artificial Intelligence",
   "Cybersecurity",
   "Data Science",
-  // ... (rest of the domains)
-]
+  "Software Development",
+  "Cloud Computing",
+  "Embedded Systems",
+  "VLSI Design",
+  "Signal Processing",
+  "Telecommunication",
+  "IoT (Internet of Things)",
+  "Automobile Engineering",
+  "Thermal Engineering",
+  "Robotics",
+  "Manufacturing Technology",
+  "Design and Simulation",
+  "Structural Engineering",
+  "Environmental Engineering",
+  "Construction Management",
+  "Geotechnical Engineering",
+  "Transportation Engineering",
+  "Power Systems",
+  "Renewable Energy",
+  "Control Systems",
+  "Electrical Machines",
+  "Energy Systems",
+  "Medical Imaging",
+  "Biomaterials",
+  "Clinical Engineering",
+  "Rehabilitation Engineering",
+  "Bioinformatics",
+  "Process Engineering",
+  "Petrochemical Engineering",
+  "Biochemical Engineering",
+  "Polymer Technology",
+  "Catalysis",
+  "Aerodynamics",
+  "Spacecraft Design",
+  "Avionics",
+  "Propulsion Systems",
+  "Flight Mechanics"
+];
 
 const department = ["CSE", "ECE", "EEE", "MECHANICAL", "CIVIL", "CHEMICAL", "METALLURGY"]
 
