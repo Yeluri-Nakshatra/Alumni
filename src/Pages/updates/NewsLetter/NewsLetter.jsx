@@ -31,10 +31,10 @@ const NewsLetter = () => {
         {data.map((item, index) => (
           <button
             key={index}
-            className={` md:block hidden h-[50px] w-[370px] px-[20px] flex justify-between items-center 
+            className={` md:flex hidden h-[50px] w-[370px] px-[20px] justify-between items-center 
               text-[23px] border-l-[3px] transition-all duration-200 
               ${selectedCategory === item.name ? " border-black bg-gray-200" : "bg-gray-200 text-black hover:bg-gray-300"}`}
-            onClick={() => setSelectedCategory(item.name)} // Update category on click
+            onClick={() => setSelectedCategory(item.name)} 
           >
             <div className="flex flex-row justify-between"><span>{item.name}</span>
             <span>{item.num}</span></div>
@@ -87,4 +87,8 @@ const NewsLetter = () => {
   );
 };
 
+
 export default NewsLetter;
+
+    
+

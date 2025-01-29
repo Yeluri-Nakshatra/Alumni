@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
-import { sponsorships } from "./data/sponsorships";
+// import { sponsorships } from "./data/sponsorships";
+import {sponsorships} from '../Sponserships/data/Sponsorships'
 import { SponsorshipCard } from "./SponsorshipCard";
 import { SponsorshipDetails } from "./SponsorshipDetails";
 import { RegistrationModal } from "./RegistrationModal";

@@ -24,7 +24,7 @@ const JobCard = ({ job, applyToJob }) => (
       </div>
     </div>
     <div className="space-y-3">
-      <h4 className="text-lg font-semibold text-blue-600">{job.position}</h4>
+      <h4 className="text-lg font-semibold text-blue-950">{job.position}</h4>
       <div className="flex flex-wrap gap-2 text-sm text-gray-600">
         <span className="flex items-center">
           <Briefcase size={14} className="mr-1" /> {job.type}
@@ -36,7 +36,7 @@ const JobCard = ({ job, applyToJob }) => (
       <p className="text-gray-700 text-sm">{job.description}</p>
       <div className="flex flex-wrap gap-2">
         {job.skills.map((skill, index) => (
-          <span key={index} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+          <span key={index} className="bg-blue-100 text-blue-950 text-xs font-medium px-2.5 py-0.5 rounded">
             {skill}
           </span>
         ))}
@@ -47,7 +47,7 @@ const JobCard = ({ job, applyToJob }) => (
         </span>
         <button
           onClick={() => applyToJob(job.id)}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+          className="bg-blue-950 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded transition duration-300"
         >
           Apply
         </button>
@@ -157,7 +157,7 @@ const Oppurtunities = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-12 mt-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -174,7 +174,7 @@ const Oppurtunities = () => {
               placeholder="Search for jobs..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
+              className="w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-950 focus:border-blue-950"
             />
             <Search className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
           </div>
