@@ -8,11 +8,12 @@ import HomeGetInvolved from '../../Components/HomeGetInvolved';
 import Network from '../../Components/Network';
 import Testimonals from "../../accernity/Testimonals";
 import {InfiniteMovingCardsDemo} from "../../accernity/InfiniteMovingCardsDemo";
-
+import HomeHeroBelow from '../../Components/HomeHeroBelow'
 const Home = () => {
   return (
     <div>
       <Homehero />
+      <HomeHeroBelow/>
       <TopEvents />
       <ProudGraduates />
       <Testimonals />
