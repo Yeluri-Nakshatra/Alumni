@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Oppurtunities from '../../../Components/Oppurtunities'
 const Jobs = () => {
   return (
-    <div className='flex justify-center items-center h-screen'>Jobs</div>
+    <div><Oppurtunities /></div>
   )
 }
 
