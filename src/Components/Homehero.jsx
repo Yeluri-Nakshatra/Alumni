@@ -7,7 +7,11 @@ import { Navigation, Pagination, Autoplay  } from 'swiper/modules';
 const Homehero=()=>{
     return(
         <div className="md:flex md:justify-center md:items-center">
+<<<<<<< HEAD
         <div className='p-[20px] rounded-xl mt-[50px] md:mt-[80px] md:w-full '>
+=======
+        <div className='p-[20px] rounded-xl mt-[50px] md:mt-[80px] md:w-[85%] md:h-[80%] '>
+>>>>>>> e1e3fc710ea137bc1f7a21e4bcea624bf7322695
     <Swiper
       pagination={{
         dynamicBullets: true,

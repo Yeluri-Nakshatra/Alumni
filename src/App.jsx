@@ -32,10 +32,12 @@ import Donate from './Pages/GetInvolved/Donate/Donate'
 import Contribute from './Pages/GetInvolved/Contribute/Contribute'
 import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
+import ScrollToTop from './Components/ScrollToTop'
 const App = () => {
   return (
     <Router>
       <Header/>
+      <ScrollToTop/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
