@@ -1,9 +1,11 @@
+
 import React, { useState } from 'react';
 import { TiTick } from "react-icons/ti";
 import { FaHeart } from "react-icons/fa";
 import carddata from "./NewsData";
 import person from "../../../assets/aboutteam2.jpg"
 import { IoMdShare } from "react-icons/io";
+import Noticeboard from '../../Noticeboard/Noticeboard'
 const NewsLetter = () => {
   // Categories list (Ensure category names match those in carddata)
   const data = [
@@ -23,6 +25,7 @@ const NewsLetter = () => {
     : carddata.filter(item => item.category === selectedCategory);
 
   return (
+
     <div className='flex flex-row mt-[100px] gap-[20px] justify-center'>
 
       {/* Categories */}
@@ -86,5 +89,10 @@ const NewsLetter = () => {
     </div>
   );
 };
+    <div className='flex justify-center items-center h-screen overflow-y-auto no-scrollbar scrollbar-hide'>
+      <Noticeboard/>
+    </div>
+  )
+}
 
 export default NewsLetter;
