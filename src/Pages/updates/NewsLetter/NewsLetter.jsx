@@ -36,8 +36,8 @@ const NewsLetter = () => {
               ${selectedCategory === item.name ? " border-black bg-gray-200" : "bg-gray-200 text-black hover:bg-gray-300"}`}
             onClick={() => setSelectedCategory(item.name)} 
           >
-            <span>{item.name}</span>
-            <span>{item.num}</span>
+            <div className="flex flex-row justify-between"><span>{item.name}</span>
+            <span>{item.num}</span></div>
           </button>
         ))}
       </div>
