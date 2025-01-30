@@ -33,13 +33,12 @@ import Contribute from './Pages/GetInvolved/Contribute/Contribute'
 import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
 import ScrollToTop from './Components/ScrollToTop'
-import Countries from './Components/Countries'
-import Hyderabad from './Components/Hyderabad'
-import Noticeboard from './Pages/Noticeboard/Noticeboard'
 import Business from './Components/Business'
 import Sponsership from './Components/Sponsership'
 import Secondsponcer from './Components/Secondsponcer';
-import GetInTouch from './Components/GetInTouch'
+import Eve from './Components/Eve'
+import Students from './Components/Students'
+import Clg from './Components/Clg'
 const App = () => {
   return (
     <Router>
@@ -67,8 +66,7 @@ const App = () => {
       <Route path='/event_calender' element={<EventCalender/>}/>
       <Route path='/reunion' element={<Reunion/>}/>
       <Route path='/sponserships' element={<Sponserships/>}/>
-      <Route path='/hyderabad' element={<Hyderabad/>}/>
-      <Route path='/countries' element={<Countries/>}/>
+      
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/mentor_ship' element={<MentorShip/>}/>
       <Route path='/workshops' element={<Workshops/>}/>
@@ -79,13 +77,15 @@ const App = () => {
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/contribute' element={<Contribute/>}/>
       <Route path='/jobs' element={<Jobs/>}/>
+      
+      <Route path='*' element={<Error />}/>
       <Route path="/Business" element={<Business />} />
       <Route path="/Sponsership" element={<Sponsership />} />
       <Route path="/Secondsponcer" element={<Secondsponcer />} />
+      <Route path="/Clg" element={<Clg />}/>
+      <Route path="/Eve" element={<Eve />} />
+      <Route path="/Students" element={<Students/>} />
 
-      <Route path='/getintouch' element={<GetInTouch/>}/>
-      <Route path='*' element={<Error />}/>
-      
     </Routes>
     <Footer/>
   </Router>
