@@ -6,10 +6,14 @@ import bangalore from "../assets/bangalore.jpg";
 import hyderabad from "../assets/hyderabad.jpg";
 import chennai from "../assets/chennai.jpg";
 import { useState } from "react";
-const CardDesign = ({ title, img }) => {
+import { Link } from "react-router-dom";
+const CardDesign = ({ title, img ,path}) => {
   return (
+    
     <div className="group relative  w-[350px] h-[200px] overflow-hidden rounded-md">
+        
       <img src={img} className="w-full group-hover:scale-[1.2] duration-[500ms] h-full rounded-md" />
+      <Link to={path}>
       <div className="flex flex-col cursor-pointer justify-center items-center rounded-md absolute top-0 left-0 w-full h-full bg-black bg-opacity-40">
         <div className="text-white font-semibold text-2xl">
           {title.toUpperCase()}
@@ -18,6 +22,7 @@ const CardDesign = ({ title, img }) => {
           <hr className="w-[30px]  bg-white" />
         </div>
       </div>
+      </Link>
     </div>
   );
 };
@@ -25,20 +30,20 @@ const Countries = () => {
   const [showAllF, setShowAllF] = useState(false);
   const [showAllI, setShowAllI] = useState(false);
   const foreign = [
-    { title: "Paris", image: paris },
-    { title: "USA", image: usa },
-    { title: "London", image: london },
-    { title: "Paris", image: paris },
-    { title: "USA", image: usa },
-    { title: "London", image: london },
+    { title: "Paris", image: paris ,path:'/paris'},
+    { title: "USA", image: usa ,path:'/usa'},
+    { title: "London", image: london,path:'/london' },
+    { title: "Paris", image: paris,path:'/paris' },
+    { title: "USA", image: usa,path:'/usa' },
+    { title: "London", image: london,path:'/london' },
   ];
   const india = [
-    { title: "Bangalore", image: bangalore },
-    { title: "Hyderabad", image: hyderabad },
-    { title: "Chennai", image: chennai },
-    { title: "Bangalore", image: bangalore },
-    { title: "Hyderabad", image: hyderabad },
-    { title: "Chennai", image: chennai },
+    { title: "Bangalore", image: bangalore,path:'/bangalore' },
+    { title: "Hyderabad", image: hyderabad,path:'/hyderabad' },
+    { title: "Chennai", image: chennai ,path:'/chennai'},
+    { title: "Bangalore", image: bangalore ,path:'/bangalore' },
+    { title: "Hyderabad", image: hyderabad ,path:'/hyderabad'},
+    { title: "Chennai", image: chennai,path:'/chennai' },
   ];
   return (
     <div>
@@ -52,7 +57,7 @@ const Countries = () => {
           </div>
           <div className="flex flex-wrap gap-6 justify-center items-center">
             {(showAllF?foreign:foreign.slice(0,3)).map((data) => (
-              <CardDesign title={data.title} img={data.image} />
+              <CardDesign title={data.title} img={data.image} path={data.path}/>
             ))}
           </div>
           <div className="flex justify-center mt-6">
@@ -73,7 +78,7 @@ const Countries = () => {
           </div>
           <div className="flex flex-wrap gap-6 justify-center items-center">
             {(showAllI?india:india.slice(0,3)).map((data) => (
-              <CardDesign title={data.title} img={data.image} />
+              <CardDesign title={data.title} img={data.image} path={data.path}/>
             ))}
           </div>
           <div className="flex justify-center mt-6">
