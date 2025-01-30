@@ -84,7 +84,7 @@ const App = () => {
       <Route path="/Secondsponcer" element={<Secondsponcer />} />
       <Route path="/Clg" element={<Clg />}/>
       <Route path="/Eve" element={<Eve />} />
-      <Route path="/Students" element={<Students />}/>
+      <Route path="/Students" element={<Students/>} />
 
     </Routes>
     <Footer/>

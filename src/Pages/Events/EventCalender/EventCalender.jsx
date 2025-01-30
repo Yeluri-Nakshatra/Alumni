@@ -1,8 +1,8 @@
 import React from 'react'
-
+import EventsPage from '../EventsPage'
 const EventCalender = () => {
   return (
-    <div className='flex h-screen justify-center items-center'>EventCalender</div>
+    <div><EventsPage/></div>
   )
 }
 

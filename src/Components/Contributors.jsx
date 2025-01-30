@@ -4,7 +4,7 @@ import Frame2 from "../assets/Frame2.png";
 const Contributors = () => {
   return (
     <div>
-         <div className="flex relative flex-col h-[50vh] lg:h-[90vh] justify-center items-center">
+         <div className="flex relative flex-col h-[24vh] md:h-[50vh] lg:h-[90vh] justify-center items-center">
                     <div className="flex flex-col items-center">
                         <div className="text-[80px] md:text-[100px] font-bold">
                             10,345+

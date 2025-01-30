@@ -10,7 +10,7 @@ const GetInvolved = () => {
   return (
    
         
-      <div className="m-4 mx-10 mt-20 md:mt-24  lg:mt-[110px] flex flex-col gap-8">
+      <div className="m-4 mx-4 mt-20 md:mt-24  lg:mt-[110px] flex flex-col gap-8">
         <HelpUs/>
         <SeekersSays/>
         <Fund/>

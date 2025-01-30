@@ -72,7 +72,7 @@ const Header = () => {
       <div className="flex  flex-row justify-between items-center m-2 mx-4 h-max">
         <div className="flex flex-row ">
           <div>
-            <Link to="/home">
+            <Link to="/">
               <img
                 src={Logo}
                 className="w-[40px] h-[40px] md:w-[70px] md:h-[70px]"
@@ -89,11 +89,11 @@ const Header = () => {
         <div className=" hidden lg:flex flex-row items-center justify-center gap-4 font-semibold">
           {/* Home */}
           <Link
-            to="/home"
+            to="/"
             onClick={() => setTab("home")}
             className={`relative  group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
               ${
-                location.pathname === "/home"
+                location.pathname === "/"
                   ? "text-blue-950"
                   : "text-gray-500"
               }
@@ -102,7 +102,7 @@ const Header = () => {
             Home
             
             
-            {location.pathname === "/home" ? (
+            {location.pathname === "/" ? (
               
               <hr className="absolute bottom-0 left-2 w-[80%]  horizontal bg-blue-950 h-[3px] mt-1" />
               
@@ -124,7 +124,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/aboutus"
+                to="/alumni_association"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -188,7 +188,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/events"
+                to="/event_calender"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                 
               >
@@ -367,7 +367,7 @@ const Header = () => {
             </div>
             <div className="hidden group-hover:flex absolute duration-400 flex-col mt-2 rounded-md w-max px-2 py-1 gap-2 bg-gray-100">
               <Link
-                to="/getinvolved"
+                to="/donate"
                 className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
               >
                 {" "}
@@ -517,7 +517,7 @@ const Header = () => {
                     {submenu === "about" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/aboutus"
+                          to="/alumni_association"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -597,7 +597,7 @@ const Header = () => {
                     {submenu === "events" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/events"
+                          to="/event_calender"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >
@@ -828,7 +828,7 @@ const Header = () => {
                     {submenu === "getinvolved" && (
                       <div className="flex flex-col text-sm font-semibold mt-2 rounded-md w-full px-2 py-1 gap-2 bg-gray-100">
                         <Link
-                          to="/getinvolved"
+                          to="/donate"
                           className="text-gray-500 hover:text-blue-950 hover:bg-blue-950 hover:bg-opacity-20 rounded px-2 "
                           onClick={() => setIsMenuVisible(false)}
                         >

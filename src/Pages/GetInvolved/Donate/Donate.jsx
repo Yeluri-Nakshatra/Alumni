@@ -1,8 +1,8 @@
 import React from 'react'
-
+import GetInvolved from '../GetInvolved'
 const Donate = () => {
   return (
-    <div className='flex h-screen justify-center items-center'>Donate</div>
+    <div ><GetInvolved/></div>
   )
 }
 
