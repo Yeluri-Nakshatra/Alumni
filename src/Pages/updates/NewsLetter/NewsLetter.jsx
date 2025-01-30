@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { TiTick } from "react-icons/ti";
 import { FaHeart } from "react-icons/fa";
 import carddata from "./NewsData";
 import person from "../../../assets/aboutteam2.jpg"
 import { IoMdShare } from "react-icons/io";
-import Noticeboard from '../../Noticeboard/Noticeboard'
 const NewsLetter = () => {
   // Categories list (Ensure category names match those in carddata)
   const data = [
@@ -25,28 +23,27 @@ const NewsLetter = () => {
     : carddata.filter(item => item.category === selectedCategory);
 
   return (
-
     <div className='flex flex-row mt-[100px] gap-[20px] justify-center'>
 
       {/* Categories */}
     
-      <div className="flex flex-col gap-[10px] ">
+      <div className="flex flex-col gap-[10px]  h-[85vh] overflow-y-auto ">
         {data.map((item, index) => (
           <button
             key={index}
-            className={` md:flex hidden h-[50px] w-[370px] px-[20px] justify-between items-center 
+            className={` md:flex hidden h-[50px]  w-[370px] px-[20px] justify-between items-center 
               text-[23px] border-l-[3px] transition-all duration-200 
               ${selectedCategory === item.name ? " border-black bg-gray-200" : "bg-gray-200 text-black hover:bg-gray-300"}`}
             onClick={() => setSelectedCategory(item.name)} 
           >
-            <span>{item.name}</span>
-            <span>{item.num}</span>
+            <div className="flex flex-row justify-between"><span>{item.name}</span>
+            <span>{item.num}</span></div>
           </button>
         ))}
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:ml-[0px] ml-[-25px] gap-[15px] ">
+      <div className="flex flex-col md:ml-[0px] ml-[-25px] gap-[15px] md:h-[85vh] md:overflow-y-auto">
         {filteredCards.length > 0 ? (
           filteredCards.map((item, index) => (
             <div key={index} className="md:h-[250px]  w-[330px] md:w-auto h-[450px] p-[15px] shadow-lg shadow-gray-300 flex justify-center  items-center md:flex-row flex-col  gap-[5px] md:gap-[9px]">
@@ -93,7 +90,5 @@ const NewsLetter = () => {
 
 export default NewsLetter;
 
-    // <div className='flex justify-center items-center h-screen overflow-y-auto no-scrollbar scrollbar-hide'>
-    //   <Noticeboard/>
-    // </div>
+    
 
