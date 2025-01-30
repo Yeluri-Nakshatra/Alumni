@@ -5,16 +5,16 @@
 
 .bell-icon{
     position:absolute;
-    top:-2px;
-    right:2px;
+    top:2px;
+    right:-2px;
     color:white;
     font-size:10px;
     font-weight: bold;
-    height:15px;
-    width:15px;
-    background-color:blue;
+    height:13px;
+    width:13px;
+    background-color:rgb(8, 8, 46);
     border-radius: 50%;
     text-align: center;
-    padding-top: -5px;
+    padding-top: -3px;
     
 }
