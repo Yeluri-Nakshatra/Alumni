@@ -141,7 +141,7 @@ function Noticeboard() {
   ];  
   return (
     <div className="min-h-screen bg-gray-50 w-full">
-      <div className="bg-gray-50 overflow-y-auto h-screen scrollbar-hide no-scrollbar mt-[200px] xl:px-[80px] ">
+      <div className="bg-gray-50 overflow-y-auto h-screen scrollbar-hide no-scrollbar mt-[100px] xl:px-[80px] ">
         <div className="w-full mx-auto p-6">
           <div className="flex justify-end items-center mb-6">
             <div className='relative'>

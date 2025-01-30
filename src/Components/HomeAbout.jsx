@@ -14,7 +14,7 @@ const HomeAbout = () => {
             <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis minima alias neque praesentium numquam, voluptates maxime nisi qui molestias sequi harum magni odit cumque rerum quae corrupti laudantium nesciunt quis.</div>
             <div className='font-bold'>10,540+ Contributors</div>
             <div>
-                <Link to='/aboutus'><button className='p-2 px-4 flex flex-row gap-2 items-center text-lg bg-blue-950 text-white font-bold rounded-xl'>Know More
+                <Link to='/alumni_association'><button className='p-2 px-4 flex flex-row gap-2 items-center text-lg bg-blue-950 text-white font-bold rounded-xl'>Know More
                   <div className="h-[15px] w-[15px] rounded-[50%] bg-[white] flex justify-center items-center">
                     <MdArrowOutward className="text-blue-950 font-extrabold text-[24px]" />
                   </div></button></Link>
