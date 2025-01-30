@@ -1,8 +1,8 @@
 import React from 'react'
-
+import About from '../About'
 const AlumniAssociation = () => {
   return (
-    <div className='flex  h-screen justify-center items-center'>AlumniAssociation</div>
+    <div ><About/></div>
   )
 }
 

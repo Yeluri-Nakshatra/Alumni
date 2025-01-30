@@ -33,6 +33,9 @@ import Contribute from './Pages/GetInvolved/Contribute/Contribute'
 import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
 import ScrollToTop from './Components/ScrollToTop'
+
+import Countries from './Components/Countries'
+import Noticeboard from './Pages/Noticeboard/Noticeboard'
 import Business from './Components/Business'
 const App = () => {
   return (
@@ -72,13 +75,13 @@ const App = () => {
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/contribute' element={<Contribute/>}/>
       <Route path='/jobs' element={<Jobs/>}/>
-      
-      <Route path='*' element={<Error />}/>
       <Route path="/Business" element={<Business />} />
+      <Route path='*' element={<Error />}/>
+      
     </Routes>
     <Footer/>
   </Router>
-  
+  // <Noticeboard/>
  
   
 
