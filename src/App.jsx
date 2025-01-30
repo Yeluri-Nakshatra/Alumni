@@ -34,6 +34,8 @@ import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
 import ScrollToTop from './Components/ScrollToTop'
 import Business from './Components/Business'
+import Sponsership from './Components/Sponsership'
+import Secondsponcer from './Components/Secondsponcer';
 const App = () => {
   return (
     <Router>
@@ -75,6 +77,9 @@ const App = () => {
       
       <Route path='*' element={<Error />}/>
       <Route path="/Business" element={<Business />} />
+      <Route path="/Sponsership" element={<Sponsership />} />
+      <Route path="/Secondsponcer" element={<Secondsponcer />} />
+
     </Routes>
     <Footer/>
   </Router>
