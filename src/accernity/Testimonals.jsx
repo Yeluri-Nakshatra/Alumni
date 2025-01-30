@@ -32,7 +32,7 @@ const Testimonals = () => {
         <AnimatedText text="Testimonials" />
       </h1>
       &nbsp;
-      <p className="text-gray-400 mt-1 max-w-[1024px] text-lg sm:text-3xl">
+      <p className="text-gray-400 mt-1 max-w-[1024px] px-2 text-lg sm:text-3xl">
         Our team provides tailored services with precision and innovation,
         ensuring impactful results that meet your unique needs.
       </p>
