@@ -33,7 +33,7 @@ import Contribute from './Pages/GetInvolved/Contribute/Contribute'
 import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
 import ScrollToTop from './Components/ScrollToTop'
-
+import Business from './Components/Business'
 const App = () => {
   return (
     <Router>
@@ -74,6 +74,7 @@ const App = () => {
       <Route path='/jobs' element={<Jobs/>}/>
       
       <Route path='*' element={<Error />}/>
+      <Route path="/Business" element={<Business />} />
     </Routes>
     <Footer/>
   </Router>
