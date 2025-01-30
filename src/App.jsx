@@ -34,6 +34,8 @@ import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
 import ScrollToTop from './Components/ScrollToTop'
 
+import Countries from './Components/Countries'
+import Noticeboard from './Pages/Noticeboard/Noticeboard'
 const App = () => {
   return (
     <Router>
@@ -77,7 +79,7 @@ const App = () => {
     </Routes>
     <Footer/>
   </Router>
-  
+  // <Noticeboard/>
  
   
 

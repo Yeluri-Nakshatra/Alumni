@@ -13,7 +13,7 @@ const HomeEvents = () => {
             <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis minima alias neque praesentium numquam, voluptates maxime nisi qui molestias sequi harum magni odit cumque rerum quae corrupti laudantium nesciunt quis.</div>
             
             <div>
-                <Link to='/events'><button className='p-2 px-4 flex flex-row gap-2 items-center text-lg bg-blue-950 text-white font-bold rounded-xl'>Explore<FaArrowCircleRight className='text-white' /></button></Link>
+                <Link to='/event_calender'><button className='p-2 px-4 flex flex-row gap-2 items-center text-lg bg-blue-950 text-white font-bold rounded-xl'>Explore<FaArrowCircleRight className='text-white' /></button></Link>
             </div>
 
         </div>

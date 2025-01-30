@@ -40,10 +40,10 @@ const PastReunions = () => {
 
                     </div>
                     {past&&(
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                    <div className='grid grid-cols-1  md:grid-cols-2 gap-6'>
                         {
                             events.map((data)=>(
-                                <div className="rounded-2xl shadow-md p-4 bg-white duration-[700ms] hover:bg-blue-950 hover:bg-opacity-20">
+                                <div className="rounded-2xl shadow-md p-4  bg-white duration-[700ms] hover:bg-blue-950 hover:bg-opacity-20">
                                 <img
                                   src={data.image}
                                   alt="Event"
@@ -69,7 +69,7 @@ const PastReunions = () => {
                     </div> )}
                     {
                       gallery && (
-                        <div className='grid grid-cols-2 w-[98%] md:w-[900px]  md:h-[500px] md:grid-rows-4 md:grid-cols-5 gap-2'>
+                        <div className='grid grid-cols-2 w-[98%] lg:w-[900px]  md:h-[500px] md:grid-rows-4 md:grid-cols-5 gap-2'>
                           <div className=' col-span-2 row-span-2 '>
                             <img src={grid1}  className='w-full h-full object-cover rounded-md'/>
                           </div>
