@@ -27,20 +27,23 @@ const NewsLetter = () => {
 
       {/* Categories */}
     
-      <div className="flex flex-col gap-[10px]  h-[85vh] overflow-y-auto ">
-        {data.map((item, index) => (
-          <button
-            key={index}
-            className={` md:flex hidden h-[50px]  w-[370px] px-[20px] justify-between items-center 
-              text-[23px] border-l-[3px] transition-all duration-200 
-              ${selectedCategory === item.name ? " border-black bg-gray-200" : "bg-gray-200 text-black hover:bg-gray-300"}`}
-            onClick={() => setSelectedCategory(item.name)} 
-          >
-            <div className="flex flex-row justify-between"><span>{item.name}</span>
-            <span>{item.num}</span></div>
-          </button>
-        ))}
+      <div className="flex flex-col gap-[10px] h-[85vh] overflow-y-auto">
+  {data.map((item, index) => (
+    <button
+      key={index}
+      className={`md:flex hidden h-[50px] w-[370px] px-[20px] justify-between items-center 
+        text-[23px] border-l-[3px] transition-all duration-200
+        ${selectedCategory === item.name ? "border-black bg-gray-200" : "bg-gray-200 text-black hover:bg-gray-300"}`}
+      onClick={() => setSelectedCategory(item.name)}
+    >
+      <div className="flex flex-row w-full">
+        <div>{item.name}</div>
+        <div className="ml-auto">{item.num}</div> {/* Properly aligns numbers */}
       </div>
+    </button>
+  ))}
+</div>
+
 
       {/* Cards */}
       <div className="flex flex-col md:ml-[0px] ml-[-25px] gap-[15px] md:h-[85vh] md:overflow-y-auto">

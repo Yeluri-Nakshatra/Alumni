@@ -36,6 +36,7 @@ import ScrollToTop from './Components/ScrollToTop'
 
 import Countries from './Components/Countries'
 import Noticeboard from './Pages/Noticeboard/Noticeboard'
+import Business from './Components/Business'
 const App = () => {
   return (
     <Router>
@@ -74,8 +75,9 @@ const App = () => {
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/contribute' element={<Contribute/>}/>
       <Route path='/jobs' element={<Jobs/>}/>
-      
+      <Route path="/Business" element={<Business />} />
       <Route path='*' element={<Error />}/>
+      
     </Routes>
     <Footer/>
   </Router>
