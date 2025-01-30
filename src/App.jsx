@@ -33,7 +33,7 @@ import Contribute from './Pages/GetInvolved/Contribute/Contribute'
 import Jobs from './Pages/updates/Jobs/Jobs'
 import Donation from './Pages/Donation/Donation'
 import ScrollToTop from './Components/ScrollToTop'
-import Announcement from './Components/Announcement'
+
 const App = () => {
   return (
     <Router>
@@ -77,6 +77,7 @@ const App = () => {
     </Routes>
     <Footer/>
   </Router>
+  
  
   
 
