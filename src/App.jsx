@@ -37,6 +37,8 @@ import Countries from './Components/Countries'
 import Hyderabad from './Components/Hyderabad'
 import Noticeboard from './Pages/Noticeboard/Noticeboard'
 import Business from './Components/Business'
+import Sponsership from './Components/Sponsership'
+import Secondsponcer from './Components/Secondsponcer';
 import GetInTouch from './Components/GetInTouch'
 const App = () => {
   return (
@@ -78,6 +80,9 @@ const App = () => {
       <Route path='/contribute' element={<Contribute/>}/>
       <Route path='/jobs' element={<Jobs/>}/>
       <Route path="/Business" element={<Business />} />
+      <Route path="/Sponsership" element={<Sponsership />} />
+      <Route path="/Secondsponcer" element={<Secondsponcer />} />
+
       <Route path='/getintouch' element={<GetInTouch/>}/>
       <Route path='*' element={<Error />}/>
       
