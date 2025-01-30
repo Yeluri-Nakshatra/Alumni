@@ -36,6 +36,9 @@ import ScrollToTop from './Components/ScrollToTop'
 import Business from './Components/Business'
 import Sponsership from './Components/Sponsership'
 import Secondsponcer from './Components/Secondsponcer';
+import Eve from './Components/Eve'
+import Students from './Components/Students'
+import Clg from './Components/Clg'
 const App = () => {
   return (
     <Router>
@@ -79,6 +82,9 @@ const App = () => {
       <Route path="/Business" element={<Business />} />
       <Route path="/Sponsership" element={<Sponsership />} />
       <Route path="/Secondsponcer" element={<Secondsponcer />} />
+      <Route path="/Clg" element={<Clg />}/>
+      <Route path="/Eve" element={<Eve />} />
+      <Route path="/Students" element={<Students />}/>
 
     </Routes>
     <Footer/>

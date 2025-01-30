@@ -1,10 +1,11 @@
 import React from 'react'
 import Coin from '../assets/Coin.jpg';
 import Hostel from '../assets/Hostel.jpeg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation  } from 'react-router-dom';
 import { FaAngleRight } from "react-icons/fa";
 const Sponsership = () => {
   const navigate=useNavigate();
+  const location = useLocation();
   return (
     <div className="md:pl-[20px] md:pr-[20px] pl-[10px] pr-[10px]">
         <div className="flex flex-col">
@@ -14,9 +15,9 @@ const Sponsership = () => {
             <div className="bg-green-200 h-auto flex flex-col w-full p-[20px] lg:p-[30px] mt-[50px] md:mt-[0px]">
               <div className=" flex w-full justify-center">
                 <div className="w-[250px] md:w-[350px] bg-white rounded-md gap-[4px]">
-                <button className="pr-[15px] pl-[20px] rounded-md ">Collage infrastucture</button>
-                <button className="pr-[15px] rounded-md">Events</button>
-                <button>Students</button>
+                <button className="pr-[15px] pl-[20px] rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Clg')}>Collage infrastucture</button>
+                <button className="pr-[15px] rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Eve')}>Events</button>
+                <button className="pr-[15px] rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Students')}>Students</button>
                 </div>
 
               </div>
