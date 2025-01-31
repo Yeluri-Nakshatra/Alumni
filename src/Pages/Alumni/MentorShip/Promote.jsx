@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { CgMail } from "react-icons/cg";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { LuFacebook } from "react-icons/lu";
@@ -6,112 +6,131 @@ import { FaInstagram } from "react-icons/fa";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { GoCopy } from "react-icons/go";
 
-const Promote=()=>{
-    return(
-
-<div>
-                <div className="flex md:flex-row flex-col gap-[20px] justify-between">
-                <div className="flex md:flex-row flex-col justify-center gap-[10px] ml-[85px]">
-                <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
-                    My Preferences
-                </div>
-                <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
-                    Mentorship Homepage
-                </div>
-            </div>
-
+const Promote = () => {
+  return (
+    <div>
+      <div className="flex lg:flex-row flex-col gap-[20px] justify-between">
+        <div className="flex md:flex-row flex-col justify-center gap-[10px] ml-[85px]">
+          <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
+            My Preferences
+          </div>
+          <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
+            Mentorship Homepage
+          </div>
+        </div>
 
         <div className="flex flex-col gap-[10px] justify-center md:mr-[80px]  ">
-      <div className="text-[black] text-[25px] font-bold text-center">Promote Mentorship</div>
-      <div className="text-[black] text-[20px] font-semibold  text-center p-[5px]">This page will help you promote the Mentorship< br className="md:block hidden"/>
-        Platform.It is important to promote mentorship <br className="md:block hidden"/>periodically if you want it to be effective
+          <div className="text-[black] text-[25px] font-bold text-center">
+            Promote Mentorship
+          </div>
+          <div className="text-[black] text-[20px] font-semibold  text-center p-[5px]">
+            This page will help you promote the Mentorship
+            <br className="md:block hidden" />
+            Platform.It is important to promote mentorship{" "}
+            <br className="md:block hidden" />
+            periodically if you want it to be effective
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-
-
 
       <div className="flex flex-row flex-wrap  justify-center gap-x-[50px] gap-y-[30px] mt-[30px] ">
-           {/*box1*/}
-          <div  className="md:h-[270px] h-[300px] md:w-[350px] w-[330px]  rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[5px]">
-              <div className="text-[20px] font-bold text-[black]">Introduce the mentorship platform to everyone</div>
-              <div className="text-[15px] font-semibold text-[black] mt-[20px]">
-                <div>Use this section in 2 steps:</div>
-                <div>1.Firstly invite semiors to volunteer as mentors</div>
-                <div>2.Upon getting a few members,introduce mentorship to everyone else</div>
-              </div>
-              <div className="flex flex-row justify-between gap-[15px]">
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-               Invite Mentors
-              </div>
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-               Invite Mentors
-              </div>
-              </div>
+        {/*box1*/}
+        <div className="md:h-[270px] h-[300px] md:w-[350px] w-[330px]  rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[5px]">
+          <div className="text-[20px] font-bold text-[black]">
+            Introduce the mentorship platform to everyone
           </div>
-          {/*second box*/}
-          <div  className="md:h-[270px] h-[300px]  md:w-[350px] w-[330px]  rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[5px]">
-              <div className="text-[20px] font-bold text-[black]">Mail templates to attract more mentors</div>
-              <div className="text-[15px] font-semibold text-[black] mt-[20px]">
-                <div>Use this section when</div>
-                <div>1.You have just started the memtorship.</div>
-                <div>No new mentors from the past few days.</div>
-              </div>
-              
-              <div className="flex flex-row  gap-[8px] justify-center items-center h-[30px] mt-[25px] w-[150px] ml-[20px] rounded-[5px]  bg-blue-950 ">
-              <div className="text-[white]">Send mail</div>
-              <div><CgMail className="text-[white] text-[25px]"/></div>
-              </div>
-              
+          <div className="text-[15px] font-semibold text-[black] mt-[20px]">
+            <div>Use this section in 2 steps:</div>
+            <div>1.Firstly invite semiors to volunteer as mentors</div>
+            <div>
+              2.Upon getting a few members,introduce mentorship to everyone else
+            </div>
+          </div>
+          <div className="flex flex-row justify-between gap-[15px]">
+            <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
+              Invite Mentors
+            </div>
+            <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
+              Invite Mentors
+            </div>
+          </div>
+        </div>
+        {/*second box*/}
+        <div className="md:h-[270px] h-[300px]  md:w-[350px] w-[330px]  rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[5px]">
+          <div className="text-[20px] font-bold text-[black]">
+            Mail templates to attract more mentors
+          </div>
+          <div className="text-[15px] font-semibold text-[black] mt-[20px]">
+            <div>Use this section when</div>
+            <div>1.You have just started the memtorship.</div>
+            <div>No new mentors from the past few days.</div>
           </div>
 
+          <div className="flex flex-row  gap-[8px] justify-center items-center h-[30px] mt-[25px] w-[150px] ml-[20px] rounded-[5px]  bg-blue-950 ">
+            <div className="text-[white]">Send mail</div>
+            <div>
+              <CgMail className="text-[white] text-[25px]" />
+            </div>
+          </div>
+        </div>
 
-          {/*third box*/}
-          <div  className="md:h-[270px] h-[300px] md:w-[350px] w-[330px] rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[15px]">
-              <div className="text-[20px] font-bold text-[black]">send mail to already listed mentors and mentees</div>
-              <div className="text-[15px] font-semibold text-[black] mt-[20px]">
-                <div>Use this section in 2 steps:</div>
-                <div>1.Share the guidelines or any such informatioins.</div>
-                <div>2.Take feedback and testimonials</div>
-              </div>
-              <div className="flex flex-row justify-between gap-[15px] mt-[10px]">
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
+        {/*third box*/}
+        <div className="md:h-[270px] h-[300px] md:w-[350px] w-[330px] rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[15px]">
+          <div className="text-[20px] font-bold text-[black]">
+            send mail to already listed mentors and mentees
+          </div>
+          <div className="text-[15px] font-semibold text-[black] mt-[20px]">
+            <div>Use this section in 2 steps:</div>
+            <div>1.Share the guidelines or any such informatioins.</div>
+            <div>2.Take feedback and testimonials</div>
+          </div>
+          <div className="flex flex-row justify-between gap-[15px] mt-[10px]">
+            <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
               Mail Mentors
-              </div>
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
+            </div>
+            <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
               Mail Mentors
-              </div>
-              </div>
+            </div>
           </div>
-          
-          {/*fourth box*/}
-          <div  className="md:h-[270px] h-[300px]  md:w-[350px] w-[330px]  rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[20px]">
-              <div className=" flex flex-row gap-[7px] items-center">
-                <div><IoShareSocialOutline className="text-[20px] font-extrabold"/></div>
-                <div className="text-[20px] font-bold text-[black]">Share on Social media</div>
-                </div>
-                 
+        </div>
 
-
-                 <div className="flex flex-row gap-[5px] mt-[20px]">
-                  <div className="h-[40px] w-[40px] rounded-[50%] bg-blue-950 flex justify-center items-center"><LuFacebook className="text-[white] text-[23px]" /></div>
-                  <div className="h-[40px] w-[40px] rounded-[50%] bg-blue-950 flex justify-center items-center"><FaInstagram className="text-[white] text-[23px]" /></div>
-                  <div className="h-[40px] w-[40px] rounded-[50%] bg-blue-950 flex justify-center items-center"><SlSocialLinkedin className="text-[white] text-[23px]" /></div>
-
-                 </div>
-                 <div className="relative w-[95%]">
-              <input placeholder="htttps://aluminirguktn.ac.in" className=" relative p-[4px] h-[35px] w-[95%] border border-[black] text-[black]"/>
-              <div><GoCopy className="text-[20px] text-[black] absolute top-[7px] right-[25px]" /></div></div>
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-              copy Now
-              </div> 
-              
+        {/*fourth box*/}
+        <div className="md:h-[270px] h-[300px]  md:w-[350px] w-[330px]  rounded-[5px] px-[30px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[20px]">
+          <div className=" flex flex-row gap-[7px] items-center">
+            <div>
+              <IoShareSocialOutline className="text-[20px] font-extrabold" />
+            </div>
+            <div className="text-[20px] font-bold text-[black]">
+              Share on Social media
+            </div>
           </div>
 
-
+          <div className="flex flex-row gap-[5px] mt-[20px]">
+            <div className="h-[40px] w-[40px] rounded-[50%] bg-blue-950 flex justify-center items-center">
+              <LuFacebook className="text-[white] text-[23px]" />
+            </div>
+            <div className="h-[40px] w-[40px] rounded-[50%] bg-blue-950 flex justify-center items-center">
+              <FaInstagram className="text-[white] text-[23px]" />
+            </div>
+            <div className="h-[40px] w-[40px] rounded-[50%] bg-blue-950 flex justify-center items-center">
+              <SlSocialLinkedin className="text-[white] text-[23px]" />
+            </div>
+          </div>
+          <div className="relative w-[95%]">
+            <input
+              placeholder="htttps://aluminirguktn.ac.in"
+              className=" relative p-[4px] h-[35px] w-[95%] border border-[black] text-[black]"
+            />
+            <div>
+              <GoCopy className="text-[20px] text-[black] absolute top-[7px] right-[25px]" />
+            </div>
+          </div>
+          <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
+            copy Now
+          </div>
+        </div>
       </div>
-
-</div>
-    )
-}
+    </div>
+  );
+};
 export default Promote;

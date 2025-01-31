@@ -1,7 +1,7 @@
 import React from 'react'
 const Chapter = () => {
   return (
-    <div className="mt-[70px]">
+    <div className="mt-[90px]">
         <div className="flex flex-col p-[10px] md:p-[50px] gap-[6px]">
             <div className="text-4xl font-semibold">Chapters</div>
             <div className="font-bold">Relevance of Alumni Chapters in meeting the goals of RGUKT IAR</div>

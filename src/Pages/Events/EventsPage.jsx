@@ -8,7 +8,7 @@ import {LayoutGridDemo} from "../../accernity/LayoutGridDemo"
 
 const EventsPage = () => {
   return (
-    <div className="  mt-20 md:mt-28 lg:mt-[110px] mx-6 ">
+    <div className="  mt-20 md:mt-28 lg:mt-[140px] mx-6 ">
         <EventsHero/>
         <UpComingEvents/>
         <PastEvents/>

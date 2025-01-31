@@ -39,6 +39,8 @@ import Secondsponcer from './Components/Secondsponcer';
 import Eve from './Components/Eve'
 import Students from './Components/Students'
 import Clg from './Components/Clg'
+import Countries from './Components/Countries'
+import Hyderabad from './Components/Hyderabad'
 const App = () => {
   return (
     <Router>
@@ -66,7 +68,7 @@ const App = () => {
       <Route path='/event_calender' element={<EventCalender/>}/>
       <Route path='/reunion' element={<Reunion/>}/>
       <Route path='/sponserships' element={<Sponserships/>}/>
-      
+      <Route path='/hyderabad' element={<Hyderabad/>}/>
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/mentor_ship' element={<MentorShip/>}/>
       <Route path='/workshops' element={<Workshops/>}/>
@@ -77,7 +79,7 @@ const App = () => {
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/contribute' element={<Contribute/>}/>
       <Route path='/jobs' element={<Jobs/>}/>
-      
+      <Route path='/countries' element={<Countries/>}/>
       <Route path='*' element={<Error />}/>
       <Route path="/Business" element={<Business />} />
       <Route path="/Sponsership" element={<Sponsership />} />

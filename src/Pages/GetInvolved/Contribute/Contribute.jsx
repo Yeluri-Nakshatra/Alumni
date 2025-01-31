@@ -23,7 +23,7 @@ const Contribute = () => {
     : carddata.filter(item => item.category === selectedCategory);
 
   return (
-    <div className='flex flex-row mt-[100px] gap-[20px] justify-center'>
+    <div className='flex flex-row md:mt-[120px] mt-[60px] lg:mt-[170px] gap-[20px] justify-center'>
 
       {/* Categories */}
     

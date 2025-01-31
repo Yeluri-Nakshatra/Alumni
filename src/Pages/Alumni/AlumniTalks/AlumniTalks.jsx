@@ -11,8 +11,8 @@ const AlumniTalks = () => {
   ];
 
   return (
-    <div className="mt-[100px] flex justify-center items-center flex-col gap-[30px] mb-[20px]">
-      <div className="h-[150px] bg-gray-400 w-[90%] flex flex-col justify-center items-center gap-[10px]">
+    <div className="mt-[80px] md:mt-[100px] lg:mt-[170px] flex justify-center items-center flex-col gap-[30px] mb-[20px]">
+      <div className="h-[150px] bg-gray-300 w-[90%] flex flex-col justify-center items-center gap-[10px]">
         <div className="text-[30px] font-bold text-[black]">Alumni Talks</div>
         <div className="text-[15px] font-bold text-[black] text-center">Hear from our successful alumni and their inspiring journeys</div>
       </div>
@@ -35,7 +35,7 @@ const AlumniTalks = () => {
       </div>
 
       
-      <div className="h-[170px] bg-gray-400 w-[90%] flex flex-col justify-center items-center gap-[10px]">
+      <div className="h-[170px] bg-gray-300 w-[90%] flex flex-col justify-center items-center gap-[10px]">
         <div className="text-[30px] font-bold text-[black]">Share your Story</div>
         <div className="text-[15px] font-bold text-[black] text-center">Are you an alumnus?We'd love to feature your journey and inspire others</div>
         <div className="h-[30px] w-[120px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
