@@ -21,13 +21,13 @@ const completed=[
 ]
 
   return (
-    <div className="mt-[100px] mb-[20px]">
+    <div className="mt-[90px] lg:mt-[160px] mb-[20px]">
 
       {/*search and filter box*/}
       <div className="flex flex-row gap-[20px] md:justify-end md:mr-[80px] ml-[30px] ">
         <div className="relative ">
           <input placeholder="Search a Workshop" className=" px-[5px] text-[gray] text-[15px] w-[200px]  font-bold border border-black h-[40px]"/>
-          <div><IoSearchOutline  className="text-[white] h-[40px] bg-blue-950 w-[27px] text-[20px] absolute right-0 top-0" /></div>
+          <div><IoSearchOutline  className="text-[white] p-1  h-[40px] bg-blue-950 w-[34px] text-[20px] absolute right-0 top-0" /></div>
         </div>
         <div className="h-[40px] w-[80px] border border-black flex flex-row gap-[5px] justify-center items-center">
           <div><CiFilter className="text-[black] text-[20px] font-bold" /></div>

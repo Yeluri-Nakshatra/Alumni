@@ -27,7 +27,7 @@ const Testimonals = () => {
   ];
 
   return (
-    <div className="w-full md:w-[90%] mx-auto max-md:mt-20  pt-12" id="testimonials">
+    <div className="w-full md:w-[90%] mx-auto mt-[5px] md:mt-18 pt-4 md:pt-10" id="testimonials">
       <h1 className="text-6xl ps-0 max-md:text-3xl mb-2 text-white font-medium w-full max-w-[420px]">
         <AnimatedText text="Testimonials" />
       </h1>

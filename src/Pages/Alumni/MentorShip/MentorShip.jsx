@@ -15,9 +15,9 @@ const MentorShip = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-[30px] mt-[100px] mb-[20px]">
+    <div className="flex flex-col gap-[30px] md:mt-[100px] mt-[70px] lg:mt-[160px] mb-[20px]">
       {/* Buttons Section */}
-      <div className="flex md:flex-row flex-col gap-[10px] justify-center ml-[60px]">
+      <div className="flex md:flex-row flex-col gap-[10px] justify-center items-center px-2">
         {data.map((item, index) => (
           <button
             key={index}

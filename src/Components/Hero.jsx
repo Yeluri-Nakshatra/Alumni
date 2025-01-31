@@ -9,7 +9,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <div className='p-[20px] rounded-xl mt-[50px] md:mt-[80px]'>
+    <div className='p-[20px]  rounded-xl mt-[50px] md:mt-[80px]'>
     <Swiper
       pagination={{
         dynamicBullets: true,
@@ -26,7 +26,7 @@ const Hero = () => {
       modules={[Navigation, Pagination, Autoplay]}
       className="mySwiper"
     >
-      <SwiperSlide><img src={carousel} className='rounded-xl' /></SwiperSlide>
+      <SwiperSlide><img src={carousel} className=' rounded-xl' /></SwiperSlide>
       <SwiperSlide><img src={carousel} className='rounded-xl' /></SwiperSlide>
       <SwiperSlide><img src={carousel} className='rounded-xl' /></SwiperSlide>
       <SwiperSlide><img src={carousel} className='rounded-xl' /></SwiperSlide>
