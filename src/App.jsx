@@ -25,6 +25,7 @@ import Sponserships from './Pages/Events/Sponserships/Sponserships'
 import MentorShip from './Pages/Alumni/MentorShip/MentorShip'
 import Workshops from './Pages/Alumni/Workshops/Workshops'
 import AlumniTalks from './Pages/Alumni/AlumniTalks/AlumniTalks'
+import RequestLost from "./pages/ALumni/RequestLost/RequestLost";
 import SmartId from './Pages/Alumni/SmartId/SmartId'
 import NewsLetter from './Pages/updates/NewsLetter/NewsLetter'
 import Awards from './Pages/updates/Awards/Awards'
@@ -71,6 +72,8 @@ const App = () => {
       <Route path='/awards' element={<Awards/>}/>
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/contribute' element={<Contribute/>}/>
+      <Route path="/requestLost" element={<RequestLost/>}/>
+      
       <Route path='/jobs' element={<Jobs/>}/>
       
       <Route path='*' element={<Error />}/>
