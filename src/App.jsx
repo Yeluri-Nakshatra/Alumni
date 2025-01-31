@@ -41,6 +41,8 @@ import Students from './Components/Students'
 import Clg from './Components/Clg'
 import Countries from './Components/Countries'
 import Hyderabad from './Components/Hyderabad'
+import GetInTouch from './Components/GetInTouch'
+import CandidateDetails from './Components/CandidateDetails'
 const App = () => {
   return (
     <Router>
@@ -49,12 +51,12 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/getinvolved" element={<GetInvolved />} />
-      <Route path="/events" element={<EventsPage />} />
-      <Route path="/aboutus" element={<About />} />
+      {/* <Route path="/getinvolved" element={<GetInvolved />} />
+      <Route path="/events" element={<EventsPage />} /> */}
+      {/* <Route path="/aboutus" element={<About />} /> */}
       <Route path="/Contact" element={<Contact />} />
       {/* <Route path='/login' element={<Login/>}/> */}
-      <Route path='/register' element={<Register/>}/>
+      {/* <Route path='/register' element={<Register/>}/> */}
       <Route path='/donation' element={<Donation/>}/>
       <Route path='/notifications' element={<Notifications/>}/>
       <Route path='/alumni_directory' element={<Alumni_Directory/>}/>
@@ -80,13 +82,16 @@ const App = () => {
       <Route path='/contribute' element={<Contribute/>}/>
       <Route path='/jobs' element={<Jobs/>}/>
       <Route path='/countries' element={<Countries/>}/>
-      <Route path='*' element={<Error />}/>
-      <Route path="/Business" element={<Business />} />
-      <Route path="/Sponsership" element={<Sponsership />} />
-      <Route path="/Secondsponcer" element={<Secondsponcer />} />
+      <Route path="/business" element={<Business />} />
+      <Route path="/sponsership" element={<Sponsership />} />
+      <Route path="/secondsponcer" element={<Secondsponcer />} />
       <Route path="/Clg" element={<Clg />}/>
       <Route path="/Eve" element={<Eve />} />
       <Route path="/Students" element={<Students/>} />
+      <Route path='/getintouch' element={<GetInTouch/>}/>
+      <Route path='/candidatedetails' element={<CandidateDetails/>}/>
+      <Route path='*' element={<Error />}/>
+      
 
     </Routes>
     <Footer/>

@@ -80,11 +80,16 @@ const Header = () => {
               />
             </Link>
           </div>
+          <div className="h-max my-2 flex justify-center items-center">
+            <Link to='/'>
           <div className="hidden lg:flex flex-col justify-center items-center ">
+          
             <div className="text-md font-bold text-blue-950 ">
               ALUMNI ASSOCIATION
             </div>
             <div className="font-semibold">RGUKT-NUZVID</div>
+          </div>
+          </Link>
           </div>
         </div>
         
@@ -145,19 +150,24 @@ const Header = () => {
                         src={Logo}
                         className="w-[40px] h-[40px]"
                         onClick={() => {
-                          setTab("home");
+                          tabClick("home");
                         }}
                       />
                     </Link>
                   </div>
-                  <div className="flex flex-col  ">
-                    <div className="text-[8px] font-bold text-blue-950 ">
-                      ALUMNI ASSOCIATION
-                    </div>
-                    <div className="font-semibold text-[8px] mt-[-10px]">
-                      RGUKT-NUZVID
-                    </div>
-                  </div>
+                  <div className="h-max my-1 flex justify-center items-center">
+            <Link to='/' onClick={() => {
+                    tabClick("home");
+                  }}>
+          <div className="flex flex-col justify-center items-center ">
+          
+            <div className="text-xs md:text-sm font-bold text-blue-950 ">
+              ALUMNI ASSOCIATION
+            </div>
+            <div className="font-semibold text-xs md:text-xs">RGUKT-NUZVID</div>
+          </div>
+          </Link>
+          </div>
                 </div>
 
                 <button
@@ -881,13 +891,13 @@ const Header = () => {
           </div>
           {/* Contact */}
           <Link
-            to="Contact"
+            to="/contact"
             className={`relative group font-semibold cursor-pointer px-4 py-1 rounded-md duration-200  hover:text-blue-950
-                    ${tab === "contact" ? " text-blue-950" : "text-gray-500"} `}
+                    ${location.pathname === "/contact" ? " text-blue-950" : "text-gray-500"} `}
             onClick={() => setTab("contact")}
           >
             Contact
-            {tab === "contact" ? (
+            {location.pathname === "/contact"  ? (
               <hr className="absolute bottom-0 left-3 w-[80%]  horizontal bg-blue-950 h-[3px] mt-1" />
             ) : (
               <hr className="absolute bottom-0 left-3 w-[80%]  horizontal bg-blue-950 h-[3px] mt-1 hidden group-hover:block" />
