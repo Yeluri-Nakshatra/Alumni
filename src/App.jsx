@@ -23,7 +23,7 @@ import EventCalender from './Pages/Events/EventCalender/EventCalender'
 import Reunion from './Pages/Events/Reunion/Reunion'
 import Sponserships from './Pages/Events/Sponserships/Sponserships'
 import MentorShip from './Pages/Alumni/MentorShip/MentorShip'
-import Workshops from './Pages/Alumni/Workshops/Workshops'
+// import Workshops from './Pages/Alumni/Workshops/Workshops'
 import AlumniTalks from './Pages/Alumni/AlumniTalks/AlumniTalks'
 import SmartId from './Pages/Alumni/SmartId/SmartId'
 import NewsLetter from './Pages/updates/NewsLetter/NewsLetter'
@@ -39,6 +39,7 @@ import Secondsponcer from './Components/Secondsponcer';
 import Eve from './Components/Eve'
 import Students from './Components/Students'
 import Clg from './Components/Clg'
+import Workshops from './Components/Workshops'
 const App = () => {
   return (
     <Router>
@@ -66,10 +67,10 @@ const App = () => {
       <Route path='/event_calender' element={<EventCalender/>}/>
       <Route path='/reunion' element={<Reunion/>}/>
       <Route path='/sponserships' element={<Sponserships/>}/>
-      
+      <Route path='/workshops2' element={<Workshops/>}/>
       <Route path='/donate' element={<Donate/>}/>
       <Route path='/mentor_ship' element={<MentorShip/>}/>
-      <Route path='/workshops' element={<Workshops/>}/>
+      {/* <Route path='/workshops' element={<Workshops/>}/> */}
       <Route path='/alumni_talks' element={<AlumniTalks/>}/>
       <Route path='/smartid' element={<SmartId/>}/>
       <Route path='/news_letter' element={<NewsLetter/>}/>

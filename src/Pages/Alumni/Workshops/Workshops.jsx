@@ -30,11 +30,11 @@ const completed=[
           <div><IoSearchOutline  className="text-[white] h-[40px] bg-blue-950 w-[27px] text-[20px] absolute right-0 top-0" /></div>
         </div>
         <div className="h-[40px] w-[80px] border border-black flex flex-row gap-[5px] justify-center items-center">
-          <div><CiFilter className="text-[black] font-bold text-[20px] font-bold" /></div>
+          <div><CiFilter className="text-[black] text-[20px] font-bold" /></div>
           <div className="text-[gray] font-bold text-[17px]">Filters</div>
         </div>
         </div>
-      <div className="font-bold text-[20px] text-center mt-[20px]">Live workshops</div>
+      <div className="font-bold text-[25px] text-center mt-[20px]">Live workshops</div>
 
 
       {/*carosuel*/}
