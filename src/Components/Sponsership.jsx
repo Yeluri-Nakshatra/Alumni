@@ -7,17 +7,17 @@ const Sponsership = () => {
   const navigate=useNavigate();
   const location = useLocation();
   return (
-    <div className="md:pl-[20px] md:pr-[20px] pl-[10px] pr-[10px]">
+    <div className="md:pl-[20px] mt-[110px] md:pr-[20px] pl-[10px] pr-[10px]">
         <div className="flex flex-col">
             <div className="flex justify-end relative lg:mr-[100px]"><img src={Coin} className="w-[300px] w-[500px]"></img></div>
             <div className="absolute flex text-3xl font-bold lg:mt-[200px] mt-[190px] md:mt-[100px] lg:ml-[200px]">Sponserships</div>
             <div className="absolute lg:mt-[240px] mt-[220px] w-[270px] lg:w-[500px] text-sm lg:ml-[200px]">Our alumni has graciously contributed in building the future of the university</div>
             <div className="bg-green-200 h-auto flex flex-col w-full p-[20px] lg:p-[30px] mt-[50px] md:mt-[0px]">
               <div className=" flex w-full justify-center">
-                <div className="w-[250px] md:w-[350px] bg-white rounded-md gap-[4px]">
-                <button className="pr-[15px] pl-[20px] rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Clg')}>Collage infrastucture</button>
-                <button className="pr-[15px] rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Eve')}>Events</button>
-                <button className="pr-[15px] rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Students')}>Students</button>
+                <div className="w-[250px] flex flex-wrap justify-center items-center md:w-[350px] bg-white rounded-md ">
+                <button className="p-1 px-2 font-semibold rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Clg')}>Collage infrastucture</button>
+                <button className="p-1 px-2 font-semibold rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Eve')}>Events</button>
+                <button className="p-1 px-2 font-semibold rounded-md hover hover:bg-blue-950 hover:text-white"onClick={()=>navigate('/Students')}>Students</button>
                 </div>
 
               </div>
