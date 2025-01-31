@@ -55,7 +55,7 @@ const CandidateDetails = () => {
             <div className="flex flex-col gap-1">
               <label htmlFor="phone">Mobile no</label>
               <input
-                type="number"
+                type="phone"
                 name="phone"
                 className="w-full px-2 py-1  rounded-lg border border-gray-300 bg-none outline-none focus:border-blue-800"
                 required

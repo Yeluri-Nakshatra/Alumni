@@ -14,9 +14,9 @@ import DistinguishedAlumni from '../../Components/DistinguishedAlumni';
 const Home = () => {
   return (
     <div>
-      <div className='flex md:flex-row flex-col '>
-      <div className='md:w-[70vw]'><Homehero /></div>
-      <div className='md:w-[20vw]'><HomeHeroBelow/></div>
+      <div className='flex md:flex-row flex-col justify-center items-center '>
+      <div className='w-[100%] md:w-[60%] lg:w-[50%]'><Homehero /></div>
+      <div className='w-[100%] md:w-[40%] lg:w-[50%]'><HomeHeroBelow/></div>
       </div>
       <TopEvents />
       <ProudGraduates />

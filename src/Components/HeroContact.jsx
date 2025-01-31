@@ -1,9 +1,9 @@
 import React from "react"
 import { FaEnvelope } from "react-icons/fa"
-
+import { Link } from "react-router-dom"
 const HeroContact = () => {
   return (
-    <div className="p-4 sm:p-6 md:p-8 mt-24 md:mt-32 lg:p-10">
+    <div className="p-4 sm:p-6 md:p-8 mt-24 md:mt-32 ">
       <div className="relative bg-gradient-to-r from-blue-950 to-blue-800 rounded-lg overflow-hidden shadow-xl">
         <div className="absolute inset-0">
           <svg className="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none">
@@ -26,7 +26,7 @@ const HeroContact = () => {
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition duration-150 ease-in-out"
               >
                 <FaEnvelope className="mr-2" />
-                Get in Touch
+                <Link to='/getintouch'>Get in Touch </Link>
               </a>
             </div>
           </div>

@@ -4,6 +4,7 @@ import carousel from "../assets/graduation.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 const Homehero = () => {
   return (
     <div className="md:flex md:justify-center md:items-center ">
