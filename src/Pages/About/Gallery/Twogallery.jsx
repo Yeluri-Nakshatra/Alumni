@@ -36,6 +36,14 @@ const galleryData = [
     images: [Fest],
     content: 'Phasellus ultricies, libero at fermentum gravida, felis sapien venenatis quam, at fermentum velit velit ac justo.',
   },
+  {
+    id: '4',
+    event: 'Nuzvid',
+    date: 'Nov 12, 2024',
+    category: 'Hyderabad',
+    images: [Fourthfest],
+    content: 'Phasellus ultricies, libero at fermentum gravida, felis sapien venenatis quam, at fermentum velit velit ac justo.',
+  },
  
 ];
 

@@ -28,7 +28,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="p-[10px] md:p-[30px] lg:p-[50px] mt-[100px]">
+    <div className="p-[10px] md:p-[30px] lg:p-[50px] mt-[100px] overflow-x-hidden">
       <div className="flex flex-col md:flex-row gap-[10px]">
         <div className="flex flex-col gap-[4px]">
           <div className="cursor-pointer w-[300px] lg:w-[300px] bg-gray-200 h-[60px] flex justify-center items-center text-center hover:border-l-4 hover:border-black"onClick={() => navigate('/Gallery')}>
@@ -64,8 +64,8 @@ const Gallery = () => {
               
               <Link 
               to ="/Festivals"
-              className={`mt-[25px] tab ${location.pathname==="/Festivals"?"active":""}`}>
-                Festivals
+              className={`mt-[25px] tab ${location.pathname==="/Festival"?"active":""}`}>
+                Festival
               </Link>
             </div>
           )}
