@@ -2,31 +2,46 @@ import React from "react";
 
 const Description = () => {
   return (
-    <div className="flex flex-col p-[20px]">
-      <div className="text-3xl font-bold flex justify-center">Description</div>
-      <div className="pt-[10px] text-lg text-center">
-        <p>
-          College is a higher education institution where students earn degrees
-          and develop skills for their careers. What is college? College is an
-          academic institution that provides higher education Students earn
-          degrees and develop skills for their careers College is a
-          transformative phase that bridges the gap between adolescence and
-          adulthood **What can students do at college? Students learn, grow, and
-          make unforgettable experiences Students develop life skills, build
-          friendships, and explore new interests Students exchange ideas and
-          participate in extra-curricular activities
-        </p>
-      </div>
-      <div className="pt-[10px] text-lg text-center">
-        <p>
-          **What is required to enter college? In most countries, students need
-          a high school diploma or equivalent to enter college In the United
-          States and Canada, a GED is equivalent to a high school diploma **What
-          are some benefits of college? College helps students develop
-          knowledge, confidence, academic and technical skills, career
-          opportunities, and social skills College helps students shape them as
-          future assets of the society
-        </p>
+    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-2xl">
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-4">
+        Description
+      </h2>
+      
+      <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+        <section>
+          <h3 className="text-2xl font-semibold text-gray-900">What is College?</h3>
+          <p>
+            College is an academic institution that provides higher education. Students earn degrees
+            and develop skills for their careers. It is a transformative phase that bridges the gap
+            between adolescence and adulthood.
+          </p>
+        </section>
+        
+        <section>
+          <h3 className="text-2xl font-semibold text-gray-900">What Can Students Do at College?</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Learn, grow, and create unforgettable experiences.</li>
+            <li>Develop life skills, build friendships, and explore new interests.</li>
+            <li>Exchange ideas and participate in extracurricular activities.</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3 className="text-2xl font-semibold text-gray-900">What is Required to Enter College?</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>In most countries, students need a high school diploma or equivalent.</li>
+            <li>In the U.S. and Canada, a GED is considered equivalent to a high school diploma.</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3 className="text-2xl font-semibold text-gray-900">Benefits of College</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Develop knowledge, confidence, and academic skills.</li>
+            <li>Gain technical expertise and career opportunities.</li>
+            <li>Enhance social skills and contribute to society.</li>
+          </ul>
+        </section>
       </div>
     </div>
   );

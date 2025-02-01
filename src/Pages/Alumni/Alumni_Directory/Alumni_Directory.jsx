@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
 
 const AlumniCard = ({ name, department, domain, year_of_graduation, profile_pic }) => (
-  <div className='h-[100px] w-[300px] border-[2px] rounded-md flex  justify-around items-center'>
+  <div className='h-[100px] md:w-[250px] lg:w-[300px] border-[2px] rounded-md flex  justify-around items-center'>
        <img src={profile_pic} className='h-[80px] w-[80px] rounded-full'/>
        <div>
        <h2 ><span className="font-bold">{name}</span>{" "} 
@@ -67,7 +67,7 @@ const Alumni_Directory = () => {
   }, [filters, searchTerm])
 
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
+    <div className="bg-gray-100 min-h-screen md:mt-[80px] mt-[50px] lg:mt-[130px] p-4 lg:p-8">
       <h1 className="text-3xl font-bold mb-8 text-center">Alumni Directory</h1>
       <div className="flex flex-col md:flex-row gap-8">
         <aside className="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-md">
@@ -97,7 +97,7 @@ const Alumni_Directory = () => {
             onChange={(domain) => handleFilterChange("domains", domain)}
           />
         </aside>
-        <main className="w-full md:w-3/4">
+        <main className="w-full lg:w-3/4 md:w-3/5">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredAlumni.length > 0 ? (
               filteredAlumni.map((alumni, index) => <AlumniCard key={index} {...alumni} />)

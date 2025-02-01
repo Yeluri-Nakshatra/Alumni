@@ -128,7 +128,7 @@ const Alumni_News = () => {
   )
 
   return (
-    <div className="min-h-screen bg-gray-100 mt-20 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 mt-4 md:mt-20 lg:mt-28 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-blue-950 mb-8 flex items-center justify-center">
           <FaNewspaper className="mr-2 text-blue-950" />

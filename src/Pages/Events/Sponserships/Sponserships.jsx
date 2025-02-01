@@ -33,7 +33,7 @@ const Sponserships = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-12 mt-[60px]">
+      <div className="max-w-7xl mx-auto px-4 py-12 mt-[80px] md:mt-[100px]">
      
         <div className="mb-8 space-y-4 sm:space-y-0 sm:flex sm:items-center sm:space-x-4 mt-[20px]">
           <div className="relative flex-1">

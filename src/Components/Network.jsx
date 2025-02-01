@@ -17,7 +17,7 @@ const Network = () => {
     <div className="flex justify-center mb-[20px]">
         <div className="flex flex-col justify-center">
             <div className="text-3xl text-[#182d6a]  flex justify-center underline text-center">IIITNUZVID ALUMNI NETWORK</div>
-            <div className="flex flex-row flex-wrap gap-[100px] text-center justify-center pt-[30px] lg:ml-[100px] lg:mr-[100px]">{
+            <div className="flex flex-row flex-wrap gap-8 md:gap-12 lg:gap-[100px] text-center justify-center pt-[30px] lg:ml-[100px] lg:mr-[100px]">{
                 rewards.map((num)=>{
                    return(
                     <div className="flex flex-col gold-shine" key={num.id}><p className="text-4xl font-semibold ">{num.number}</p><p className="font-extrabold text-[#182d6a] text-xl">{num.specialization}</p></div>

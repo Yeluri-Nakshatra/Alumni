@@ -15,11 +15,11 @@ const Login = ({ isVisible, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[200]"
       onClick={onClose}
     >
       <div
-        className="bg-white p-6 rounded-lg  w-[90%] md:w-[440px] shadow-lg"
+        className="bg-white p-2 md:p-6 rounded-lg  w-[90%] md:w-[440px] shadow-lg"
         onClick={(e) => e.stopPropagation()}
       >
         {/*<button

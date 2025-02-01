@@ -1,92 +1,155 @@
-import react from 'react';
-import { LuDownload } from "react-icons/lu";
-import { IoSearchOutline } from "react-icons/io5";
-import { CiFilter } from "react-icons/ci";
-import person from "../../../assets/aboutteam2.jpg";
-const Mentees=()=>{
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { LuDownload, LuUserPlus } from "react-icons/lu"
+import { IoSearchOutline } from "react-icons/io5"
+import { CiFilter } from "react-icons/ci"
 
+const Mentees = () => {
+  const [activeTab, setActiveTab] = useState("My Preferences")
+  const [searchTerm, setSearchTerm] = useState("")
+  const [showFilters, setShowFilters] = useState(false)
 
+  const tabs = ["My Preferences", "Mentorship Homepage"]
 
-    const Mentees=[
-        
-        {photo:person,name:"Muthuraja Balasubramani",position:"Admin"},
-        {photo:person,name:"Muthuraja Balasubramani",position:"Admin"},
-        {photo:person,name:"Muthuraja Balasubramani",position:"Admin"},
-        {photo:person,name:"Muthuraja Balasubramani",position:"Admin"},
-        {photo:person,name:"Muthuraja Balasubramani",position:"Admin"},
-        {photo:person,name:"Muthuraja Balasubramani",position:"Admin"},
+  const mentees = [
+    {
+      photo: "https://i.pravatar.cc/150?img=1",
+      name: "Aisha Patel",
+      position: "Computer Science Student",
+      seeking: ["Resume review assistance", "Interview preparation tips"],
+    },
+    {
+      photo: "https://i.pravatar.cc/150?img=2",
+      name: "Carlos Rodriguez",
+      position: "Marketing Intern",
+      seeking: ["Career guidance in digital marketing", "Networking strategies"],
+    },
+    {
+      photo: "https://i.pravatar.cc/150?img=3",
+      name: "Emma Thompson",
+      position: "Aspiring Data Analyst",
+      seeking: ["SQL and Python mentorship", "Data visualization techniques"],
+    },
+    {
+      photo: "https://i.pravatar.cc/150?img=4",
+      name: "Jamal Wilson",
+      position: "Engineering Graduate",
+      seeking: ["Industry insights for mechanical engineering", "Project management skills"],
+    },
+    {
+      photo: "https://i.pravatar.cc/150?img=5",
+      name: "Sophia Chen",
+      position: "UX Design Student",
+      seeking: ["Portfolio review and feedback", "User research methodologies"],
+    },
+    {
+      photo: "https://i.pravatar.cc/150?img=6",
+      name: "Liam O'Connor",
+      position: "Business Administration Major",
+      seeking: ["Entrepreneurship guidance", "Financial modeling assistance"],
+    },
+  ]
 
-    ]
-    return(
-        <div>
+  const filteredMentees = mentees.filter(
+    (mentee) =>
+      mentee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      mentee.position.toLowerCase().includes(searchTerm.toLowerCase()),
+  )
 
-
-
-
-              <div className="flex md:flex-row flex-col gap-[20px] justify-between">
-               <div className="flex md:flex-row flex-col justify-center gap-[10px] ml-[85px]">
-                <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
-                    My Preferences
-                </div>
-                <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
-                    Mentorship Homepage
-                </div>
-            </div>
-
-
-
-           <div className="flex flex-col gap-[10px] md:mr-[80px] ml-[30px]">
-            <div className="text-[20px] font-bold text-[black]">Mentees List</div>
-            <div className=" flex justify-center items-center border-black border text-[black] font-bold text-[15px] h-[40px] w-[300px]">Add mentees</div>
-            <div className=" flex justify-center items-center bg-blue-950  text-[white] flex-row gap-[10px] font-bold text-[15px] h-[40px] w-[300px]">
-            <LuDownload className="text-[20px]"/>
-             <div>Download</div>  </div>  
-         <div className="flex flex-row gap-[20px] ">
-        <div className="relative ">
-          <input placeholder="Search a Workshop" className=" px-[5px] text-[gray] text-[15px] w-[200px]  font-bold border border-black h-[40px]"/>
-          <div><IoSearchOutline  className="text-[white] h-[40px] bg-blue-950 w-[27px] text-[20px] absolute right-0 top-0" /></div>
+  return (
+    <div className="bg-gray-50 min-h-screen p-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Tabs */}
+        <div className="flex justify-center mb-8">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={`px-6 py-3 text-sm font-medium rounded-full transition-all duration-200 ${
+                activeTab === tab ? "bg-blue-950 text-white shadow-md" : "bg-white text-gray-600 hover:bg-gray-100"
+              }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
-        <div className="h-[40px] w-[80px] border border-black flex flex-row gap-[5px] justify-center items-center">
-          <div><CiFilter className="text-[black] font-bold text-[20px] font-bold" /></div>
-          <div className="text-[gray] font-bold text-[17px]">Filters</div>
-        </div>
-        </div> 
-           </div>
-           </div>
 
-             
-
-
-          
-
-          <div className="flex flex-row flex-wrap  justify-center gap-x-[50px] gap-y-[30px] mt-[30px] ">
-        {Mentees.map((item, index) => (
-          <div key={index} className="h-[350px] w-[300px]  rounded-[5px] shadow-lg shadow-gray-400 flex flex-col justify-center items-center gap-[10px]">
-            
-              <img src={item.photo} className="h-[100px] w-[100px] rounded-[50%]" />
-              <div className="text-[20px] font-bold text-[black]">{item.name}</div>
-              <div className="text-[15px] font-bold text-[gray]">{item.position}</div>
-              <div className="text-[12px] font-bold text-[black]">Seeking for help</div>
-              <div>
-                <div className="text-[black] font-semibold text-[black] text-center">Need help with my resume review</div>
-                <div  className="text-[black] font-semibold text-[black] text-center">Need help with HR interview</div>
-              </div>
-              <div className="h-[30px] w-[100px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-                View Profile
-              </div>
-            
+        {/* Header and Actions */}
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4 md:mb-0">Mentees List</h1>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="flex items-center justify-center px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors">
+              <LuUserPlus className="mr-2" />
+              Add Mentee
+            </button>
+            <button className="flex items-center justify-center px-4 py-2 bg-blue-950 text-white rounded-md hover:bg-blue-700 transition-colors">
+              <LuDownload className="mr-2" />
+              Download
+            </button>
           </div>
-        ))}
+        </div>
+
+        {/* Search and Filter */}
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
+          <div className="relative w-full sm:w-64 mb-4 sm:mb-0">
+            <input
+              type="text"
+              placeholder="Search mentees..."
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <IoSearchOutline className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          </div>
+          <button
+            className="flex items-center px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors"
+            onClick={() => setShowFilters(!showFilters)}
+          >
+            <CiFilter className="mr-2" />
+            Filters
+          </button>
+        </div>
+
+        {/* Mentees Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredMentees.map((mentee, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
+              <div className="p-6 flex flex-col items-center">
+                <img
+                  src={mentee.photo || "/placeholder.svg"}
+                  alt={mentee.name}
+                  className="w-24 h-24 rounded-full mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">{mentee.name}</h3>
+                <p className="text-sm text-gray-600 mb-4">{mentee.position}</p>
+                <div className="mb-4 w-full">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Seeking help with:</h4>
+                  <ul className="text-sm text-gray-600">
+                    {mentee.seeking.map((item, i) => (
+                      <li key={i} className="mb-1 flex items-start">
+                        <span className="mr-2">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button className="w-full px-4 py-2 bg-blue-950 text-white rounded-md hover:bg-blue-700 transition-colors">
+                  View Profile
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-
-          
-
-
-
-
-
-
-            </div>
-    );
+    </div>
+  )
 }
-export default Mentees;
+
+export default Mentees
+
