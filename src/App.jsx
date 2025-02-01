@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router,Routes,Route } from 'react-router'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GetInvolved from './Pages/GetInvolved/GetInvolved'
 import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
@@ -39,6 +39,13 @@ import Secondsponcer from './Components/Secondsponcer';
 import Eve from './Components/Eve'
 import Students from './Components/Students'
 import Clg from './Components/Clg'
+import Onegallery from './Pages/About/Gallery/Onegallery';
+import Twogallery from './Pages/About/Gallery/Twogallery';
+
+import Collagedays from './Pages/About/Gallery/Collagedays';
+import Video from './Pages/About/Gallery/Video';
+import Festival from './Pages/About/Gallery/Festival';
+import Fourgallery from './Pages/About/Gallery/Fourgallery';
 const App = () => {
   return (
     <Router>
@@ -85,6 +92,11 @@ const App = () => {
       <Route path="/Clg" element={<Clg />}/>
       <Route path="/Eve" element={<Eve />} />
       <Route path="/Students" element={<Students/>} />
+      <Route path="/gallery/:id" element={<Twogallery />}/>
+      <Route path='/Collagedays' element={<Collagedays />} />
+      <Route path='/Video' element={<Video />} />
+      <Route path='/Festival' element={<Festival />} />
+      <Route path='/gallery/:id' element={<Fourgallery />} />
 
     </Routes>
     <Footer/>
