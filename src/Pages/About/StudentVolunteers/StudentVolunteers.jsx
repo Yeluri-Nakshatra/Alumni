@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const StudentVolunteers = () => {
   const team = [
@@ -10,27 +10,38 @@ const StudentVolunteers = () => {
   ];
 
   return (
-    <div className='flex justify-center items-center w-full h-screen p-[20px]'>
-      <div className="overflow-x-auto w-full">
-        <table className="min-w-full border border-2">
-          <thead>
-            <tr className="border border-2">
-              <th className="border border-2 py-2 px-4 text-left text-center">Name</th>
-              <th className="border border-2 py-2 px-4 text-left text-center">Id</th>
-              <th className="border border-2 py-2 px-4 text-left text-center">Year</th>
-              <th className="border border-2 py-2 px-4 text-left text-center">Branch</th>
-              <th className="border border-2 py-2 px-4 text-left text-center">LinkedIn Profile</th>
+    <div className='flex flex-col md:mt-[140px] mt-[80px  ] items-center w-full min-h-screen p-6 bg-gray-100'>
+      {/* Header Section */}
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-gray-800">Meet Our Student Volunteers</h1>
+        <p className="text-lg text-gray-600 mt-2">A team dedicated to making a difference!</p>
+      </div>
+      
+      {/* Volunteer Table */}
+      <div className="overflow-x-auto w-full max-w-6xl bg-white shadow-lg rounded-lg p-6">
+        <table className="w-full border-collapse border border-gray-300 rounded-lg overflow-hidden">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="py-3 px-6 text-center">Name</th>
+              <th className="py-3 px-6 text-center">Id</th>
+              <th className="py-3 px-6 text-center">Year</th>
+              <th className="py-3 px-6 text-center">Branch</th>
+              <th className="py-3 px-6 text-center">LinkedIn Profile</th>
             </tr>
           </thead>
           <tbody>
             {team.map((member) => (
-              <tr key={member.id} className="text-sm md:text-base">
-                <td className="border border-2 py-2 px-4 text-center">{member.Name}</td>
-                <td className="border border-2 py-2 px-4 text-center">{member.Id}</td>
-                <td className="border border-2 py-2 px-4 text-center">{member.Year}</td>
-                <td className="border border-2 py-2 px-4 text-center">{member.Branch}</td>
-                <td className="border border-2 py-2 px-4 text-center">
-                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <tr key={member.id} className="text-gray-700 bg-gray-50 border-b hover:bg-gray-200 transition duration-200">
+                <td className="py-3 px-6 text-center">{member.Name}</td>
+                <td className="py-3 px-6 text-center">{member.Id}</td>
+                <td className="py-3 px-6 text-center">{member.Year}</td>
+                <td className="py-3 px-6 text-center">{member.Branch}</td>
+                <td className="py-3 px-6 text-center">
+                  <a 
+                    href={`https://www.linkedin.com/in/${member.Linked}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-blue-600 hover:underline">
                     {member.Linked}
                   </a>
                 </td>
@@ -38,6 +49,17 @@ const StudentVolunteers = () => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Volunteer Impact Section */}
+      <div className="mt-12 bg-blue-50 p-6 rounded-lg w-full max-w-6xl text-center shadow-lg">
+        <h2 className="text-2xl font-semibold text-blue-900">Why Student Volunteers Matter</h2>
+        <p className="text-lg text-gray-700 mt-3">Student volunteers contribute their time and effort to support events, help peers, and drive positive change in the community. Their dedication shapes a better future for everyone.</p>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-12 text-center text-gray-600 text-sm">
+        <p>&copy; {new Date().getFullYear()} Student Volunteers | All Rights Reserved</p>
       </div>
     </div>
   );
