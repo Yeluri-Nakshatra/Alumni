@@ -1,111 +1,98 @@
-import react from "react";
-import { AiOutlineExclamation } from "react-icons/ai";
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { FaUserTie, FaUserGraduate } from "react-icons/fa"
+import { AiOutlineExclamation } from "react-icons/ai"
+
 const Analytics = () => {
+  const [activeTab, setActiveTab] = useState("My Preferences")
+
+  const tabs = ["My Preferences", "Mentorship Homepage"]
+
+  const stats = [
+    { title: "Total Mentors", count: 40, change: "+1 new mentor in last 30 days", icon: FaUserTie },
+    { title: "Total Mentees", count: 50, change: "+3 new mentees in last 30 days", icon: FaUserGraduate },
+  ]
+
+  const actions = [
+    {
+      title: "Increase mentor engagement",
+      description:
+        "Promoting the mentorship platform regularly will encourage mentors to connect with mentees as and when needed.",
+      action: "Promote Mentorship",
+    },
+    {
+      title: "Improve mentee retention",
+      description:
+        "Regularly check in with mentees and gather feedback to improve their experience and keep them engaged.",
+      action: "Survey Mentees",
+    },
+  ]
+
   return (
-    <div>
-      {/*tabs*/}
-
-      <div className="flex md:flex-row flex-col justify-center gap-[10px] ml-[85px]">
-        <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
-          My Preferences
-        </div>
-        <div className="border border-[gray] bg-gray-300 h-[50px] w-[200px] text-[black] flex justify-center items-center">
-          Mentorship Homepage
-        </div>
+    <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+      {/* Tabs */}
+      <div className="flex justify-center mb-8">
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            className={`px-6 py-3 text-sm font-medium rounded-full transition-all duration-200 ${
+              activeTab === tab ? "bg-blue-950 text-white shadow-md" : "bg-white text-gray-600 hover:bg-gray-100"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </button>
+        ))}
       </div>
 
-      {/*Top Analytics */}
-      <div className="flex flex-col gap-[50px]">
-        <div className="text-[black] font-semibold text-[25px] text-center mt-[30px]">
-          Top Analytics
-        </div>
-        <div className="flex md:flex-row flex-col gap-[50px] justify-center items-center ">
-          <div className="md:h-[270px] h-[300px] md:w-[350px] w-[340px] rounded-[5px]  shadow-lg shadow-gray-400 flex flex-col justify-center pl-[20px] gap-[10px]">
-            <div className="text-[20px] font-bold text-[black]">
-              Total mentors
-            </div>
-            <div className="text-[40px] font-semibold text-[black] ">40</div>
-
-            <div className="text-[20px] font-bold text-[black] underline">
-              +1 new mentors in last 30 days
-            </div>
-            <div className="flex flex-row gap-[10px] mt-[30px]">
-              <div className="h-[30px] w-[150px] rounded-[5px] text-blue-950  bg-[white]  border border-blue-950 flex justify-center items-center">
-                View all
+      {/* Top Analytics */}
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Top Analytics</h2>
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {stats.map((stat, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-semibold text-gray-700">{stat.title}</h3>
+                <stat.icon className="text-3xl text-blue-950" />
               </div>
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-                Increase Mentors
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stat.count}</p>
+              <p className="text-sm text-green-600 font-medium">{stat.change}</p>
+              <div className="mt-4 flex gap-4">
+                <button className="px-4 py-2 text-sm font-medium text-blue-950 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors">
+                  View all
+                </button>
+                <button className="px-4 py-2 text-sm font-medium text-white bg-blue-950 rounded-md hover:bg-blue-700 transition-colors">
+                  {stat.title === "Total Mentors" ? "Increase Mentors" : "Increase Mentees"}
+                </button>
               </div>
             </div>
-          </div>
-          {/*second box*/}
-          <div className="md:h-[270px] h-[300px] md:w-[350px] w-[340px] rounded-[5px]  shadow-lg shadow-gray-400 flex flex-col justify-center pl-[20px] gap-[10px]">
-            <div className="text-[20px] font-bold text-[black]">
-              Total mentees
-            </div>
-            <div className="text-[40px] font-semibold text-[black] ">50</div>
-
-            <div className="text-[20px] font-bold text-[black] underline">
-              +1 new mentors in last 30 days
-            </div>
-            <div className="flex flex-row  gap-[10px] mt-[30px]">
-              <div className="h-[30px] w-[150px] rounded-[5px] text-blue-950  bg-[white]  border border-blue-950 flex justify-center items-center">
-                View all
-              </div>
-              <div className="h-[30px] w-[150px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-                Increase Mentors
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div>
-          <div className="text-[black] font-semibold text-[25px] text-center ">
-            Important actions
-          </div>
-
-          <div className="flex md:flex-row flex-col gap-[50px] justify-center items-center mt-[30px]">
-            {/*first box*/}
-            <div className="md:h-[200px] h-[300px] md:w-[500px] w-[340px] rounded-[5px]  shadow-lg shadow-gray-400 flex flex-col justify-center pl-[20px] gap-[15px]">
-              <div className="flex flex-row gap-[6px] items-center">
-                <div className="flex justify-center items-center bg-blue-950 rounded-[50%] h-[25px] w-[25px] md:mt-auto mt-[-25px]">
-                  <AiOutlineExclamation className="text-[white] text-[25px]" />
+        {/* Important Actions */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Important Actions</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {actions.map((action, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-start mb-4">
+                <div className="flex-shrink-0">
+                  <AiOutlineExclamation className="text-2xl text-blue-950" />
                 </div>
-                <div className="text-[20px] font-bold text-[black]">
-                  Very few important requests in recent time
+                <div className="ml-3">
+                  <h3 className="text-lg font-semibold text-gray-800">{action.title}</h3>
+                  <p className="mt-1 text-sm text-gray-600">{action.description}</p>
                 </div>
               </div>
-
-              <div className="text-[16px] font-semibold text-[gray]  ">
-                Promoting the mentorship platform regularly will encourage
-                mentors to connect with mentors as and when needed
-              </div>
-              <div className="h-[30px] w-[200px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-                Promote Mentorship
-              </div>
+              <button className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-950 rounded-md hover:bg-blue-700 transition-colors">
+                {action.action}
+              </button>
             </div>
-            {/*second box*/}
-            <div className="md:h-[200px] h-[300px] md:w-[500px] w-[340px] rounded-[5px]  shadow-lg shadow-gray-400 flex flex-col justify-center pl-[20px] gap-[15px]">
-              <div className="flex flex-row gap-[6px] items-center">
-                <div className="flex justify-center items-center bg-blue-950 rounded-[50%] h-[25px] w-[25px]  md:mt-auto mt-[-25px]">
-                  <AiOutlineExclamation className="text-[white] text-[25px]" />
-                </div>
-                <div className="text-[20px] font-bold text-[black]">
-                  Very few important requests in recent time
-                </div>
-              </div>
-              <div className="text-[16px] font-semibold text-[gray] ">
-                Promoting the mentorship platform regularly will encourage
-                mentors to connect with mentors as and when needed
-              </div>
-              <div className="h-[30px] w-[200px] rounded-[5px] text-[white] bg-blue-950 flex justify-center items-center">
-                Promote Mentorship
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
+      </motion.div>
     </div>
-  );
-};
-export default Analytics;
+  )
+}
+
+export default Analytics
+
