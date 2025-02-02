@@ -44,6 +44,10 @@ import Countries from "./Components/Countries";
 import Hyderabad from "./Components/Hyderabad";
 import GetInTouch from "./Components/GetInTouch";
 import CandidateDetails from "./Components/CandidateDetails";
+import Twogallery from "./Pages/About/Gallery/Twogallery";
+import Collagedays from "./Pages/About/Gallery/Collagedays";
+import Festival from "./Pages/About/Gallery/Festival";
+import Video from "./Pages/About/Gallery/Video";
 const App = () => {
   return (
     <Router>
@@ -94,6 +98,10 @@ const App = () => {
         <Route path="/getintouch" element={<GetInTouch />} />
         <Route path="/candidatedetails" element={<CandidateDetails />} />
         <Route path="*" element={<Error />} />
+        <Route path="/gallery/:id" element={<Twogallery />} />
+        <Route path="/Collagedays" element={<Collagedays/>} />
+        <Route path="/Festival" element={<Festival />} />
+        <Route path="/Video" element={<Video />} />
       </Routes>
       <Footer />
     </Router>
