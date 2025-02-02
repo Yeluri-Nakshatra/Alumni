@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <div>
       <div className='flex md:flex-row flex-col justify-center items-center '>
-      <div className='w-[100%] md:w-[60%] lg:w-[50%]'><Homehero /></div>
-      <div className='w-[100%] md:w-[40%] lg:w-[50%]'><HomeHeroBelow/></div>
+      <div className='w-[100%]'><Homehero /></div>
+     
       </div>
       <TopEvents />
       <ProudGraduates />
