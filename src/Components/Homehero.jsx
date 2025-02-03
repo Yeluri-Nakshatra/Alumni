@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 const Homehero = () => {
   return (
-    <div className="mb-[100px]">
+    <div className="pb-[100px] bg-gray-200">
       <div className="relative">
         <img src={Graduates} className="w-full md:h-[650px] h-[400px]"></img>
         <div className="absolute inset-0 bg-black opacity-50"></div>
