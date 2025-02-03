@@ -11,6 +11,7 @@ import {InfiniteMovingCardsDemo} from "../../accernity/InfiniteMovingCardsDemo";
 import HomeHeroBelow from '../../Components/HomeHeroBelow'
 import Announcement from '../../Components/Announcement';
 import DistinguishedAlumni from '../../Components/DistinguishedAlumni';
+import LatestNews from '../../Components/LatestNews';
 const Home = () => {
   return (
     <div>
@@ -18,7 +19,7 @@ const Home = () => {
       <div className='w-[100%]'><Homehero /></div>
      
       </div>
-      <TopEvents />
+      <LatestNews />
       <ProudGraduates />
       <div className='flex md:flex-row flex-col w-full mt-16 md:justify-around lg:justify-evenly items-center gap-6 md:gap-0 '>
         <Announcement/>
