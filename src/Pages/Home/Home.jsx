@@ -21,7 +21,7 @@ const Home = () => {
       </div>
       <LatestNews />
       <ProudGraduates />
-      <div className="flex flex-col md:flex-row w-full mt-8 md:justify-center lg:justify-around items-center  px-4">
+      <div className="flex flex-col md:flex-row w-full mt-8 md:justify-center lg:justify-around items-center  px-4 gap-[20px]">
       <Announcement />
       <DistinguishedAlumni />
     </div>
