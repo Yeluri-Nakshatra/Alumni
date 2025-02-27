@@ -104,11 +104,16 @@ import person from '../../../assets/aboutteam2.jpg';
 
 const Contribute = () => {
   const categories = [
-    { name: 'All', num: '14' },
-    { name: 'Academic Scholarship', num: '3' },
-    { name: 'Development', num: '3' },
-    { name: 'Social', num: '5' },
-    { name: 'Financial Assistance', num: '5' }
+    // { name: 'All', num: '14' },
+    // { name: 'Academic Scholarship', num: '3' },
+    // { name: 'Development', num: '3' },
+    // { name: 'Social', num: '5' },
+    // { name: 'Financial Assistance', num: '5' }
+    { name: 'All', num: '0' },
+    { name: 'Academic Scholarship', num: '0' },
+    { name: 'Development', num: '0' },
+    { name: 'Social', num: '0' },
+    { name: 'Financial Assistance', num: '0' }
   ];
   const [selectedCategory, setSelectedCategory] = useState('All');
   const filteredCards = selectedCategory === 'All' ? carddata : carddata.filter(item => item.category === selectedCategory);
@@ -131,9 +136,11 @@ const Contribute = () => {
           </button>
         ))}
       </div>
-
+ <div>
+  "No Contributions Yet."
+ </div>
       {/* Cards Section */}
-      <div className="flex flex-wrap justify-center gap-6">
+      {/* <div className="flex flex-wrap justify-center gap-6">
         {filteredCards.length > 0 ? (
           filteredCards.map((item, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-5 w-80 transition-transform hover:-translate-y-1">
@@ -158,7 +165,7 @@ const Contribute = () => {
         ) : (
           <p className="text-lg text-gray-500">No contributions available for this category.</p>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

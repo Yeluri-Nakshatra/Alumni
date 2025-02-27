@@ -80,7 +80,8 @@ const SeekersSays = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8">
           Alumni Voices: Our Shared Legacy
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <span className="text-center text-2xl">Coming Soon..</span>
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {displayedAlumni.map((alum, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-6">
@@ -119,7 +120,7 @@ const SeekersSays = () => {
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   )

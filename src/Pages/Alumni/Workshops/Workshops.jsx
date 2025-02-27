@@ -145,7 +145,7 @@ const Workshops = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Upcoming Workshops</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingWorkshops.map((workshop) => (
+            {/* {upcomingWorkshops.map((workshop) => (
               <div key={workshop.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{workshop.title}</h3>
@@ -173,15 +173,17 @@ const Workshops = () => {
                   </button>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
+          <div className="w-full h-[50px] bg-gray-300 opacity-20 flex items-center px-[20px]">Will Update Soon...</div>
+
         </section>
 
         {/* Completed Workshops */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Completed Workshops</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {completedWorkshops.map((workshop) => (
+            {/* {completedWorkshops.map((workshop) => (
               <div key={workshop.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{workshop.title}</h3>
@@ -205,8 +207,10 @@ const Workshops = () => {
                   </button>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
+          <div className="w-full h-[50px] bg-gray-300 opacity-20 flex items-center px-[20px] ">Will Update Soon...</div>
+
         </section>
       </div>
     </div>

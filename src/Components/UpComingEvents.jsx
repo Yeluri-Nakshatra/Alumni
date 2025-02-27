@@ -39,7 +39,9 @@ const UpComingEvents = () => {
           </button>
         </div>
       </div>
-      <div className="pt-[10px] flex flex-col md:flex-row">
+      <div className="w-full bg-gray-300 flex items-center px-[20px] opacity-20 h-[50px]">Will Update Soon ..</div>
+
+      {/* <div className="pt-[10px] flex flex-col md:flex-row">
         <div className="flex w-full md:w-[25%]">
           <img src={firsteve} />
         </div>
@@ -60,8 +62,8 @@ const UpComingEvents = () => {
             game, the 5k run and more
           </div>
         </div>
-      </div>
-      <div className="pt-[10px] flex flex-col md:flex-row">
+      </div> */}
+      {/* <div className="pt-[10px] flex flex-col md:flex-row">
         <div className="flex w-full md:w-[25%]">
           <img src={Secondeve} />
         </div>
@@ -82,7 +84,7 @@ const UpComingEvents = () => {
             game, the 5k run and more
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

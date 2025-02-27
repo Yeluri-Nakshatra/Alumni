@@ -195,13 +195,15 @@ const Alumni_News = () => {
           </div>
         </div>
 
-        {currentItems.length > 0 ? (
+        {/* {currentItems.length > 0 ? (
           currentItems.map((article) => <ArticleItem key={article.id} article={article} />)
         ) : (
           <div className="text-center text-gray-500 py-8">No articles found matching your criteria.</div>
-        )}
+        )} */}
+                  <div className="text-center text-gray-500 py-8">No articles Yet..</div>
 
-        {sortedArticles.length > itemsPerPage && (
+
+        {/* {sortedArticles.length > itemsPerPage && (
           <div className="flex justify-center items-center mt-8">
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
@@ -221,7 +223,7 @@ const Alumni_News = () => {
               <FaChevronRight />
             </button>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   )

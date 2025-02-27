@@ -1,5 +1,5 @@
 import React from 'react'
-import Graduates from '../assets/Graduates.webp';
+import Graduates from '../assets/ab222.jpg';
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 const Homehero = () => {
@@ -7,7 +7,7 @@ const Homehero = () => {
     <div className="pb-[100px] bg-gray-200">
       <div className="relative">
         <img src={Graduates} className="w-full md:h-[650px] h-[400px]"></img>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-30"></div>
       </div>
       <div className="text-2xl md:text-4xl font-bold absolute mt-[-300px] lg:mt-[-350px] md:mt-[-400px] text-white w-[200px] md:w-[300px] ml-[20px] md:ml-[100px]">
         OUR PROUD ALUMNI

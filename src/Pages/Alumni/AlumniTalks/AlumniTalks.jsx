@@ -48,7 +48,7 @@ const AlumniTalks = () => {
           <p className="mt-4 text-xl text-gray-500">Hear from our successful alumni and their inspiring journeys</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {alumni.map((alum, index) => (
             <div key={index} className="bg-white overflow-hidden shadow-lg rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
               <div className="p-6">
@@ -66,8 +66,8 @@ const AlumniTalks = () => {
               </div>
             </div>
           ))}
-        </div>
-
+        </div> */}
+         <div className='text-2xl bg-gray-300 opacity-20 flex items-center px-20 h-[50px]'>Will Update Soon ...</div>
         <div className="mt-16 bg-blue-950 rounded-lg shadow-xl overflow-hidden">
           <div className="px-6 py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:justify-between">
             <div>

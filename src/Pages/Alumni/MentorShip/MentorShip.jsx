@@ -35,7 +35,7 @@ const MentorShip = () => {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
             { label: "Active Mentors", value: "50+" },
             { label: "Mentees Enrolled", value: "200+" },
@@ -46,7 +46,7 @@ const MentorShip = () => {
               <p className="text-gray-600">{stat.label}</p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Tabs Section */}
         <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
