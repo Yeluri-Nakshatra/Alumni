@@ -98,13 +98,15 @@ const Alumni_Directory = () => {
           />
         </aside>
         <main className="w-full lg:w-3/4 md:w-3/5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredAlumni.length > 0 ? (
               filteredAlumni.map((alumni, index) => <AlumniCard key={index} {...alumni} />)
             ) : (
               <p className="col-span-full text-center text-gray-500">No alumni match the selected filters.</p>
             )}
-          </div>
+          </div> */}
+                <div className="w-full bg-gray-300 flex items-center px-[20px] opacity-20 h-[80px]">Will Update Soon</div>
+
         </main>
       </div>
     </div>

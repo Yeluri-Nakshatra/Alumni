@@ -76,7 +76,7 @@ const Collagedays = () => {
         </div>
 
         {/* Image Gallery */}
-        <div className="flex flex-wrap gap-[20px]">
+        {/* <div className="flex flex-wrap gap-[20px]">
           {pho.map((mem) => (
             <div
               key={mem.id}
@@ -95,7 +95,9 @@ const Collagedays = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+                          <div className='w-full h-[50px] bg-gray-300 opacity-20 flex items-center px-[20px] justify-center'>Will Update Soon</div>
+
 
       </div>
     </div>

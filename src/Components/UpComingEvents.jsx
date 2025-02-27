@@ -6,8 +6,10 @@ import firsteve from "../assets/firsteve.png";
 import Secondeve from "../assets/Secondeve.png";
 const UpComingEvents = () => {
   return (
-    <div className='my-6 mx-4 flex flex-col gap-4'>
-      <div className="text-3xl font-bold pt-2 text-blue-950">UpComing Events</div>
+    <div className="my-6 mx-4 flex flex-col gap-4">
+      <div className="text-3xl font-bold pt-2 text-blue-950">
+        UpComing Events
+      </div>
       <div className="pt-2">
         RGUKT Alumini events are great to stay connected to the university and
         your fellow graduates.Find an near you or one that matches your
@@ -39,7 +41,14 @@ const UpComingEvents = () => {
           </button>
         </div>
       </div>
-      <div className="w-full bg-gray-300 flex items-center px-[20px] opacity-20 h-[50px]">Will Update Soon ..</div>
+      <div className="w-full bg-gray-300 flex items-center px-[20px] opacity-20 h-[80px]">
+        Stay updated with the latest happenings at Rajiv Gandhi University of Knowledge Technologies! Our
+        Event Calendar keeps you informed about upcoming seminars, workshops,
+        cultural fests, alumni meetups, and more. Whether you're looking to
+        learn, network, or celebrate, this is your go-to space for all events.
+        Check the calendar regularly to never miss an exciting opportunity to
+        engage and grow
+      </div>
 
       {/* <div className="pt-[10px] flex flex-col md:flex-row">
         <div className="flex w-full md:w-[25%]">
