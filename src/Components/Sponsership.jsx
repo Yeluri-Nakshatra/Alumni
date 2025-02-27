@@ -140,7 +140,7 @@ const Sponsorship = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSponsorships.map((sponsorship) => (
               <div
                 key={sponsorship.id}
@@ -172,7 +172,9 @@ const Sponsorship = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+
+          <div className="w-full flex justify-center items-center bg-gray-300 opacity-20 h-[50px]">Will Update Soon</div>
         </div>
       </div>
     </div>

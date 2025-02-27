@@ -13,8 +13,8 @@ const GetInvolved = () => {
       <div className="m-4 mx-4 mt-20 md:mt-24  lg:mt-[150px] flex flex-col gap-8">
         <HelpUs/>
         <SeekersSays/>
-        <Fund/>
-        <Contributors/>
+         {/* <Fund/> */}
+        {/* <Contributors/>  */}
         <Oppurtunities/>
         
         

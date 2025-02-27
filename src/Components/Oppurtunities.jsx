@@ -191,11 +191,11 @@ const Oppurtunities = () => {
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <Filter className="h-5 w-5" />
-            </div>
+            </div>  
           </div>
         </div>
-
-        <motion.div layout className="flex flex-wrap gap-6 justify-center">
+        <span className="text-center text-2xl">"No opportunities available yet."</span>
+        {/* <motion.div layout className="flex flex-wrap gap-6 justify-center">
           <AnimatePresence>
             {filteredOpportunities.map((job) => (
               <JobCard key={job.id} job={job} applyToJob={applyToJob} />
@@ -207,7 +207,7 @@ const Oppurtunities = () => {
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center text-gray-600 mt-8">
             No opportunities found. Try adjusting your search or filters.
           </motion.p>
-        )}
+        )} */}
       </div>
     </div>
   )

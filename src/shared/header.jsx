@@ -99,7 +99,7 @@ const Header = () => {
   return (
     <div className=" fixed top-0 left-0 z-[105]  w-screen ">
       <div className="flex flex-col w-screen">
-       <div className=" flex z-[101] shadow-md bg-white flex-row justify-between items-center  px-4 ">
+       <div className=" flex z-[101] h-[60px] shadow-md bg-white flex-row justify-between items-center  px-4 ">
         <div className="flex flex-row ">
           <div>
             <Link to="/">

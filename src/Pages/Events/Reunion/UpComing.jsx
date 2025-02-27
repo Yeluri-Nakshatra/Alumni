@@ -57,7 +57,7 @@ const Upcoming = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {(showAll ? events : events.slice(0, 3)).map((event, index) => (
+          {/* {(showAll ? events : events.slice(0, 3)).map((event, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
@@ -84,8 +84,11 @@ const Upcoming = () => {
                 </button>
               </div>
             </div>
-          ))}
+          ))} */}
+
         </div>
+        <div className='w-full h-[50px] bg-gray-300 opacity-20 flex items-center px-[20px] justify-center'>Will Update Soon</div>
+
 
         {events.length > 3 && (
           <div className="text-center mt-12">

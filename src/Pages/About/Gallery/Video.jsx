@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useLocation, useNavigate,Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { IoShareSocialSharp } from "react-icons/io5";
-import Videoone from "../../../assets/Videoone.jpg"
+import Videoone from "../../../assets/Videoone.jpg";
 
 const Video = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,7 +10,7 @@ const Video = () => {
 
   // Toggle dropdown visibility
   const toggleList = () => {
-    setIsOpen(prev => !prev);
+    setIsOpen((prev) => !prev);
   };
   // Function to handle category click
   const handleCategoryClick = (path) => {
@@ -24,17 +24,19 @@ const Video = () => {
   return (
     <div className="p-[10px] md:p-[30px] lg:p-[50px] mt-[100px]">
       <div className="flex flex-col md:flex-row gap-[10px]">
-        
         {/* Sidebar */}
         <div className="flex flex-col gap-[4px]">
-          <div className="cursor-pointer w-[300px] lg:w-[300px] bg-gray-200 h-[60px] flex justify-center items-center text-center hover:border-l-4 hover:border-black"onClick={() => navigate('/Gallery')}>
-            <button >All</button>
+          <div
+            className="cursor-pointer w-[300px] lg:w-[300px] bg-gray-200 h-[60px] flex justify-center items-center text-center hover:border-l-4 hover:border-black"
+            onClick={() => navigate("/Gallery")}
+          >
+            <button>All</button>
           </div>
 
           {/* Categories Dropdown */}
           <div className="w-[300px] lg:w-[300px] bg-gray-200 h-[60px] flex justify-center items-center text-center">
-            <button 
-              className="w-full h-full hover:border-l-4 hover:border-black" 
+            <button
+              className="w-full h-full hover:border-l-4 hover:border-black"
               onClick={toggleList}
             >
               Categories
@@ -44,25 +46,36 @@ const Video = () => {
           {isOpen && (
             <div className="flex flex-col gap-[10px] pt-[10px]">
               <Link
-              to="/Reunion"
-              className={`ml-[10px] tab ${location.pathname==="/Reunion"?"active":""}`}>
-              Reunion
-                
+                to="/Reunion"
+                className={`ml-[10px] tab ${
+                  location.pathname === "/Reunion" ? "active" : ""
+                }`}
+              >
+                Reunion
               </Link>
-              <Link 
-              to ="/Collagedays"
-              className={`mt-[15px] tab ${location.pathname==="/Collagedays"?"active":""}`}>
+              <Link
+                to="/Collagedays"
+                className={`mt-[15px] tab ${
+                  location.pathname === "/Collagedays" ? "active" : ""
+                }`}
+              >
                 Collagedays
               </Link>
-              <Link 
-              to ="/Video"
-              className={`mt-[20px] tab ${location.pathname==="/Video"?"active text-blue-500":""}`}>
+              <Link
+                to="/Video"
+                className={`mt-[20px] tab ${
+                  location.pathname === "/Video" ? "active text-blue-500" : ""
+                }`}
+              >
                 Video
               </Link>
-              
-              <Link 
-              to ="/Festival"
-              className={`mt-[25px] tab ${location.pathname==="/Festivals"?"active":""}`}>
+
+              <Link
+                to="/Festival"
+                className={`mt-[25px] tab ${
+                  location.pathname === "/Festivals" ? "active" : ""
+                }`}
+              >
                 Festivals
               </Link>
             </div>
@@ -70,7 +83,7 @@ const Video = () => {
         </div>
 
         {/* Image Gallery */}
-        <div className="flex flex-wrap gap-[20px]">
+        {/* <div className="flex flex-wrap gap-[20px]">
           {pho.map((mem) => (
             <div
               key={mem.id}
@@ -89,8 +102,10 @@ const Video = () => {
               </div>
             </div>
           ))}
+        </div> */}
+        <div className="w-full h-[50px] bg-gray-300 opacity-20 flex items-center px-[20px] justify-center ">
+          Will Update Soon
         </div>
-
       </div>
     </div>
   );

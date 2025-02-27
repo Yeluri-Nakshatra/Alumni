@@ -14,18 +14,17 @@ import DistinguishedAlumni from '../../Components/DistinguishedAlumni';
 import LatestNews from '../../Components/LatestNews';
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       <div className='flex md:flex-row flex-col justify-center items-center '>
       <div className='w-[100%]'><Homehero /></div>
      
       </div>
       <LatestNews />
       <ProudGraduates />
-      <div className='flex md:flex-row flex-col w-full mt-16 md:justify-around lg:justify-evenly items-center gap-6 md:gap-0 '>
-        <Announcement/>
-        <DistinguishedAlumni/>
-
-      </div>
+      <div className="flex flex-col md:flex-row w-full mt-8 md:justify-center lg:justify-around items-center  px-4 gap-[20px]">
+      <Announcement />
+      <DistinguishedAlumni />
+    </div>
 
       <Testimonals />
       <HomeAbout />

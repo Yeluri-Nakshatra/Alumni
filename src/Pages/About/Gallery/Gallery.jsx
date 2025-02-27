@@ -71,7 +71,7 @@ const Gallery = () => {
           )}
         </div>
         <div className="flex flex-wrap gap-[20px]">
-          {pho.map((mem) => (
+          {/* {pho.map((mem) => (
             <div
               key={mem.id}
               className="relative group w-[300px] md:w-[180px] lg:w-[450px] h-[300px] md:h-[200px] lg:h-[300px] mt-[20px] md:mt-[0px] mb-[20px]"
@@ -90,8 +90,10 @@ const Gallery = () => {
                 <div>{mem.Items}</div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
+        <div className='w-full h-[50px] bg-gray-300 opacity-20 flex items-center px-[20px]'>Will Update Soon</div>
+
 
       </div>
     </div>
